@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       const tmpl = addrs => `
+          <table>
+          ${addrs.map(addr => `
+            <tr><td>${addr.first}</td></tr>
+            <tr><td>${addr.last}</td></tr>
+          `).join('')}
+          </table>
+        `;
+       const data = [
+           { first: '<Jane>', last: 'Bond' },
+           { first: 'Lars', last: '<Croft>' },
+       ];
+
+       console.log(tmpl(data));
+   </script>
+
+</head>
+<body>
+
+</body>
+</html>

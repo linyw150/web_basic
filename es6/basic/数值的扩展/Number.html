@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       // ES5的写法
+       parseInt('12.34') // 12
+       parseFloat('123.45#') // 123.45
+
+       // ES6的写法
+       Number.parseInt('12.34') // 12
+       Number.parseFloat('123.45#') // 123.45
+
+       //JavaScript 内部，整数和浮点数采用的是同样的储存方法，所以 25 和 25.0 被视为同一个值。
+       //Number.isInteger()
+       Number.isInteger(25) // true
+       Number.isInteger(25.0) // true
+        //总之，如果对数据精度的要求较高，不建议使用Number.isInteger()判断一个数值是否为整数。
+
+
+
+   </script>
+
+</head>
+<body>
+
+</body>
+</html>

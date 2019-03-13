@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        // 实例化 Promise对象
+        let time = function(time) {
+            return new Promise((resolve, reject) => {
+                console.log('Promise实例化完成'); // Promise实例化后立即执行
+                if (time >= 3000) {
+                    setTimeout(function(){
+                        resolve('大于3秒的时间后才显示出来');
+                    }, time)
+                } else {
+                    reject('时间不能小于3秒')
+                }
+            });
+        };
+
+        // 实例化Promise对象后才能使用 then
+        time(4000).then((value) => { // 1000 会走第二条判断Reject(Pending => Reject 失败会走第二个回调)
+            console.log(value);
+        }, (error) => {
+            console.log(error);
+        });
+        console.log(1); // 'Promise实例化完成' 1 '时间不能小于3秒'
+    </script>
+</head>
+<body>
+
+</body>
+</html>

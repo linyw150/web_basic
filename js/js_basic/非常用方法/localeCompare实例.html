@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       var str = 'abbbbAAbcBCCccdaACBDDabcccddddaab';
+       str = str.toLowerCase().split('').sort(
+               function(a,b){
+                   return a.localeCompare(b)//第一个值和第二个值比较，第一个值比较大返回1，
+                   //例如C>B,则返回1，则
+               }
+       ).join('');
+//       我的理解：
+//       function（a,b)中a.localeCompare(b),a比b大时，返回1，则对sort来说，返回1，则交换a，和b的位置。则变成b、a。变成了升序。
+//       function（a,b)中b.localeCompare(a),b比a大时，返回1，则对sort来说，返回1，则交换a，和b的位置。则变成b、a。变成了降序。
+//
+
+
+
+
+   </script>
+</head>
+<body>
+
+
+</body>
+</html>

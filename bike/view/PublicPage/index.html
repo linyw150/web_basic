@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+ <!--   <meta name=”format-detection” content=”telephone=no” />
+你明明写的一串数字没加链接样式，而iPhone会自动把你这个文字加链接样式、并且点击这个数字还会自动拨号！想去掉这个拨号链接该如何操作呢？这时我们的meta又该大显神通了，代码如下：
+telephone=no就禁止了把数字转化为拨号链接！
+telephone=yes就开启了把数字转化为拨号链接，要开启转化功能，这个meta就不用写了,在默认是情况下就是开启！/>-->
+
+    <title></title>
+
+    <link href="../../uclbrt/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/uclbrt/ulite/ulite.css">
+    <link rel="stylesheet" type="text/css" href="../../jslib/swiper/swiper.min.css">
+    <link href="../../run/src/PublicPage/index.css" rel="stylesheet">
+    <link href="../../run/src/common.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="../../jslib/html5shiv/html5shiv.min.js"></script>
+    <script src="../../jslib/html5shiv/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="doc" class="container">
+    <div id="doc-header" class="navbar navbar-fixed-top">
+        <a href="/view/PublicPage/center.html" class="pull-right navbar-icon"><span class="iconfont icon-chevronleft"></span></a>
+    </div>
+    <div id="doc-body">
+        <div class="tabs ulite-js-tabs ulite-js-ripple-effect">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="cover-images" src="../../run/src/image/changlian.jpg">
+                    </div>
+                </div>
+                <div class="title-container">
+                    <div class="navbar-title typo-text-white-deep"></div>
+                </div>
+            </div>
+            <div class="tabs-tab-bar">
+                <a href="#manage-panel" class="col-xs-6 tabs-tab is-active" id="personalCenter">店铺介绍</a>
+                <a href="#shop-panel" class="col-xs-6 tabs-tab shop-pogoing " id="shop-pogoing">掌柜优品</a>
+            </div>
+            <div id="manage-panel" class="tabs-panel is-active" >
+                <div class="panel">
+                    <div class="panel-body" style="text-align: center">
+                        <!-- 右上角的义卖总额显示，收藏人数显示-->
+                        <div class="collect-container">
+                            <div class="rummageSale-box theme-text">
+                                <span>义卖总额：￥</span><span class="rummageSale"></span>
+                            </div>
+                            <div class="collect-box">
+                                <span class="collect"></span>人收藏
+                            </div>
+                        </div>
+                        <div class="main-pic-start">
+                            <div class="main-pic"></div>
+                        </div>
+                        <div class="vertical-margin nowrap-content"><span class="hotel-panel-contact">畅联科技</span></div>
+                        <div class="vertical-margin nowrap-content " style="height: 0.38rem;">
+                            <div class="sign-content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-outside-title"><span class="title-before"></span>店铺信息</div>
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="vertical-margin nowrap-content">
+                            地址：
+                            <span class="stores-panel-address"></span>
+                        </div>
+                        <div class="vertical-margin nowrap-content">
+                            电话：
+                            <span class="stores-panel-mobile"></span>
+                        </div>
+                        <div class="stores-more-info hidden">
+                            <div class="vertical-margin nowrap-content">微信：<span class="stores-panel-wechat"></span></div>
+                            <div class="vertical-margin">简介：<span class="stores-description"></span></div>
+                        </div>
+                        <div class="stores-more-info-trigger text-center">
+                            <span class="iconfont"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-outside-title"><span class="title-before"></span>店长笔记</div>
+                <div class="panel">
+                    <div class="panel-body" id="hotel-panel-special-container">
+                        <div class="hotel-panel-special">g h</div>
+                        <div class="hotel-panel-special-img">
+                            <img class="background-cover" style="width: 100%;" src="http://booking.uclbrt.com/api/uploads/noteImage/20170914/f63e6d5345af4ac833348325cc1ccfb3.jpg">
+                        </div>
+                        <div class="vertical-margin"><a href="#" class="theme-text more-zhangGui-info">阅读全文</a></div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="shop-panel" class="tabs-panel">
+                <div class="content-outside-title"><span class="title-before"></span>商家推荐</div>
+                <div class="content-panel">
+                    <div class="content-panel-body shop-panel-content clearfix" >
+                        <div id="shopContent" ></div>
+                        <div class="more-content"><div class="more">更多</div></div>
+                    </div>
+                </div>
+                <div class="content-outside-title"><span class="title-before"></span>热销商品</div>
+                <div class="content-panel">
+                    <div class="content-panel-body hotsale-panel-content clearfix" >
+                        <div id="hotsaleContent" ></div>
+                        <div class="more-content"><div class="more">更多</div></div>
+                    </div>
+                </div>
+                <div id="doc-foot" class="navbar-fixed-bottom navbar-fixed-foot container">
+                    <div class="shop-classify">
+                        <div class="icon"></div>
+                        <div class="introduce">分类</div>
+                    </div>
+                    <a class="shop-contact btn-link" href="tel:13480251015">
+                        <div class="icon"></div>
+                        <div class="introduce">联系卖家</div>
+                    </a>
+                    <div class="shop-enshrine">
+                        <div class="icon"></div>
+                        <div class="introduce">收藏</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="classify-content hidden">
+            <div class="classify-box">
+                <div class="search-content">
+                    <input type="text" name="" id="searchInfo" value="" placeholder="请输入商品名" />
+                    <div class="search">搜索</div>
+                </div>
+                <div id="classifyContent">
+                    <div class="shop-content">
+                        <div class="classify-mian">
+                            <div class="mian-left">商品</div>
+                            <div class="mian-right revert"></div>
+                        </div>
+                        <div class="shop-list-content classify-shop"></div>
+                    </div>
+                    <div class="shop-content">
+                        <div class="classify-mian ">
+                            <div class="mian-left">服务</div>
+                            <div class="mian-right"></div>
+                        </div>
+                        <div class="shop-list-content classify-serve"></div>
+                    </div>
+                    <div class="shop-content">
+                        <div class="classify-mian ">
+                            <div class="mian-left">义卖</div>
+                            <div class="mian-right"></div>
+                        </div>
+                        <div class="shop-list-content classify-other"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    标签列表<!---->
+    <script type="text/html" id="templateLabel">
+        <div class="sign">
+        </div>
+    </script>
+    <script type="text/html" id="templateGoodsContent">
+        <div class="col-xs-6 shopItem">
+             <div class="shop-img-content">
+                <div class="panel-shop-img">
+                    <div class="shop-cover">
+                    </div>
+                    <div class="rummage-sale hidden"></div>
+                </div>
+              </div>
+        <div class="layout-content">
+            <div class="layout">
+                <div class="nowrap-content shop-dec"></div>
+                    <div class="nowrap-content">
+                        <div class="col-xs-6 shopPirce-content">
+                            <span>￥</span><span class="shopPirce"></span>
+                        </div>
+                        <div class="col-xs-6 shopSales-content">
+                            <span>销量</span><span class="shopSales"></span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </script>
+
+</div>
+</body>
+<script src="../../jslib/jquery/1.11.2/jquery.min.js"></script>
+<script src="../../jslib/bookstrap/bootstrap.js"></script>
+<script type="text/javascript" src="/jslib/toastr/2.1.2/toastr.min.js"></script>
+<script src="/uclbrt/ulite/ulite.js"></script>
+<script  type="text/javascript" src="/run/src/common.js"></script>
+<script src="../../run/src/PublicPage/index.js"></script>
+<script type="text/javascript" src="../../jslib/swiper/swiper.min.js"></script>
+
+
+</html>

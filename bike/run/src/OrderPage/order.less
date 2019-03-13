@@ -1,0 +1,299 @@
+#doc-body{
+  .tabs-tab-bar{
+    background: #fff;
+    height: 0.68rem;
+    border: 0;
+    .tabs-tab{
+      height: 0.68rem;
+      line-height: 0.68rem;
+      font-size:13px ;
+      text-transform:inherit
+    }
+  }
+  .tabs.is-upgraded .tabs-tab.is-active:after{
+    height: 0;
+  }
+  .centeral-container{
+    top: 1.76rem;
+  }
+  .order-refresh{
+    margin-top: 0.3rem;
+  }
+}
+
+.store-container {
+  background-color: #fff;
+  margin-bottom: .2rem;
+  font-size: 13px;
+  padding: 0 .32rem 0 .32rem;
+  .store-head{
+    height: .68rem;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    display: -webkit-box; /* 相当于display: flex; 兼容性写法*/
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    .store-name{
+      height: 0.68rem;
+      line-height: 0.68rem;
+      background: url(../image/right.png) right center no-repeat ;
+      padding-right: 0.38rem;
+      max-width: 5.4rem;
+    }
+    .store-status{
+      height: 0.68rem;
+      line-height: 0.68rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #DF3E0F;
+      font-size:12px ;
+    }
+  }
+  .store-goods{
+    .store-goods-list{
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      height: 2.1rem;
+      border-bottom:1px solid #ccc ;
+      position: relative;
+      .goods-img-content{
+        height: 2.1rem;
+        margin-left: 1.6rem;
+        .goods-picture{
+          position: absolute;
+          top: 0.2rem;
+          left: 0;
+          height: 1.57rem;
+          width: 1.6rem;
+          background: url(../image/shili.png) center no-repeat;
+          background-size: 1.6rem 1.57rem;
+          .goods-picture-cover{
+            width: 100%;
+            height: 100%;
+            background-size:100% ;
+            background-repeat:no-repeat ;
+          }
+
+        }
+      }
+      .goods-represent{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        height: 1.46rem;
+        padding: 0.32rem;
+        font-size:13px;
+        .represent-top{
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          .represent-dec{
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            height: 0.68rem;
+          }
+          .represent-price{
+            height: 0.32rem;
+            line-height: 0.32rem;
+            padding-left:0.16rem;
+          }
+        }
+        .represent-foot{
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          .represent-model{
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            height: 0.38rem;
+            line-height: 0.38rem;
+            color: #666;
+          }
+          .sum{
+            float: right;
+            height: 0.38rem;
+            line-height: 0.38rem;
+          }
+        }
+      }
+
+    }
+
+  }
+  .store-foot{
+    height: 0.68rem;
+    border-bottom: 1px solid #ccc;
+    .store-freight{
+      height: 0.68rem;
+      line-height: 0.68rem;
+      float: right;
+    }
+    .store-pay{
+      height: 0.68rem;
+      line-height: 0.68rem;
+      float: right;
+      margin-left: 0.4rem;
+      .pay{
+        color:#df3e0f ;
+      }
+    }
+    .store-check{
+      height: 0.68rem;
+      line-height: 0.68rem;
+      float: left;
+    }
+  }
+  .store-operation{
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 12px;
+    .operation-list{
+      height: 0.88rem;
+      line-height: 0.88rem;
+      width: 1.28rem;
+      float: right;
+      margin-left: 0.3rem;
+      position: relative;
+      div{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -0.22rem;
+        width: 1.28rem;
+        height: 0.44rem;
+        border-radius:4px ;
+        color: #fff;
+
+        line-height: 0.44rem;
+        text-align: center;
+
+        background: #DF3E0F;
+        cursor: pointer;
+      }
+      .operation-close,.operation-remind,.operation-check,.operation-contact{
+        background: #FF781E;
+      }
+    }
+  }
+}
+
+.order-status-content{
+  height: .78rem;
+  padding: 0 .32rem;
+  font-size: 13px;
+  background: #fff;
+  .order-status-left{
+    line-height: .78rem;
+    float:left;
+  }
+  .order-status{
+    line-height: .78rem;
+    float: left;
+    color: #df3e0f;
+  }
+}
+.personage-info-content{
+  background: #fff;
+  padding: .3rem .32rem .18rem .32rem;
+  font-size: 13px;
+  height: 1.8rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  .personage-tip,.personage-info,.personage-address{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  .personage-info{
+    .name{
+      float: left;
+      margin-right: 0.48rem;
+    }
+    .number{
+      float: left;
+    }
+  }
+}
+.store-check-details{
+  height: 0.68rem;
+  line-height: 0.68rem;
+  float: left;
+  color: #666;
+}
+.order-info-content{
+  color: #666;
+  background: #fff;
+  padding:0.3rem 0 0.18rem 0;
+  font-size:13px ;
+  height: 1.8rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-top:1px solid #ccc ;
+  .order-info-list{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    .order-info-left{
+      float: left;
+    }
+    .order-info-right{
+      float: left;
+    }
+  }
+}
+
+.operation-refund-content,.operation-service-content{
+  position: absolute;
+  right: 0.32rem;
+  bottom: 0.2rem;
+  width: 1.28rem;
+  height: 0.44rem;
+  line-height: 0.44rem;
+  text-align: center;
+  border-radius: 4px;
+  color: #fff;
+  background: #DF3E0F;
+  cursor: pointer;
+  font-size:12px ;
+}
+.details-refund{
+  background: #FF781E;
+}
+.details-service{
+  background: #FF781E;
+}

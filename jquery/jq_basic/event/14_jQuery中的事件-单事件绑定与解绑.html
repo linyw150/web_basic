@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的事件-单事件绑定与解绑</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+  <style>
+	.d1 {
+		width : 200px;
+		height : 50px;
+		border : solid 1px black;
+		background : yellow;
+	}
+	.d2 {
+		width : 200px;
+		height : 200px;
+		border : solid 1px black;
+		background : pink;
+		display : none;
+	}
+  </style>
+ </head>
+
+ <body>
+  <div class="d1">
+	<h3>什么是jQuery?</h3>
+  </div>
+  <div class="d2">
+	<p>jQuery是一个轻量级的JS库.</p>
+  </div>
+  <script>
+	// 需求 - 当鼠标点击第一个div时,显示第二个div;再点击第一个div时,隐藏第二个div
+	/*
+	$(".d1").click(function(){
+		if($(".d2").is(":hidden")){
+			$(".d2").show(3000);
+		}else{
+			$(".d2").hide(3000);
+		}
+	});
+	*/
+
+	/*
+	 * bind(type,data,fn)方法 - 事件绑定
+	 * * type - 设置绑定的事件名称,string类型.
+	 * * data - 可选项,作为event.data属性值传递给事件对象的额外数据对象
+	 * * fn - 事件对应的处理函数
+	 */
+	$(".d1").bind("click",function(){
+		if($(".d2").is(":hidden")){
+			$(".d2").show(3000);
+		}else{
+			$(".d2").hide(3000);
+		}
+	});
+	/*
+	 * unbind() - 解绑事件
+	 */
+	$(".d1").unbind();
+  </script>
+ </body>
+</html>

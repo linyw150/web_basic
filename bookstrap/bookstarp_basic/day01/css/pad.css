@@ -1,0 +1,16 @@
+/*屏幕宽度在768~990之间*/
+body {
+    font-family: "Microsoft YaHei";
+    margin: 0px;
+}
+
+h1 {
+    font-size: 2em;
+    border-bottom: 2px solid #ccc;
+}
+.box {
+    border: 1px solid #a33;
+    background: #fdd;
+    color: #822;
+    padding: 6px;
+}

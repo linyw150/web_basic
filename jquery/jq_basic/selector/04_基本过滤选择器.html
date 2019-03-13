@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>基本过滤选择器</title>
+  <meta charset="utf-8" />
+     <script src="../../jslib/jquery-1.11.3.js"></script>
+  <style>
+	div {
+		width : 150px;
+		height : 150px;
+		border : solid 1px black;
+		background : pink;
+		float : left;
+		margin-right : 10px;
+	}
+	.mini {
+		width : 50px;
+		height : 50px;
+		border : solid 1px black;
+		background : yellow;
+		float : left;
+		margin-right : 10px;
+	}
+  </style>
+ </head>
+
+ <body>
+  <h3>基本过滤选择器</h3>
+  <h1>基本过滤选择器</h1>
+  <button id="btn1">:first</button>
+  <button id="btn2">:last</button>
+  <button id="btn3">:even</button>
+  <button id="btn4">:odd</button>
+  <button id="btn5">:gt</button>
+  <button id="btn6">:lt</button>
+  <button id="btn7">:eq</button>
+  <button id="btn8">:not</button>
+  <button id="btn9">:header</button>
+  <button id="btn10">:animated</button>
+  <br><br>
+  <div id="d1"></div>
+  <div id="one"></div>
+  <div class="mini"></div>
+  <div></div>
+  <div></div>
+  <script>
+	$("#btn1").click(function(){
+		// 获取div元素中的第一个
+		//$("div:first").css("background","green");
+        //$("div").first().css("background","green");
+	});
+	$("#btn2").click(function(){
+		// 获取div元素中的最后一个
+		$("div:last").css("background","green");
+	});
+	$("#btn3").click(function(){
+		// 获取索引值为偶数的div元素
+		// 索引值从0开始
+		$("div:even").css("background","green");
+	});
+	$("#btn4").click(function(){
+		// 获取索引值为奇数的div元素
+		$("div:odd").css("background","green");
+	});
+	$("#btn5").click(function(){
+		// 获取索引值大于1的div元素 great than
+		$("div:gt(1)").css("background","green");
+	});
+	$("#btn6").click(function(){
+		// 获取索引值小于1的div元素 less than
+		$("div:lt(1)").css("background","green");
+	});
+	$("#btn7").click(function(){
+		// 获取索引值等于1的div元素 less than
+		$("div:eq(1)").css("background","green");
+	});
+	$("#btn8").click(function(){
+		// 获取class不为mini的div元素(包含没有class属性的div元素)
+		$("div:not('.mini')").css("background","green");
+	});
+	$("#btn9").click(function(){
+		// 获取所有标题元素(h1 - h6) - 不常用
+		$(":header").css("background","green");
+	});
+	// 让第一个div上下滑动
+	function move(){
+		/*
+		 * slideToggle(speed,callback)方法
+		 * * 实现上下滑动效果
+		 * * 参数
+		 *   * speed - 动画执行的时长,单位为毫秒
+		 *   * callback - 动画执行完毕后调用的函数
+		 */
+		$("#d1").slideToggle(500,function(){
+			move();
+		});
+	}
+	move();
+	$("#btn10").click(function(){
+		// 获取当前正在执行动画的元素
+		$(":animated").css("background","green");
+	});
+  </script>
+ </body>
+</html>

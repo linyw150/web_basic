@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的DOM-基本操作</title>
+  <meta charset="utf-8" />
+<!--
+	<script>标签允许定义HTML页面的任意位置
+	* 在<head>标签中
+	  * 引入外部的JS文件
+	* 在<body>标签前
+	  * 需要获取页面元素的话,编写window.onload
+	* 在<body>标签后
+	  * 没有任何问题
+-->
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+
+ <body>
+  <ul id="city">
+	<li id="bj" name="beijing">北京</li>
+	<li id="tj" name="tianjin">天津</li>
+	<li id="nj" name="nanjing">南京</li>
+	<li id="sh" name="shanghai">上海</li>
+	<li id="cq" name="chongqing">重庆</li>
+  </ul>
+  <input type="text" id="user" value="请输入你的用户名">
+  <script>
+	// html()
+	//console.log($("#city").html());
+	//$("#city").html("<li>长春</li>");
+
+	// val()
+	//console.log($("#user").val());
+	//$("#user").val("请输入你的密码");
+
+	// text()
+	//console.log($("#bj").text());
+	//$("#bj").text("长春");
+
+	// attr() - removeAttr()
+	console.log($("#bj").attr("name"));
+
+	// jQuery - undefined(未定义)
+	//$("#bj").attr("name","changchun");
+	//console.log($("#bj").attr("name"));
+
+	$("#bj").removeAttr("name");
+	console.log($("#bj").attr("name"));
+	
+	// DOM - null(空)
+	$("#bj")[0].removeAttribute("name");
+	console.log($("#bj")[0].getAttribute("name"));
+
+	/*
+	 * javascript的五个原始类型
+	 * * boolean
+	 * * string
+	 * * number
+	 * * undefined
+	 *   * 报错undefined - 不存在
+	 *   * 提示undefined - 存在,但没值
+	 * * null - 释放资源
+	 */
+	var a;
+	console.log(a);
+  </script>
+ </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #main {
+            width: 200px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById("main").onclick = function(e) {
+                console.log(e.target);
+                console.log(e.target.id);
+                console.log(e.target.tagName);
+                console.log(e.target.nodeName);
+                console.log(e.target.classList);
+                console.log(e.target.className);
+                console.log(e.target.innerHTML);
+                console.log(e.target.innerText);
+            }
+        }
+    </script>
+</head>
+
+<body>
+<div id="main" class="sb js node"><span>我爱JavaScript</span></div>
+</body>
+
+</html>

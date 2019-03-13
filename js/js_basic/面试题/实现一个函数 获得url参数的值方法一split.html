@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       function getArr(url){
+           var paramArr = url.split('?')[1].split('&');
+           var param = {}
+           for(x in paramArr){
+               let temp = paramArr[x].split('=');
+               param[temp[0]] = temp[1];
+           }
+           return param
+       }
+       var url = 'http://booking.uclbrt.com/shop/index.html?shop=5&id=1'
+       console.log(getArr(url));
+
+
+   </script>
+</head>
+<body>
+
+
+</body>
+</html>

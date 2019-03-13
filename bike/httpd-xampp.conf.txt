@@ -1,0 +1,144 @@
+#
+# XAMPP settings
+#
+
+<IfModule env_module>
+    SetEnv MIBDIRS "D:/soft/xmapp/php/extras/mibs"
+    SetEnv MYSQL_HOME "\\xampp\\mysql\\bin"
+    SetEnv OPENSSL_CONF "D:/soft/xmapp/apache/bin/openssl.cnf"
+    SetEnv PHP_PEAR_SYSCONF_DIR "\\xampp\\php"
+    SetEnv PHPRC "\\xampp\\php"
+    SetEnv TMP "\\xampp\\tmp"
+</IfModule>
+
+#
+# PHP-Module setup
+#
+LoadFile "D:/soft/xmapp/php/php5ts.dll"
+LoadFile "D:/soft/xmapp/php/libpq.dll"
+LoadModule php5_module "D:/soft/xmapp/php/php5apache2_4.dll"
+
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+<FilesMatch "\.phps$">
+    SetHandler application/x-httpd-php-source
+</FilesMatch>
+
+#
+# PHP-CGI setup
+#
+#<FilesMatch "\.php$">
+#    SetHandler application/x-httpd-php-cgi
+#</FilesMatch>
+#<IfModule actions_module>
+#    Action application/x-httpd-php-cgi "/php-cgi/php-cgi.exe"
+#</IfModule>
+
+
+<IfModule php5_module>
+    PHPINIDir "D:/soft/xmapp/php"
+</IfModule>
+
+<IfModule mime_module>
+    AddType text/html .php .phps
+</IfModule>
+
+ScriptAlias /php-cgi/ "D:/soft/xmapp/php/"
+<Directory "D:/soft/xmapp/php">
+    AllowOverride None
+    Options None
+    Require all denied
+    <Files "php-cgi.exe">
+          Require all granted
+    </Files>
+</Directory>
+
+<Directory "D:/soft/xmapp/cgi-bin">
+    <FilesMatch "\.php$">
+        SetHandler cgi-script
+    </FilesMatch>
+    <FilesMatch "\.phps$">
+        SetHandler None
+    </FilesMatch>
+</Directory>
+
+<Directory "D:/soft/xmapp/htdocs/xampp">
+    <IfModule php5_module>
+    	<Files "status.php">
+    		php_admin_flag safe_mode off
+    	</Files>
+    </IfModule>
+    AllowOverride AuthConfig
+</Directory>
+
+<IfModule alias_module>
+    Alias /licenses "D:/soft/xmapp/licenses/"
+    <Directory "D:/soft/xmapp/licenses">
+        Options +Indexes
+        <IfModule autoindex_color_module>
+            DirectoryIndexTextColor  "#000000"
+            DirectoryIndexBGColor "#f8e8a0"
+            DirectoryIndexLinkColor "#bb3902"
+            DirectoryIndexVLinkColor "#bb3902"
+            DirectoryIndexALinkColor "#bb3902"
+        </IfModule>
+        Require local
+        ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+   </Directory>
+
+    Alias /phpmyadmin "D:/soft/xmapp/phpMyAdmin/"
+    <Directory "D:/soft/xmapp/phpMyAdmin">
+        AllowOverride AuthConfig
+        Require local
+        ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+    </Directory>
+
+    Alias /webalizer "D:/soft/xmapp/webalizer/"
+    <Directory "D:/soft/xmapp/webalizer">
+        <IfModule php5_module>
+    		<Files "webalizer.php">
+    			php_admin_flag safe_mode off
+    		</Files>
+        </IfModule>
+        AllowOverride AuthConfig
+        Require local
+        ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+    </Directory>
+</IfModule>
+Listen 1300
+<VirtualHost *:1300>
+DirectoryIndex index.html index.php
+DocumentRoot "D:/soft/xmapp/htdocs/web/shop"
+<Directory "D:/soft/xmapp/htdocs/web/shop">
+Options FollowSymLinks
+AllowOverride All
+Order deny,allow
+Allow From All
+</Directory>
+Alias /api "D:/soft/xmapp/htdocs/qrcKeyManage/public"
+<Directory "D:/soft/xmapp/htdocs/qrcKeyManage/public">
+Options FollowSymLinks
+AllowOverride All
+Order deny,allow
+Allow From All
+</Directory>
+</VirtualHost>
+Listen 1200
+<VirtualHost *:1200>
+DirectoryIndex index.html index.php
+DocumentRoot "D:/soft/xmapp/htdocs/qrcKeyManage-Web/front"
+<Directory "D:/soft/xmapp/htdocs/qrcKeyManage-Web/front">
+Options FollowSymLinks
+AllowOverride All
+Order deny,allow
+Allow From All
+</Directory>
+Alias /api "D:/soft/xmapp/htdocs/qrcKeyManage/public"
+<Directory "D:/soft/xmapp/htdocs/qrcKeyManage/public">
+Options FollowSymLinks
+AllowOverride All
+Order deny,allow
+Allow From All
+</Directory>
+</VirtualHost>

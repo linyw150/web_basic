@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+https://www.cnblogs.com/s-qiu/p/7339094.html
+
+
+data-* 是H5的新属性，用来让开发者对标签添加自定义属性的。
+
+其读写方式有如下几种：
+
+如果是 data-abc 的格式，则采用正常格式 abc 来读写该属性值
+
+<div id="content" data-age="18">html5 data-*自定义属性 age</div>
+
+// 原生 js 方式读写
+
+var content= document.getElementById('content');
+
+console.log(content.dataset.age);//读
+
+content.dataset.name ="小白”;//写
+
+console.log(content.dataset.name);//读
+
+// jquery 方式读写
+
+console.log($('#content').data('age'));//读
+
+$('#content').data('name', "小黑");//写
+
+console.log($('#content').data('name'));//读
+
+
+
+若果是 data-abc-abc-abc 的格式，则采用首字母小写的驼峰式 abcAbcAbc 读写该自定义属性值
+<div id="content" data-user-list="user_list">data-user-list自定义属性 </div>
+
+var list = [{name: "aa", age: 18},{name: "bb", age: 20}]
+
+// 原生 js 获取方式
+
+var content= document.getElementById('content');
+
+console.log(content.dataset.userList);//读
+
+content.dataset.userList=list;//写
+
+console.log(content.dataset.userList);//读
+
+// jquery 方式读写
+
+console.log($('#content').data('userList'));//读
+
+$('#content').data('userList', list);//写
+
+console.log($('#content').data('userList'));//读
+
+
+
+getAttribute/setAttribute方法的使用
+<div id="content" data-name="小a">data-user-list自定义属性 </div>
+
+var content= document.getElementById('content');
+
+content.dataset.birthDate = '19990619';//写
+
+content.setAttribute('age', 25);//写
+
+console.log(content.getAttribute('data-birth-date')); //读
+
+console.log(content.getAttribute('data-age')); //读
+</body>
+</html>

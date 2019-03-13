@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+//       https://www.cnblogs.com/skywang/articles/2051052.html
+       var str="他今年22岁，她今年20岁，他的爸爸今年45岁，她的爸爸今年44岁，一共有4人"
+       function test($1){
+        var gyear=(new Date()).getYear()-parseInt($1)+1;
+             return $1+"("+gyear+"年出生)";
+         }
+       var reg=new RegExp("(\\d+)岁","g");
+       var newstr=str.replace(reg,test);
+       alert(str);
+       alert(newstr);
+   </script>
+</head>
+<body>
+
+
+</body>
+</html>

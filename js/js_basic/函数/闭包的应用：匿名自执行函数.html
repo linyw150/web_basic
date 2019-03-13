@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var a = document.getElementsByTagName('li');
+            for(var i = 0; i < a.length; i++) {
+                (function(i,j,k) {
+                    a[i].onclick = function() {
+                        console.log(i++,j,k);
+                    }
+                })(i,'sb','db')
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+<li>E</li>
+</body>
+
+</html>

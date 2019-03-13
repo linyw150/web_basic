@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的事件-toggle()</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+  <style>
+	div {
+		width : 200px;
+		height : 200px;
+		border : solid 1px black;
+	}
+	.r {
+		width : 200px;
+		height : 50px;
+		border : solid 1px black;
+		background : red;
+	}
+	.g {
+		width : 500px;
+		height : 50px;
+		border : solid 1px black;
+		background : green;
+	}
+  </style>
+ </head>
+
+ <body>
+  <p>这是jQuery的事件.</p>
+  <script>
+	$("p").toggle(function(){
+		$("p").attr("class","r");
+	},function(){
+		$("p").attr("class","g");
+	});
+  </script>
+ </body>
+</html>

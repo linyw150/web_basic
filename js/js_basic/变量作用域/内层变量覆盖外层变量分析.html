@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+
+    </script>
+
+
+</head>
+<body>
+    https://zhidao.baidu.com/question/1366893818772162859.html
+    (function(){
+      //这是一个独立作用域
+      var i = 0;
+      var a = 1;
+      alert(i + a);
+    })();
+    在作用域中的变量声明和方法声明都会呗编译器在编译的时候，
+    给强制挪到第一行，在开始执行,并且变量的默认值都是 `undefined`
+
+    经过编译后的代码可能会类似这样
+    (function(){
+        var i , a;//变量的声明会挪到首行,并且变量默认赋值为`undefined`
+        i = 0;
+        a = 1;
+        alert(i + a);
+    })();
+
+    也会有这种情况
+    (function(){
+        alert(a);
+        test();
+        var a = 1;
+        function test(){
+        alert('test fn');
+    }
+    })();
+    编译后的代码：
+    (function(){
+        var a;
+        function test(){//方法会直接挪到代码前
+        alert('test fn');
+        }
+        alert(a);
+        test();
+        a = 1;
+    })();
+    如果同名的变量，那么局部作用域的变量优先于外部变量
+    var a = 1; //这是一个外部定义的变量
+    (function(){
+        alert(a);
+        var a = 2;//在这里，又使用`var`声明了一次 `a`，
+        //那么这个变量就会覆盖在外面定义的变量`a`
+    })();
+    编译后的结果将是这样
+    var a;
+    a = 1;
+    (function(){
+        var a;//这里的a就会覆盖外面的变量a，并且编译器会默认赋值undefined
+        alert(a);//所以这里就会弹出undefined了
+        a = 1;
+    })();
+    如果内部没有用`var`声明这个变量，那么外部作用域和内部的作用域就会使用同一个变量:
+    var a = 1;
+    (function(){
+        alert(a);//这样这个方法在自己的作用域中无法找到变量`a`,就会去父作用域找变量`a`
+        //如果还没找到，就在往父作用域中找，这样直到找到为止
+        //或者一直找到global(全局作用域)还没找到变量`a`,
+        //就会抛出一个异常(也就是报错) 'ReferenceError : `a` is not defined'
+       })();
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       var str = 'abc123cba456aaa789';
+       var reg = /\d+/;
+       console.log(reg.exec(str))
+       //  ["123", index: 3, input: "abc123cba456aaa789"];
+       console.log(reg.lastIndex)
+       // lastIndex : 0
+
+//       reg.exec捕获的数组中
+//       // [0:"123",index:3,input:"abc123cba456aaa789"]
+//       0:"123" 表示我们捕获到的字符串
+//       index:3 表示捕获开始位置的索引
+//       input 表示原有的字符串
+   </script>
+</head>
+<body>
+
+</body>
+</html>

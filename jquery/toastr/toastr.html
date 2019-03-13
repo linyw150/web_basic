@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link href="2.1.2/toastr.min.css" rel="stylesheet" type="text/css"/>
+    <title>huhx</title>
+</head>
+<body>
+<button id="button1">Button1</button>
+<button id="button2">Button2</button>
+<button id="button3">Button3</button>
+<!--
+
+toastr.options = {
+        closeButton: false,                                // 是否显示关闭按钮，（提示框右上角关闭按钮）
+        debug: false,                                      // 是否使用deBug模式
+        progressBar: true,                                 // 是否显示进度条，（设置关闭的超时时间进度条）
+        positionClass: "toast-bottom-center",              // 设置提示款显示的位置
+        onclick: null,                                     // 点击消息框自定义事件
+        showDuration: "300",                               // 显示动画的时间
+        hideDuration: "1000",                              //  消失的动画时间
+        timeOut: "2000",                                   //  自动关闭超时时间
+        extendedTimeOut: "1000",                           //  加长展示时间
+        showEasing: "swing",                               //  显示时的动画缓冲方式
+        hideEasing: "linear",                              //   消失时的动画缓冲方式
+        showMethod: "fadeIn",                              //   显示时的动画方式
+        hideMethod: "fadeOut"                              //   消失时的动画方式
+    };
+
+
+-->
+<script type="text/javascript" src="../jslib/jquery-1.11.3.js" ></script>
+<script type="text/javascript" src="2.1.2/toastr.min.js" ></script>
+<script type="text/javascript">
+    $('#button1').click(function () {
+        toastr.options = {
+            closeButton: false,
+            debug: false,
+            progressBar: false,
+            positionClass: "toast-top-center",
+            onclick: null,
+            showDuration: "300",
+            hideDuration: "1000",
+            timeOut: "5000",
+            extendedTimeOut: "1000",
+            showEasing: "swing",
+            hideEasing: "linear",
+            showMethod: "fadeIn",
+            hideMethod: "fadeOut"
+        };
+        toastr.info("hello world.");
+    });
+
+    $('#button2').click(function () {
+        toastr.error("hello world.");
+    });
+    $('#button3').click(function () {
+        toastr.clear();
+    });
+</script>
+</body>
+</html>

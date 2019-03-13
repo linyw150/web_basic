@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>我的</title>
+    <link rel="stylesheet" type="text/css" href="../../uclbrt/ulite/ulite.css">
+    <link href="../../uclbrt/css/bootstrap.css" rel="stylesheet">
+    <link href="../../run/src/OrderPage/order.css" rel="stylesheet">
+    <link href="../../run/src/common.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/jslib/toastr/2.1.2/toastr.min.css">
+
+
+    <!--[if lt IE 9]>
+    <script src="../../jslib/html5shiv/html5shiv.min.js"></script>
+    <script src="../../jslib/html5shiv/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="doc" class="container">
+        <div id="doc-header" class="navbar-cart">
+            <a href="/view/OrderPage/order.html" class="back-home info-back"></a>
+            <a href="javascript:void(0);" class="back-home img-back hidden"></a>
+            <div class="navbar-title">订单详情</div>
+            <div class="compile info-compile"></div>
+        </div>
+    <div id="doc-body" class="hidden">
+        <div class="nowrap-color"></div>
+        <div class="order-status-content">
+            <div class="order-status-left">订单状态：</div>
+            <div class="order-status">222</div>
+        </div>
+        <div class="nowrap-color"></div>
+        <div class="personage-info-content">
+            <div class="personage-tip">收货人信息：</div>
+            <div class="personage-info">
+                <div class="name"></div>
+                <div class="number"></div>
+            </div>
+            <div class="personage-address nowrap-content">北京北京市东城区333</div>
+        </div>
+        <div class="store-container">
+            <div class="store-head">
+                <div class="store-name"></div>
+                <div class="store-status"></div>
+            </div>
+            <!--商品列表-->
+            <div class="store-goods"></div>
+            <div class="store-foot">
+                <div class="store-pay">
+                    <span class="expressfee"></span>
+                </div>
+                <div class="store-check-details">
+                    <span>运费</span>
+                </div>
+            </div>
+            <div class="store-foot">
+                <div class="store-pay">
+                    <span class="pay payment">200</span>
+                </div>
+                <div class="store-check">
+                    <span class="payment-status">需付款</span>
+                </div>
+            </div>
+            <div class="store-operation ">
+                <!--待收货的可以查看物流-->
+                <div class="operation-list hidden">
+                    <div class="operation-check">查看物流</div>
+                </div>
+                <!--所以得订单都可以联系卖家-->
+                <a class="operation-list contact hidden">
+                    <div class="operation-contact">联系卖家</div>
+                </a>
+            </div>
+            <div class="order-info-content">
+                <div class="order-info-list">
+                    <div class="order-info-left">订单编号：</div>
+                    <div class="order-info-right store-serial nowrap-content"></div>
+                </div>
+                <div class="order-info-list">
+                    <div class="order-info-left">下单时间：</div>
+                    <div class="order-info-right store-place-time nowrap-content"></div>
+                </div>
+                <div class="order-info-list">
+                    <div class="order-info-left">付款时间：</div>
+                    <div class="order-info-right store-pay-time nowrap-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="noLogining" class="hidden">
+        <a href="/view/PublicPage/login.html" class="theme-text">尚未登录，请点击这里登录</a>
+    </div>
+</div>
+<script type="text/html" id="templateGoodsList">
+    <div class="store-goods-list">
+        <div class="goods-img-content">
+            <div class="goods-picture">
+                <div class="goods-picture-cover"></div>
+            </div>
+        </div>
+        <div class="goods-represent">
+            <div class="represent-top">
+                <div class="represent-dec"></div>
+                <div class="represent-price"></div>
+            </div>
+            <div class="represent-foot">
+                <div class="represent-model">
+                    <span>型号：</span><span class="model">无型号</span>
+                </div>
+                <div class="sum">
+                    <span>x</span><span class="scalar"></span>
+                </div>
+            </div>
+        </div>
+        <!--退款详情或申请退款-->
+        <div class="operation-refund-content operation-refund hidden"></div>
+
+        <div class="operation-service-content operation-service hidden"></div>
+    </div>
+</script>
+<div id="loadingContainer" class="hidden">
+    <div id="loading">
+        <div class="cssload-loader">
+            <div class="cssload-inner cssload-one"></div>
+            <div class="cssload-inner cssload-two"></div>
+            <div class="cssload-inner cssload-three"></div>
+        </div>
+    </div>
+ </div>
+</body>
+<script src="../../jslib/jquery/1.11.2/jquery.min.js"></script>
+<script src="../../jslib/bookstrap/bootstrap.js"></script>
+<script src="/uclbrt/ulite/ulite.js"></script>
+<script type="text/javascript" src="/jslib/toastr/2.1.2/toastr.min.js"></script>
+<script type="text/javascript" src="../../jslib/upload/hammer.min.js"></script>
+<script type="text/javascript" src="../../jslib/upload/iscroll-zoom-min.js"></script>
+<script type="text/javascript" src="../../jslib/upload/lrz.all.bundle.js"></script>
+<script type="text/javascript" src="../../jslib/upload/PhotoClip.js"></script>
+<script  type="text/javascript" src="../../run/src/common_zh_cn.js"></script>
+<script  type="text/javascript" src="../../run/src/common.js"></script>
+<script src="../../run/src/OrderPage/orderDetail.js"></script>
+
+</html>

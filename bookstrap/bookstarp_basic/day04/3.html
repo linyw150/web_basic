@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title></title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container">
+  <h1>jQuery插件——警告框</h1>
+
+  <div class="alert alert-danger alert-dismissible fade in">
+    <span class="close" data-dismiss="alert">&times;</span>
+    <p>
+      <span class="glyphicon glyphicon-alert"></span>
+      警告：没有更多的好友消息了。
+    </p>
+  </div>
+  <div class="alert alert-success">
+    <p>
+      <span class="glyphicon glyphicon-alert"></span>
+      警告：没有更多的好友消息了。
+    </p>
+  </div>
+  <div class="alert alert-warning">
+    <p>
+      <span class="glyphicon glyphicon-alert"></span>
+      警告：没有更多的好友消息了。
+    </p>
+  </div>
+  <div class="alert alert-info">
+    <p>
+      <span class="glyphicon glyphicon-alert"></span>
+      警告：没有更多的好友消息了。
+    </p>
+  </div>
+
+  <h1>模态(modal)弹出框</h1>
+  <a class="btn btn-success" href="#mymodal1" data-toggle="modal">LOGIN</a>
+  <button class="btn btn-info" type="button" data-toggle="modal" data-target="#mymodal2">REGISTER</button>
+</div>
+
+<!--模态弹出框推荐写在body的最后——fixed定位-->
+<div id="mymodal1" class="modal">   <!--半透明的黑色遮罩层-->
+  <div class="modal-dialog"> <!--宽/高/定位-->
+    <div class="modal-content"> <!--边框/背景色/阴影-->
+      <div class="modal-header">头部</div>
+      <div class="modal-body">主体</div>
+      <div class="modal-footer">尾部</div>
+    </div>
+  </div>
+</div>
+
+<!--模态弹出框推荐写在body的最后——fixed定位-->
+<div id="mymodal2" class="modal fade">   <!--半透明的黑色遮罩层-->
+  <div class="modal-dialog">        <!--宽/位置-->
+    <div class="modal-content">     <!--背景色/边框-->
+      <div class="modal-header">
+        <span class="close" data-dismiss="modal">&times;</span>
+        <h3 class="modal-title">User Register</h3>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="form-group">
+            <label for="uname">用户名：</label>
+            <input class="form-control" id="uname" type="text">
+          </div>
+          <div class="form-group">
+            <label for="upwd">密码：</label>
+            <input class="form-control" id="upwd" type="text">
+          </div>
+
+          <input class="btn btn-success" type="button" value="提交">
+          <input class="btn btn-info" type="button" value="重置">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <input class="btn btn-success" type="button" value="提交">
+        <input class="btn btn-danger" data-dismiss="modal" type="button" value="关闭">
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  (function () {
+    var s = document.createElement("script");
+    s.onload = function () {
+      bootlint.showLintReportForCurrentDocument([]);
+    };
+    s.src = "js/bootlint.js";
+    document.body.appendChild(s)
+  })();
+</script>
+</body>
+</html>

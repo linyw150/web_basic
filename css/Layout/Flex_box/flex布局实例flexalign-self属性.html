@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style type="text/css">
+
+        .first-face {
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: row;/*flex-direction属性决定主轴的方向（即项目的排列方向）。*/
+            justify-content: space-between;/*属性定义了项目在主轴上的对齐方式。*/
+
+        }
+
+       /*  align-self属性允许单个项目有与其他项目不一样的对齐方式，
+       可覆盖align-items属性。默认值为auto，
+       表示继承父元素的align-items(align-items属性定义项目在交叉轴上如何对齐。)属性，
+       如果没有父元素，则等同于stretch。
+
+       */
+
+        .p1{
+            flex-grow: 1;
+            border: 1px solid #2858ff;
+        }
+        .p2 {
+            flex-grow: 1;
+            border: 1px solid #66ff6d;
+        }
+        .p3 {
+            flex-grow: 1;
+            border: 1px solid #ffff00;
+            align-self:flex-end;
+        }
+    </style>
+</head>
+<body>
+<!--
+https://blog.csdn.net/zxy9602/article/details/53138564-->
+<div class="first-face">
+    <span class="p1">1</span>
+    <span class="p2">2</span>
+    <span class="p3">3</span>
+</div>
+</body>
+</html>

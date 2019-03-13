@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .parent1 {
+            width: 400px;
+            height: 200px;
+            background: #faa;
+        }
+        .parent2 {
+            width: 400px;
+            height: 200px;
+            background: #afa;
+            /*border-top: 1px solid #000;*/
+            /*padding-top: 1px;*/
+            /*overflow: hidden;*/
+        }
+        .parent2:before {
+            content: ' ';
+            display: table;
+        }
+        .child2 {
+            width: 200px;
+            height: 100px;
+            background: #aaf;
+            margin-top: 20px;
+        }
+        p:before {
+            content: '子曰:';
+            color: red;
+            margin-right: 5px;
+            display: inline-block;
+        }
+        p:after {
+            content: '——摘自论语';
+            color: #aaa;
+            font-style: italic;
+        }
+        hr {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    a<table></table>b
+    <h1>第一个子元素的margin-top越界问题</h1>
+
+    <div class="parent1"></div>
+    <div class="parent2">
+        <div class="child2"></div>
+    </div>
+
+
+    <hr>
+    <p>三人行必有我师</p>
+    <p>学而时习之不亦说乎</p>
+    <p>有朋自远方来不亦乐乎</p>
+
+
+<br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

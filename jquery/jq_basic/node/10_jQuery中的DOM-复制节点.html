@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的DOM-复制节点</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+
+ <body>
+  <button>点我</button>
+  <p>这是一个段落.</p>
+  <script>
+	/*
+	$("button").click(function(){
+		alert("xxx");
+	});
+	// 复制button按钮,将其追加到p标签中
+	$("button").clone(true).appendTo($("p"));
+	*/
+
+	// DOM
+	var btn = document.getElementsByTagName("button")[0];
+	var copy = btn.cloneNode(true);
+	var p = document.getElementsByTagName("p")[0];
+	p.appendChild(copy);
+  </script>
+ </body>
+</html>

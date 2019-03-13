@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .anim_transition {
+            width: 100px;
+            height: 70px;
+            background-color: green;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            transition: all 2s linear;
+        }
+        .anim_transition:hover {
+            width: 150px;
+            height: 105px;
+            background-color: #000000;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+<div id="matrixBox" class="anim_transition">css3过度</div>
+<!--
+transition: width 2s, height 2s, transform 2s linear 2s
+表示同时过度宽度  高度 和 transform 过渡时间为2秒 过度方式为匀速 延时2秒开始过渡。;
+
+
+transition-property　　 指定过渡的性质，(如：background属性，默认值为all)
+transition-duration　 　指定当前过渡的持续时间
+transition-timing-function　　延迟触发过渡时间
+transition-delay　　　　指定过渡类型(有：linear | ease | ease-in | ease-out | ease-in-out)
+
+W3C标准中对CSS3的transition是这样描述的：
+css的transition允许css的属性值在一定的时间区域内平滑的过渡。
+这种效果可以在鼠标单击 获得焦点 被点击活着对元素的任何改变中触发，
+并圆滑的以动画效果改变CSS的属性值。
+https://www.cnblogs.com/huanying2000/p/6215472.html
+https://blog.csdn.net/XIAOZHUXMEN/article/details/52003135
+-->
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        function strMapToJson(strMap) {
+            return JSON.stringify(strMapToObj(strMap));
+        }
+
+        let myMap = new Map().set('yes', true).set('no', false);
+        strMapToJson(myMap)
+        // '{"yes":true,"no":false}'
+    </script>
+    <script>
+        function jsonToStrMap(jsonStr) {
+            return objToStrMap(JSON.parse(jsonStr));
+        }
+
+        jsonToStrMap('{"yes": true, "no": false}')
+        // Map {'yes' => true, 'no' => false}
+    </script>
+
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title></title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container">
+  <h1>组件——导航</h1>
+
+  <h2>标签页式导航</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#">十元套餐</a></li>
+    <li ><a data-toggle="tab" href="#">二十元套餐</a></li>
+    <li><a data-toggle="tab" href="#">三十元套餐</a></li>
+  </ul>
+  <br><br>
+  <ul class="nav nav-tabs nav-justified">
+    <li><a data-toggle="tab" href="#">十元套餐</a></li>
+    <li class="active"><a data-toggle="tab" href="#">二十元套餐</a></li>
+    <li><a data-toggle="tab" href="#">三十元套餐</a></li>
+  </ul>
+
+  <h2>胶囊式导航</h2>
+  <ul class="nav nav-pills">
+    <li><a data-toggle="tab" href="#">十元套餐</a></li>
+    <li class="active"><a data-toggle="tab" href="#">二十元套餐</a></li>
+    <li><a data-toggle="tab" href="#">三十元套餐</a></li>
+  </ul>
+  <br><br>
+  <ul class="nav nav-pills nav-justified nav-">
+    <li><a data-toggle="tab" href="#">十元套餐</a></li>
+    <li class="active"><a data-toggle="tab" href="#">二十元套餐</a></li>
+    <li><a data-toggle="tab" href="#">三十元套餐</a></li>
+  </ul>
+  <br><br>
+  <h2>竖直放置的胶囊式导航</h2>
+  <ul class="nav nav-pills nav-stacked">
+    <li><a data-toggle="tab" href="#">十元套餐</a></li>
+    <li class="active"><a data-toggle="tab" href="#">二十元套餐</a></li>
+    <li><a data-toggle="tab" href="#">三十元套餐</a></li>
+  </ul>
+
+
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  (function () {
+    var s = document.createElement("script");
+    s.onload = function () {
+      bootlint.showLintReportForCurrentDocument([]);
+    };
+    s.src = "js/bootlint.js";
+    document.body.appendChild(s)
+  })();
+</script>
+</body>
+</html>

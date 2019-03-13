@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style>
+        .wrapper-inline-block {
+            padding: 15px 20px;
+            border: 1px dashed #ff6c60;
+        }
+        .left {
+            width: 120px;
+            border: 5px solid #ddd;
+        }
+        .right {
+            margin-left: 20px;
+            border: 5px solid #ddd;
+        }
+        .wrapper-inline-block {
+            box-sizing: content-box;
+            font-size: 0;    // 消除空格的影响
+        }
+
+        .wrapper-inline-block .left,.wrapper-inline-block .right {
+            display: inline-block;
+            vertical-align: top;    // 顶端对齐
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .wrapper-inline-block .right {
+            width: calc(100% - 140px);
+        }
+    </style>
+</head>
+<body>
+<body>
+<!--https://segmentfault.com/a/1190000010698609-->
+
+<div class="wrapper-inline-block" id="wrapper">
+    <div class="left">
+        左边固定宽度，高度不固定 </br> </br></br></br>高度有可能会很小，也可能很大。
+    </div>
+    <div class="right">
+        这里的内容可能比左侧高，也可能比左侧低。宽度需要自适应。</br>
+        基本的样式是，两个div相距20px, 左侧div宽 120px
+    </div>
+</div>
+
+<!--缺点:
+
+需要知道左侧盒子的宽度，两个盒子的距离，还要设置各个元素的box-sizing
+需要消除空格字符的影响
+需要设置vertical-align: top满足顶端对齐。-->
+</body>
+</body>
+</html>

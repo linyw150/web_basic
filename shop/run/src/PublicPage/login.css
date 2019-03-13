@@ -1,0 +1,112 @@
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12 {
+  padding: 0;
+}
+#doc-body ul {
+  height: 0.68rem;
+}
+#doc-body ul li {
+  height: 0.68rem;
+  line-height: 0.68rem;
+}
+#doc-body ul li a {
+  height: 0.68rem;
+  line-height: 0.68rem;
+  text-align: center;
+}
+#doc-body .nowrap-color {
+  height: 0.2rem;
+}
+.nav > li > a {
+  padding: 0;
+}
+.btn-primary.btn-raised {
+  background: #DF3E0F;
+  border: none;
+  box-shadow: none ;
+}
+.btn-primary.btn-raised:focus {
+  background: #DF3E0F;
+  border: none ;
+  box-shadow: none ;
+}
+.btn,
+.btn-primary {
+  height: 0.88rem;
+  line-height: 0.88rem;
+  font-size: 14px;
+}
+#login-container,
+#quick-container {
+  padding: 0 0.32rem;
+}
+.form-sm {
+  padding: 0;
+  padding-left: 0.1rem;
+}
+.form-horizontal .control-label,
+.form-horizontal .form-group-sm .control-label,
+.form-horizontal .form-group .form-control {
+  height: 0.86rem;
+  line-height: 0.86rem;
+  font-size: 13px;
+}
+.register-btn {
+  height: 0.82rem;
+  line-height: 0.82rem;
+  float: left;
+  font-size: 14px;
+}
+.register-btn a {
+  height: 0.82rem;
+}
+.forget-btn {
+  height: 0.82rem;
+  line-height: 0.82rem;
+  float: right;
+  font-size: 14px;
+}
+.forget-btn a {
+  height: 0.82em;
+}
+.form-group {
+  margin-bottom: 0;
+}
+.group-submit {
+  margin-top: 0.44rem;
+}
+.border-show:focus {
+  box-shadow: none;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: red;
+  border: 2px solid #ffffff;
+  border-bottom: 2px solid red;
+}
+.nav-tabs > li > a {
+  color: #000000;
+  border: 2px solid #ffffff;
+}
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:hover {
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+}
+.row .register-btn > a,
+.row .forget-btn > a {
+  color: #000000;
+  text-decoration: none;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style>
+        div.box{width:300px;padding:20px;margin:20px;border:4px dashed #ccc;}
+        div.box span{color:#999;font-style:italic;}
+        div.content{width:250px;margin:10px 0;padding:20px;border:2px solid #ff6666;}
+        li{padding:10px;}
+        .red{color:red;}
+    </style>
+
+
+</head>
+<body>
+<div class="box">
+    <span>点击li元素设置红色并去除其余所有同胞元素的红色样式：</span>
+    <div class="content">
+        <li class="red">栗子</li>
+        <li class="red">李子</li>
+        <li class="red">梨子</li>
+        <li class="red">荔枝</li>
+    </div>
+</div>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+    $(function(){
+        $("li").click(function() {
+            $(this).addClass('red');    // 设置被点击元素为红色
+            $(this).siblings('li').removeClass('red'); // 去除所有同胞元素的红色样式
+        })
+    })
+</script>
+
+</body>
+</html>

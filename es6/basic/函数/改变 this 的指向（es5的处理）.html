@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        var name = "windowsName";
+        var a = {
+            name : "Cherry",
+            func1: function () {
+                console.log(this.name)
+            },
+            func2: function () {
+                var _this = this;
+                setTimeout( function() {
+                    _this.func1()
+                },100);
+            }
+        };
+        a.func2()  // Cherry
+
+        //，在 func2 中，首先设置 var _this = this;，这里的 this 是调用 func2 的对象 a，为了防止在 func2 中的 setTimeout 被 window 调用而导致的在 setTimeout 中的 this 为 window。我们将 this(指向变量 a) 赋值给一个变量 _this，
+        // 这样，在 func2 中我们使用 _this 就是指向对象 a 了。
+    </script>
+</head>
+<body>
+
+</body>
+</html>

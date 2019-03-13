@@ -1,0 +1,125 @@
+body{
+    font-size: 10px;
+    /*字体颜色*/
+    color: #333;
+    /* 设置body为灰，也可以设置header,content,tabs 每个div设置为灰色*/
+    background: #ffffff;
+    font-family: Arial,sans-serif;
+}
+/* 不同浏览器 html元素都有不同的margin和padding，所以要设置margin为0，padding为0*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container{
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+}
+#header{
+    height: 50px;
+}
+#header a,#header span{
+    width: 47px;
+    height: 50px;
+    display: block;
+    float: left;
+}
+#header div{
+    width: 500px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    text-align: center;
+}
+#header a {
+   background: url("../image/left.png") no-repeat center ;
+}
+.nowrap-color{
+    background: #f2f2f2;
+    height: 14px;
+}
+
+
+#tabs{
+    height: 50px;
+}
+#tabs div {
+    width: 300px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+#tabs div a{
+    text-decoration: none;
+    display: block;
+    color: #000000;
+}
+
+
+
+.content{
+    margin: 20px 70px;
+}
+#loginContent{
+    display: none;
+}
+
+.line {
+    border-bottom: 1px solid #f2f2f2 ;
+}
+.line span{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+}
+.content .line{
+    height: 60px;
+}
+.line .text{
+    line-height: 50px;
+    width: 150px;
+}
+.line .ipt{
+    width: 300px;
+}
+.line input{
+    border: none;
+    text-shadow: none;
+    outline: none;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    font-size:10px;
+    color: #cecfce;
+}
+.login-btn{
+    margin-top: 50px;
+}
+.login-btn button{
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: rgba(223, 63, 17, 0.93);
+    border: none;
+    color: #ffffff;
+}
+
+.register-link{
+    height: 60px;
+}
+.register-link a{
+    width:50px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+}
+.register-btn{
+    float: left;
+}
+.forget-btn{
+    float: right;
+}
+
+
+

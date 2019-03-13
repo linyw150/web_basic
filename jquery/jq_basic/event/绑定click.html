@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<div id='div1'>
+    <div id='div2'>a</div>
+    <div id='div3' class='a'>b</div>
+    <div id='div4'>c</div>
+    <input value="1234" type="button" class="inp-1">
+
+</div>
+
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    $(function(){
+        var btn = $("#div1");
+        btn.on('click','.inp-1',function(e){
+            alert(1);
+        })
+
+    })
+</script>
+
+</html>

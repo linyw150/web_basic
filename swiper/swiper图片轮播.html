@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./swiper.min.css">
+    <script src="./swiper.min.js"></script>
+    <style type="text/css">
+        .swiper-container {
+            width: 900px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img  src="image/11.jpg"></div>
+        <div class="swiper-slide" ><img  src="image/22.jpg"></div>
+        <div class="swiper-slide"><img   src="image/33.jpg"></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+
+</div>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+        pagination : '.swiper-pagination',
+        autoplay: 1000,//可选选项，自动滑动
+    })
+</script>
+
+</body>
+</html>

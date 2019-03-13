@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的事件-事件切换</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+  <style>
+	.d1 {
+		width : 200px;
+		height : 50px;
+		border : solid 1px black;
+		background : yellow;
+	}
+	.d2 {
+		width : 200px;
+		height : 200px;
+		border : solid 1px black;
+		background : pink;
+		display : none;
+	}
+  </style>
+ </head>
+
+ <body>
+  <div class="d1">
+	<h3>什么是jQuery?</h3>
+  </div>
+  <div class="d2">
+	<p>jQuery是一个轻量级的JS库.</p>
+  </div>
+  <script>
+	/*
+	 * 鼠标悬停事件
+	 * * mouseover
+	 * * mouseout
+	 */
+	/*
+	$(".d1>h3").mouseover(function(){
+		$(".d2").show(1000);
+	}).mouseout(function(){
+		$(".d2").hide(1000);
+	});
+	*/
+
+	$(".d1>h3").hover(function(){
+		// onmouseover
+		$(".d2").show(1000);
+	},function(){
+		// onmouseout
+		$(".d2").hide(1000);
+	});
+
+
+	
+  </script>
+ </body>
+</html>

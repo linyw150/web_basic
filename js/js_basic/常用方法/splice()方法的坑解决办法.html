@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       var arr =  new Array(1,2,3,3,3,5)
+       var delete_num = 3;//删除的数字
+       var amount = 2;//删除的个数
+       var loop = arr.length;/*循环次数*/
+       for(var i=0;i<loop;i++){
+           if(arr[i]==delete_num) {
+               arr.splice(i,amount);
+               i = i-1;//i向前移动一位
+               loop=loop-amount;//改变循环次数
+           }
+       }
+       console.log(arr)//结果为（1,2,3,5）
+
+   </script>
+</head>
+<body>
+
+
+</body>
+</html>

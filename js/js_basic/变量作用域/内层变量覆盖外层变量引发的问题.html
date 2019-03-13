@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        var tmp = new Date();
+
+        function f() {
+            console.log(tmp);
+            if (false) {
+                var tmp = 'hello world';
+            }
+        }
+        f(); // undefined
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

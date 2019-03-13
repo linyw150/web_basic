@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title></title>
+  <link href="../qrmaster_ulite.css" rel="stylesheet">
+
+    <!--https://www.cnblogs.com/lvlina/p/6164796.html-->
+</head>
+<body>
+
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    新增集群
+</button>
+
+<!--如果你不需要模态框弹出时的动画效果（淡入淡出效果），删掉 .fade 类即可。
+为 .modal 添加 role="dialog"，用于指定模态框为对话框。
+
+当你点击屏幕灰色背景的时候，模态框是会关闭的，
+如果你不希望这种情况出现，那么你可以在模态框的最外围代码当中添加一条属性：data-backdrop="static"。
+-->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>One fine body…</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="../jquery-1.11.3.js"></script>
+<script src="../ulite.js"></script>
+</body>
+</html>

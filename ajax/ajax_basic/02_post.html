@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>POST方式的Ajax</title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+  <input type="button" value="异步" id="btn">
+  <script>
+	var btn = document.getElementById("btn");
+	btn.onclick = function(){
+		// 实现Ajax的异步交互
+		var xhr = getXhr();
+		xhr.open("post","02.php");
+		/*
+		 * 如果Ajax使用的是POST请求类型的话
+		 * * 必须要在send()方法调用之前
+		 * * 使用setRequestHeader(key,value)方法
+		 *   * 该方法用于设置请求头
+		 */
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
+		xhr.send("user=zhangwuji");
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				if(xhr.status == 200){
+					var data = xhr.responseText;
+					console.log(data);
+				}
+			}
+		}
+	}
+	function getXhr(){
+		var xhr = null;
+		if(window.XMLHttpRequest){
+			xhr = new XMLHttpRequest();
+		}else{
+			xhr = new ActiveXObject("Microsoft.XMLhttp");
+		}
+		return xhr;
+	}
+  </script>
+ </body>
+</html>

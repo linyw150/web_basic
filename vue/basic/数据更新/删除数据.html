@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <script src="https://unpkg.com/vue@2.3.3/dist/vue.js"></script>
+    <style>
+        li:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="form-group">
+        <label>name:</label>
+        <input type="text" name="" v-model='newitems.name'>
+    </div>
+    <div class="form-group">
+        <label>age:</label>
+        <input type="text" name="" v-model='newitems.age'>
+    </div>
+    <div class="form-group">
+        <label>sex:</label>
+        <select v-model='newitems.sex'>
+            <option value="男">男</option>
+            <option value="女">女</option>
+        </select>
+
+    </div>
+    <div class="form-group">
+        <label></label>
+        <button v-on:click = 'addPerson'>Create</button>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="item in items"><!--v-for-->
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.sex}}</td>
+            <td><button @click="deletePerson($index)">Delete</button></td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+
+</body>
+<script src="vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            newitems:{
+                name:'',
+                age:'1',
+                sex:'女'
+            },//newitems默认的
+            items:[{
+                name:'lily',
+                age:2,
+                sex:'女'
+            },{
+                name:'lily',
+                age:3,
+                sex:'女'
+            },{
+                name:'lily',
+                age:4,
+                sex:'女'
+            },{
+                name:'lily',
+                age:5,
+                sex:'女'
+            },{
+                name:'lily',
+                age:6,
+                sex:'女'
+            }]
+        },
+        methods:{
+            addPerson:function(){
+                this.items.push(this.newitems)//往items中添加newitems
+                this.newitems = {name:'',age:'18',sex:'女'}
+            },//添加元素
+            deletePerson: function(index){
+                // 删一个数组元素
+                let len = this.btn
+                this.items.splice(index,1);
+            }
+        }
+    })
+</script>
+</html>

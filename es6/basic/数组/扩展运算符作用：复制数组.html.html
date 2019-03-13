@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       //数组是复合的数据类型，直接复制的话，只是复制了指向底层数据结构的指针，
+       // 而不是克隆一个全新的数组。
+       const a1 = [1, 2];
+       const a2 = a1;
+
+       a2[0] = 2;
+       a1 // [2, 2]
+   </script>
+    <script>
+        //ES5
+        const a1 = [1, 2];
+        const a2 = a1.concat();
+
+        a2[0] = 2;
+    </script>
+    <script>
+        //ES6
+        const a1 = [1, 2];
+        // 写法一
+        const a2 = [...a1];
+        // 写法二
+        const [...a2] = a1;
+    </script>
+    <script>
+        const arr1 = ['a', 'b'];
+        const arr2 = ['c'];
+        const arr3 = ['d', 'e'];
+
+        // ES5 的合并数组
+        arr1.concat(arr2, arr3);
+        // [ 'a', 'b', 'c', 'd', 'e' ]
+
+        // ES6 的合并数组
+        [...arr1, ...arr2, ...arr3]
+        // [ 'a', 'b', 'c', 'd', 'e' ]
+    </script>
+</head>
+<body>
+
+</body>
+</html>

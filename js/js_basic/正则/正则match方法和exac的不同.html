@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       var str = 'abc123cba456aaa789';
+       var reg = /\d+/g;
+       console.log(reg.exec(str));
+       // ["123", index: 3, input: "abc123cba456aaa789"]
+       console.log(str.match(reg));
+       // ["123", "456", "789"]
+//       当全局匹配时，match方法会一次性把符合匹配条件的字符串全部捕获到数组中,
+   </script>
+</head>
+<body>
+
+</body>
+</html>

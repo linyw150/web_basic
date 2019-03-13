@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       var arr = [1, 2, 3, 3, 4, 4, 5, 5, 6, 1, 9, 3, 25, 4];
+       var arr2 = []
+       params = {}
+       for(var i=0;i<arr.length;i++){
+           params[arr[i]] = numAccount(arr[i])
+       }
+       for(x in params){//params是object，所以x是key
+           arr2.push(x)
+       }
+       //传入的数字有多个值
+       function numAccount(x){
+           var account = 0
+           for(var i=0;i<arr.length;i++){
+               if(arr[i]==x)account +=1;
+           }
+           return account
+       }
+   </script>
+</head>
+<body>
+
+
+</body>
+</html>

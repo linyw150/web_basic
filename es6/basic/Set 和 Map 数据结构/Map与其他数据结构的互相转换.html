@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        const myMap = new Map()
+            .set(true, 7)
+            .set({foo: 3}, ['abc']);
+        [...myMap]
+        // [ [ true, 7 ], [ { foo: 3 }, [ 'abc' ] ] ]
+    </script>
+    <script>
+        const myMap = new Map()
+                .set(true, 7)
+                .set({foo: 3}, ['abc']);
+        [...myMap]
+        // [ [ true, 7 ], [ { foo: 3 }, [ 'abc' ] ] ]
+    </script>
+    <script>
+        //Map 转为对象
+        function strMapToObj(strMap) {
+            let obj = Object.create(null);
+            for (let [k,v] of strMap) {
+                obj[k] = v;
+            }
+            return obj;
+        }
+
+        const myMap = new Map()
+                .set('yes', true)
+                .set('no', false);
+        strMapToObj(myMap)
+        // { yes: true, no: false }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+</html>

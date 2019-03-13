@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery动画效果-滑动效果</title>
+  <meta charset="utf-8" />
+  <script src="scripts/jquery-1.11.3.js"></script>
+  <style>
+	div {
+		width : 200px;
+		height : 200px;
+		border : solid 1px black;
+		background : pink;
+		display : none;
+	}
+  </style>
+ </head>
+
+ <body>
+  <button>slideDown</button>
+  <button>slideUp</button>
+  <br><br>
+  <div></div>
+  <script>
+	$("button:first").click(function(){
+		/*
+		 * slideDown(speed,callback)方法 - 向下滑动
+		 * * API帮助文档 - 不允许不传递参数的
+		 *   * 经过实际测试,可以不传递参数
+		 *   * jQuery底层代码,指定默认时长
+		 * * 参数
+		 *   * speed - 设置动画执行的时长
+		 *   * callback - 动画执行完毕后执行的函数
+		 */
+		$("div").slideDown(3000);
+	});
+	$("button:last").click(function(){
+		$("div").slideUp(3000);
+	});
+  </script>
+ </body>
+</html>

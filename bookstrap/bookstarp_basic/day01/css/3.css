@@ -1,0 +1,47 @@
+body {
+    font-family: "Microsoft YaHei";
+    margin: 0px;
+}
+
+@media screen and (min-width: 990px) {/*绿色*/
+    /*屏幕宽度大于990*/
+    h1 {
+        font-size: 3em;
+        border-bottom: 3px solid #ccc;
+    }
+    .box {
+        border: 1px solid #3a3;
+        background: #dfd;
+        color: #282;
+        padding: 8px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 989px) {/*红色*/
+    /*屏幕宽度768px~990px之间*/
+    h1 {
+        font-size: 2em;
+        border-bottom: 2px solid #ccc;
+    }
+    .box {
+        border: 1px solid #a33;
+        background: #fdd;
+        color: #822;
+        padding: 6px;
+    }
+}
+@media screen and (max-width: 767px) {/*蓝色*/
+    /*屏幕宽度小于768px*/
+    /*h1 {*/
+        /*font-size: 1.5em;*/
+        /*border-bottom: 2px solid #ccc;*/
+    /*}*/
+    h1 {
+        display: none;
+    }
+    .box {
+        border: 1px solid #33a;
+        background: #ddf;
+        color: #228;
+        padding: 4px;
+    }
+}

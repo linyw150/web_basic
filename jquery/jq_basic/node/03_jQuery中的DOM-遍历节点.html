@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的DOM-遍历节点</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+
+ <body>
+  <ul id="city">
+	<li id="bj" name="beijing">北京
+		<ul>
+			<li>海淀区</li>
+			<li>朝阳区</li>
+			<li>大兴区</li>
+		</ul>
+	</li>
+	<li id="tj" name="tianjin">天津</li>
+	<li id="nj" name="nanjing">南京</li>
+	<li id="sh" name="shanghai">上海</li>
+	<li id="cq" name="chongqing">重庆</li>
+  </ul>
+  <script>
+	// 1. 获取北京节点的父节点
+	//console.log($("#bj").parent().attr("id"));
+	// 2. 获取id为city节点的所有子节点的个数
+	//console.log($("#city").children().length);
+	// 3. 获取南京节点的上一个兄弟节点和下一个兄弟节点
+	//console.log($("#nj").prev().attr("name"));
+	//console.log($("#nj").next().attr("name"));
+	// 4. 获取南京节点的所有兄弟节点的个数
+	console.log($("#nj").siblings().length);
+	console.log($("#nj~li").length);
+	// 5. 获取id为city节点下所有li元素的个数(后代节点)
+	//console.log($("#city").find("li").length);
+  </script>
+ </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html s>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <title>我的</title>
+    <link rel="stylesheet" type="text/css" href="/uclbrt/ulite/ulite.css">
+    <link href="/uclbrt/css/bootstrap.css" rel="stylesheet">
+    <link href="/run/src/common.css" rel="stylesheet">
+    <link href="/run/src/cart/confirm.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/jslib/toastr/2.1.2/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="/jslib/swiper/swiper.min.css">
+
+    <!--[if lt IE 9]>
+    <script src="/jslib/html5shiv/html5shiv.min.js"></script>
+    <script src="/jslib/html5shiv/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="doc" class="container">
+        <div id="doc-header" class="navbar-cart">
+            <a href="/view/details/details.html" class="back-home info-back"></a>
+            <a href="javascript:void(0);" class="back-home img-back hidden"></a>
+            <div class="navbar-title">确认购买</div>
+            <div class="compile info-compile"></div>
+        </div>
+    <div id="doc-body" >
+        <div class="address-container">
+            <div class="notYet hidden ">请填写收货地址</div>
+            <div class="alreadly hidden">
+                <div class="alreadly-container">
+                    <div class="alreadly_top">
+                        <div class="name"></div>
+                        <div class="number"></div>
+                    </div>
+                    <div class="alreadly_bottom">
+                        <div class="tacitly hidden">[默认]</div>
+                        <div class="address nowrap-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shopOrderList"></div>
+    </div>
+    <div id="doc-foot" class="navbar-fixed-top navbar-fixed-foot container ">
+        <div class="select"></div>
+        <div class="all-pay-container">
+            <div class="all-pay">
+                <span>应付总额：</span><span class="all-price">222</span>
+            </div>
+            <div class='carriage'>共<span class="num">1</span>件商品</div>
+        </div>
+        <div class="accounts" id="pay">
+            <span>提交订单</span>
+        </div>
+    </div>
+ </div>
+<script type="text/html" id="templateOrder">
+    <div class="store-container">
+        <div class="store-head">
+            <div class="store-name"></div>
+        </div>
+        <div class="store-goods"></div>
+        <div class="store-send-content">
+            <div class="store-send">运费</div>
+            <div class="store-send-pay">
+                <span>￥</span><span class="pay"></span>
+            </div>
+        </div>
+        <div class="store-message-content">
+            <div class="store-send">留言</div>
+            <div class="store-message">
+                <input name="" placeholder="给卖家留言"/>
+            </div>
+        </div>
+        <div class="store-foot">
+            <div class="store-pay">
+                <span>合计：</span><span class="pay"></span>
+            </div>
+            <div class="store-check">
+                <span>已选</span><span class="choice">1</span>件商品
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="templateGoodsList">
+    <div class="store-goods-list">
+        <div class="goods-img-content">
+            <div class="goods-picture">
+                <div class="goods-picture-cover"></div>
+            </div>
+        </div>
+        <div class="goods-represent">
+            <div class="represent-top">
+                <div class="represent-dec"></div>
+            </div>
+            <div class="represent-foot">
+                <div class="represent-price">
+                    <span>￥</span><span class="price"></span>
+                </div>
+                <div class="sum">
+                    <span>x</span><span class="scalar">1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="templateOrderEmpty">
+    <div class="centeral-container vertical-middle-block">
+        <div class="centeral-content vertical-middle-block-cell">
+            <div class="col-xs-12 text-center theme-text" >没有选择商品</div>
+        </div>
+    </div>
+</script>
+</body>
+<script src="/jslib/jquery/1.11.2/jquery.min.js"></script>
+<script src="/jslib/bookstrap/bootstrap.js"></script>
+<script src="/uclbrt/ulite/ulite.js"></script>
+<script type="text/javascript" src="/jslib/swiper/swiper.min.js"></script>
+
+<script type="text/javascript" src="/jslib/toastr/2.1.2/toastr.min.js"></script>
+<script type="text/javascript" src="/jslib/upload/hammer.min.js"></script>
+<script type="text/javascript" src="/jslib/upload/iscroll-zoom-min.js"></script>
+<script type="text/javascript" src="/jslib/upload/lrz.all.bundle.js"></script>
+<script type="text/javascript" src="/jslib/upload/PhotoClip.js"></script>
+<script  type="text/javascript" src="/run/src/common_zh_cn.js"></script>
+<script  type="text/javascript" src="/run/src/common.js"></script>
+<script src="/run/src/cart/confirm.js"></script>
+
+</html>

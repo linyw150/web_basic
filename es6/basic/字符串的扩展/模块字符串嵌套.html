@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       // 写法一
+       let str1 = 'return ' + '`Hello ${name}!`';
+       let func1 = new Function('name', str1);
+       console.log(func1('Jack')); // "Hello Jack!"
+       // 写法二
+       let str2 = '(name) => `Hello ${name}!`';
+       let func2 = eval.call(null, str2);
+       console.log(func2('Jack')) // "Hello Jack!"
+   </script>
+</head>
+<body>
+
+</body>
+</html>

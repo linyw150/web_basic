@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>手工实现表单验证</title>
+  <meta charset="utf-8" />
+  <script src="scripts/jquery-1.11.3.js"></script>
+ </head>
+
+ <body>
+  <fieldset>
+	<legend>用户注册页面</legend>
+	<!--
+		在javascript代码中,如何获取form表单
+		* 通过id属性值获取表单
+		* 通过name属性值获取表单
+		* document.forms - 获取当前页面所有表单元素(数组)
+		* document.表单名称
+		<form>元素
+		* id属性 - 表单标识
+		* name属性 - 表单名称
+		* action属性 - 提交表单的地址
+		* method属性 - 请求类型(GET或POST)
+		<form>表单提交的方式
+		* 在表单定义submit按钮
+		* 表单绑定onsubmit事件
+		* <form>元素具有submit()方法
+	-->
+	<form id="myform" name="myform" onsubmit="return formValidator();">
+		<table>
+			<tr>
+				<td>用户名:</td>
+				<td><input type="text" id="user"></td>
+				<!-- 显示提示内容 -->
+				<td><div id="userTip"></div></td>
+			</tr>
+			<tr>
+				<td>密码:</td>
+				<td><input type="password" id="pwd"></td>
+				<!-- 显示提示内容 -->
+				<td><div id="pwdTip"></div></td>
+			</tr>
+			<tr>
+				<td>确认密码:</td>
+				<td><input type="password" id="repwd"></td>
+				<!-- 显示提示内容 -->
+				<td><div id="repwdTip"></div></td>
+			</tr>
+			<tr>
+				<td>email地址:</td>
+				<td><input type="text" id="email"></td>
+				<!-- 显示提示内容 -->
+				<td><div id="emailTip"></div></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" id="rigist" value="注册"></td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+  </fieldset>
+  <script>
+	/*
+	 * 表单验证需求
+	 * * 用户名 - 不能为空,只能输入英文+数字,长度在6-12之间
+	 * * 密码 - 不能为空,只能输入英文,长度在6-8之间
+	 * * 确认密码 - 与密码的要求一致,两次密码输入一致
+	 * * email - 不能为空
+	 *
+	 * 效果
+	 * * 获取焦点事件 - 给出输入提示内容
+	 * * 失去焦点事件 - 完成对应元素的验证
+	 *   * 验证成功 - 给出输入正确提示
+	 *   * 验证失败 - 给出输入错误提示
+	 * * 当提交表单之前,保证表单内所有元素全部验证通过的
+	 */
+	 function userValidator(){
+		var regExp=/^[a-zA-Z0-9]{6,12}$/
+		var $myval=$("#user").val();
+		if($myval==""||$myval==null){
+			$("#userTip").text("用户名不能为空").css({
+				"color":"red",
+				"font-weight":"bold"
+			});
+			return false;
+		}
+		else if(!regExp.test($myval)){
+			$("#userTip").text("用户名格式错误").css({
+				"color":"red",
+				"font-weight":"bold"
+			});
+			return false;
+		}
+		else{
+			$("#userTip").text("用户名输入正确.").css({
+				"color" : "green",
+				"font-weight" : "bold"
+			});
+			return true;
+		}
+	}
+	  function pwdValidator(){
+		var regExp=/^[a-zA-Z0-9]{6,12}$/
+		var $myval=$("#user").val();
+		if($myval==""||$myval==null){
+			$("#pwdTip").text("密码不能为空").css({
+				"color":"red",
+				"font-weight":"bold"
+			});
+			return false;
+		}
+		else if(!regExp.test($myval)){
+			$("#pwdTip").text("密码格式错误").css({
+				"color":"red",
+				"font-weight":"bold"
+			});
+			return false;
+		}
+		else{
+			$("#pwdTip").text("密码输入正确").css({
+				"color" : "green",
+				"font-weight" : "bold"
+			});
+			return true;
+		}
+	}
+	  function repwdValidator(){
+		var regExp=/^[a-zA-Z0-9]{6,12}$/
+		var $myval=$("#repwd").val();
+		var $pwd=$("#pwd").val();
+		if($myval==""||$myval==null){
+			$("#repwdTip").text("密码不能为空").css({
+				"color":"red",
+				"font-weight":"bold"
+			});
+			return false;
+		}else if(!regExp.test($myval)){
+			$("#repwdTip").text("密码格式错误").css({
+				"color":"red",
+				"font-weight":"bold"
+			});
+			return false;
+		}else if($myval!=$pwd){
+			$("#repwdTip").text("密码输入错误").css({
+				"color":"red",
+				"font-weight":"bold"
+			});
+			return false;
+		}
+		else{$("#repwdTip").text("密码输入正确").css({
+				"color":"green",
+				"font-weight":"bold"
+			});
+			return true;
+		}
+	 }
+	 function emailValidator(){
+		var $myval=$("#pwd").val();
+		if($myval==""||$myval==null){
+			$("#emailTip").text("邮箱不能为空").css({
+				"color":"red",
+				"font-weight":"bold"
+			});
+			return false;
+		}else{
+			$("#emailTip").text("密码输入正确").css({
+				"color":"green",
+				"font-weight":"bold"
+			});
+			return true;
+		}
+	 }
+	$("#user").focus(function(){
+		$("#userTip").text("请输入英文或数字，长度在8至12之间").css({
+			"color":"black",
+			"font-weight":"normal"
+		});
+	}).blur(userValidator);
+	$("#pwd").focus(function(){
+		$("#pwdTip").text("请输入英文长度在6至8之间").css({
+			"color":"black",
+			"font-weight":"normal"
+		});
+	}).blur(pwdValidator);
+	$("#repwd").focus(function(){
+		$("#repwdTip").text("请输入英文长度在6至8之间").css({
+			"color":"black",
+			"font-weight":"normal"
+		});
+	}).blur(repwdValidator);
+	$("#email").focus(function(){
+		$("#emailTip").text("请输入邮箱").css({
+			"color":"black",
+			"font-weight":"normal"
+		});
+	}).blur(emailValidator);
+	function formValidator(){
+		// 判断表单内所有元素验证全部通过
+		if(userValidator()&&pwdValidator()&&repwdValidator()&&emailValidator()){
+			alert("表单验证成功!");
+			return true;
+		}else{
+			alert("表单验证失败!");
+			return false;
+		}
+	}
+  </script>
+ </body>
+</html>

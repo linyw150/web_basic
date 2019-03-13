@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery动画效果-显示与隐藏</title>
+  <meta charset="utf-8" />
+  <!--
+	路径 - 绝对路径和相对路径
+	* 绝对路径 - 当前文件位置在哪,路径不变化
+	* 相对路径 - 相对于当前文件的位置的路径
+  -->
+  <script src="scripts/jquery-1.11.3.js"></script>
+  <style>
+	div {
+		width : 200px;
+		height : 200px;
+		border : solid 1px black;
+		background : pink;
+		display : none;
+	}
+  </style>
+ </head>
+
+ <body>
+  <button>显示</button>
+  <button>隐藏</button>
+  <br><br>
+  <div></div>
+  <script>
+	$("button:first").click(function(){
+		/*
+		 * show()方法 - 显示
+		 * * show()无参版本 - 不具有动画效果
+		 * * show(speed,[callback])有参版本 - 具有动画效果
+		 *   * speed - 设置动画执行的时长,单位为毫秒
+		 *     * 三个预定义值 - slow|normal|fast
+		 *   * callback - 当动画执行完毕后的函数
+		 */
+		$("div").show('slow',function(){
+			alert('xxx');
+		});
+	});
+	$("button:last").click(function(){
+		/*
+		 * hide()方法 - 隐藏
+		 * * hide()无参版本 - 不具有动画效果
+		 * * hide(speed,callback)有参版本 - 具有动画效果
+		 *   * speed - 设置动画执行的时长,单位为毫秒
+		 *     * 三个预定义值 - slow|normal|fast
+		 *   * callback - 当动画执行完毕后的函数
+		 */
+		$("div").hide(1000,function(){
+			alert("yyy");
+		});
+	});
+  </script>
+ </body>
+</html>

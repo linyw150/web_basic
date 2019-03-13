@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<!--parent是指取得一个包含着所有匹配元素的唯一父元素的元素集合。
+parents则是取得一个包含着所有匹配元素的祖先元素的元素集合（不包含根元素）。
+可以通过一个可选的表达式进行筛选。
+可以看出parent取的很明确，就是当前元素的父元素；parents则是当前元素的祖先元素。下面列出例子说明：
+
+
+$('p').parent()取到的是div2,div3,div4
+$('p').parent('.a')取到的是div3
+$('p').parent().parent()取到的是div1，这点比较奇特；不过Jquery对象本身的特点决定了这是可行的。
+$('p').parents()取到的是div1,div2,div3,div4
+$('p').parents('.a')取到的是div3
+
+
+https://www.cnblogs.com/myjavawork/articles/1868991.html-->
+
+<div id='div1'>
+    <div id='div2'>a</div>
+    <div id='div3' class='a'>b</div>
+    <div id='div4'>c</div>
+</div>
+
+
+</body>
+<script src="jquery.min.js">
+</script>
+<script>
+    $(function(){
+        console.log($("#div4").parents('.a').text());
+    })
+</script>
+</html>

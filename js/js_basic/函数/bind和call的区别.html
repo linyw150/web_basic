@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        //都是将obj作为上下文的this
+        function func(name,id) {
+            console.log(name,id,this);
+        }
+        //什么也不加
+        func("", "-->"); //---> window
+        //使用bind是 返回改变上下文this后的函数
+        var obj = "Look here";
+        var a = func.bind(obj, "bind", "-->");
+        a(); //bind--->
+        //使用call是 改变上下文this并执行函数
+        var b = func.call(obj, "call", "-->");//call--->
+        //b(); //TypeError: undefined is not a function
+    </script>
+</head>
+<body>
+
+</body>
+</html>

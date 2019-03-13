@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+//        let不允许在相同作用域内，重复声明同一个变量。
+    // 报错
+    function func() {
+        let a = 10;
+        var a = 1;
+    }
+
+    // 报错
+    function func() {
+        let a = 10;
+        let a = 1;
+    }
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

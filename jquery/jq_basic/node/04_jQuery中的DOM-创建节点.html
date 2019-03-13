@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的DOM-创建节点</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+
+ <body>
+  <ul id="city">
+	<li id="bj" name="beijing">北京</li>
+	<li id="tj" name="tianjin">天津</li>
+	<li id="nj" name="nanjing">南京</li>
+	<li id="sh" name="shanghai">上海</li>
+  </ul>
+  <script>
+	// 为id为city节点增加<li id="cq" name="chongqing">重庆</li>
+	// 1. 创建<li id="cq" name="chongqing">重庆</li>
+		// a. 创建<li></li>
+		//var $li = $("<li></li>");
+		// b. 设置属性
+		//$li.attr("id","cq").attr("name","chongqing");
+		// c. 创建文本节点
+		// d. 添加文本节点
+		//$li.text("重庆");
+		//var $li = $("<li id='cq' name='chongqing'>重庆</li>");
+	// 2. 获取id为city节点
+	//var $city = $("#city");
+	// 3. 添加append - appendChild
+	//$city.append($li);
+
+	$("#city").append($("<li id='cq' name='chongqing'>重庆</li>"));
+  </script>
+ </body>
+</html>

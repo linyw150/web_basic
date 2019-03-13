@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style>
+        #div1
+        {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            margin: 100px;
+            border: 1px solid black;
+        }
+        #div2
+        {
+            width:200px;
+            height:50px;
+            background-color:yellow;
+            /* Rotate div */
+            transform:rotate(90deg);
+            -ms-transform:rotate(90deg); /* IE 9 */
+            -webkit-transform:rotate(90deg); /* Safari and Chrome */
+            transform-origin:center;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2"></div>
+</div>
+
+<!--
+在CSS3中transform主要包括以下几种：旋转rotate、扭曲skew、缩放scale和移动translate以及矩阵变形matrix
+
+CSS3 transform-origin 属性(设置旋转元素的基点位置：)
+
+
+https://blog.csdn.net/qq_24189933/article/details/79293870
+-->
+</body>
+</html>

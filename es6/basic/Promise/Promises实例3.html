@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        var sleep = function (time) {
+            return new Promise(function (resolve, reject) {
+                console.log('test123');
+                setTimeout(function () {
+                    resolve('test');
+                }, time);
+            })
+        };
+        (function(){
+            console.log('start');
+            sleep(3000)
+                    .then(function(data){
+                        console.log(data);
+                        return sleep(5000);})
+                    .then(function(data){
+                        console.log(data);
+                        console.log('end');
+                    })
+        })();
+        /*
+         上面代码中，sleep方法返回一个Promise实例，表示一段时间以后才会发生的结果。
+         首先输出‘start’,然后，sleep执行后，3秒后返回“test”，触发then方法绑定的回调函数，
+         输出回调返回值“test”,又return sleep(5000),这样第一个then的返回值，就是第二个
+         的参数，再次执行sleep，5秒后返回‘test’，输出‘test’、'end';好像没有什么大不了的
+         ，promises的真正强大之处在于多重的链接，在异步执行的流程中，把执行代码和处理结果
+         的代码清晰地分离了：它有个缺点就是链过长以后，满屏幕的then，傻傻分不清业务到底干啥了，
+
+         */
+       </script>
+</head>
+<body>
+
+</body>
+</html>

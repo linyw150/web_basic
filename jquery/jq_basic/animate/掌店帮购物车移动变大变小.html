@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery动画效果-自定义动画二</title>
+  <meta charset="utf-8" />
+  <script src="scripts/jquery-1.11.3.js"></script>
+  <style>
+      #left{
+          width:20px;
+          height: 20px;
+          border:1px solid red;
+          float: left;
+          background-color: red;
+      }
+      #main{
+          width: 500px;
+          height: 500px;
+          position: relative;
+          border:1px solid red;
+      }
+      #cart{
+          width: 38px;
+          height: 38px;
+          background:url('http://booking.uclbrt.com/api/uploads/goodsImage/20170814/165d66b58648c48c4f2eff3cae96e8d4.jpg') no-repeat center;
+          background-size:cover ;
+          position: absolute;
+          right: 90px;
+        }
+
+  </style>
+ </head>
+ <body>
+ <div id="main">
+ <div id="left"></div>
+ <div id="cart"></div>
+ <br/>
+ <button id="btn"></button>
+</div>
+ <script>
+	$(function(){
+
+        $("#btn").click(function(){
+            var cart = $('#cart')
+            var img = $("#left")
+            var img = img.clone().offset({
+                top: img.offset().top,
+                left: img.offset().left
+            })
+             .css({
+                        'width':'0',
+                        'height':'0',
+                        'position': 'absolute',
+                        'z-index': '1000'
+             })
+             .appendTo($('body'))
+             .animate({
+                        'top': cart.offset().top+30,
+                        'left': cart.offset().left-16,
+                        'width': 38,
+                        'height': 38
+                    }, 10000);
+
+        })
+    })
+  </script>
+ </body>
+</html>

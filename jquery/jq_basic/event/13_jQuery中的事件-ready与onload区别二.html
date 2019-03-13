@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的事件-ready与onload区别二</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+ <script>
+	var startTime = new Date().getTime();
+	$(function(){
+		var endTime1 = new Date().getTime();
+		console.log("ready执行时间: "+(endTime1-startTime)+" ms");
+	});
+	window.onload = function(){
+		var endTime2 = new Date().getTime();
+		console.log("onload执行时间: "+(endTime2-startTime)+" ms");
+	}
+ </script>
+ <body>
+  <img src="Koala.jpg" />
+ </body>
+</html>

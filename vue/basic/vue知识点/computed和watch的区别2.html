@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue@2.3.3/dist/vue.js"></script>
+<style></style>
+</head>
+<body>
+
+<div id="app4">
+    {{x}}---{{y}}---{{z}}--{{D}}
+    <p>
+        <button v-on:click="someMethod">Click</button>
+    </p>
+    <p>
+        <input v-bind:value="DF"/>
+    </p>
+</div>
+</body>
+<script>
+    var app4 = new Vue({
+        el: '#app4',
+        data: {
+            x: 1,
+            y: 2,
+            z: 3,
+            D: 99
+        },
+        watch: {
+            /**
+             * 类型: { [key: string]: string | Function | Object }
+             * 一个对象，键是需要观察的表达式，值是对应回调函数。值也可以是方法名，或者包含选项的对象。
+             * Vue 实例将会在实例化时调用 $watch()，遍历 watch 对象的每一个属性。
+             *
+             */
+            x: function (val, oldVal) {
+                console.log('[watch]==>new: %s, old: %s', val, oldVal)
+            },
+            // 方法名
+            y: 'someMethod',
+            // 深度 watcher
+            z: {
+                handler: function (val, oldVal) {
+                    console.log('[watch]==>c===:'+val+','+oldVal)
+                },
+                deep: true
+            }
+        },
+        methods: {
+            /**
+             * 类型: { [key: string]: Function }
+             * methods 将被混入到 Vue 实例中。可以直接通过 VM 实例访问这些方法，或者在指令表达式中使用。
+             * 方法中的 this 自动绑定为 Vue 实例。
+             *
+             */
+            someMethod: function(){
+                this.z = this.z + 999
+                this.D = this.D + 10
+                console.log('[methods]==>click someMethod for app4.y========>==================>')
+            }
+        },
+        computed: {
+            /**
+             * 类型: { [key: string]: Function | { get: Function, set: Function } }
+             * 计算属性将被混入到 Vue 实例中。所有 getter 和 setter 的 this 上下文自动地绑定为 Vue 实例。
+             */
+            DF: function(){
+                return this.D
+            },
+            doubleDF: function(){
+                return this.DF * 2
+            },
+            doDF: {
+                get: function(){
+                    return this.D + 11
+                },
+                set: function(v){
+                    this.D = this.D - 11
+                    this.x = v - 222
+                }
+            }
+        }
+    })
+    app4.x = 88 // -> new: -122, old: 1
+    app4.z = 999 // -> 999,3
+    app4.doDF //相当于get 此时这个值为：99+11
+    console.log('[computed]==>相当于get 此时这个值为：99+11:'+app4.doDF)
+    app4.doDF = 100 //相当于set 此时这个值为：100-11 x值为x-2
+    console.log('[computed]==>相当于set 此时这个值为：100-11 x值为100-222:'+app4.doDF)
+    console.log('[computed]==>再次打印D:'+app4.D)
+    app4.doubleDF
+    console.log('[computed]==>app4.doubleDF后的D:'+app4.doubleDF)
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的事件-toggle()</title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+
+ <a id="a1" href="http://www.365mini.com">CodePlayer</a>
+ <a id="a2" href="http://www.365mini.com/doc">中文手册</a>
+<!-- hover()函数主要有以下两种用法：
+ jQueryObject.hover( handlerIn , handlerOut )
+ 分别指定鼠标移入、移出元素时的事件处理函数。
+
+ 用法二：jQuery 1.4 新增支持该用法。
+ jQueryObject.hover( handlerInAndOut )
+ 用法一的变体。当鼠标移入、移出元素时的事件处理函数相同时，只需直接传入一个处理函数作为参数即可。
+
+
+ 返回值
+
+ hover()函数的返回值为jQuery类型，返回当前jQuery对象本身。
+ https://blog.csdn.net/kevinwuwenboa/article/details/53107135
+ -->
+ https://blog.csdn.net/kevinwuwenboa/article/details/53107135
+ </body>
+ <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+ <script>
+     $(function(){
+         // 为所有button元素的hover事件绑定处理函数(可以绑定多个，触发时按照绑定顺序依次执行)：
+         // 鼠标移入链接时，显示红色；移出链接时，显示蓝色
+         $("a").hover( function(event){
+             $(this).css("color", "red");
+         }, function(event){
+             $(this).css("color", "blue");
+         } );
+
+         // 为所有button元素的hover事件绑定处理函数
+         // 鼠标移入、移出链接时，都去掉下划线
+         $("a").hover( function(event) {
+             $(this).css("textDecoration", "none");
+         });
+     })
+
+ </script>
+</html>

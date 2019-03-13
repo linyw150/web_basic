@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       let x = 1;
+       function f(y = x) {
+           let x = 2;
+           console.log(y);
+       }
+       f() // 1
+       //上面代码中，函数f调用时，参数y = x形成一个单独的作用域。这个作用域里面，变量x本身没有定义，
+       // 所以指向外层的全局变量x。函数调用时，函数体内部的局部变量x影响不到默认值变量x。
+   </script>
+
+</head>
+<body>
+
+</body>
+</html>

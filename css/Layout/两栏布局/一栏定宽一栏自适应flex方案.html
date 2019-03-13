@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style>
+        .wrapper-flex {
+            padding: 15px 20px;
+            border: 1px dashed #ff6c60;
+        }
+        .left {
+            width: 120px;
+            border: 5px solid #ddd;
+        }
+        .right {
+            margin-left: 20px;
+            border: 5px solid #ddd;
+        }
+        .wrapper-flex {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .wrapper-flex .left {
+            flex: 0 0 auto;
+        }
+
+        .wrapper-flex .right {
+            flex: 1 1 auto;
+        }
+    </style>
+</head>
+<body>
+<body>
+<!--https://segmentfault.com/a/1190000010698609-->
+
+<div class="wrapper-flex" id="wrapper">
+    <div class="left">
+        左边固定宽度，高度不固定 </br> </br></br></br>高度有可能会很小，也可能很大。
+    </div>
+    <div class="right">
+        这里的内容可能比左侧高，也可能比左侧低。宽度需要自适应。</br>
+        基本的样式是，两个div相距20px, 左侧div宽 120px
+    </div>
+</div>
+
+<!--
+flex可以说是最好的方案了，代码少，使用简单。有朝一日，大家都改用现代浏览器，就可以使用了。
+需要注意的是，flex容器的一个默认属性值:align-items: stretch;。这个属性导致了列等高的效果。
+为了让两个盒子高度自动，需要设置: align-items: flex-start;
+-->
+</body>
+</body>
+</html>

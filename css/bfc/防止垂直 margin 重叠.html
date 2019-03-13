@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style>
+        p {
+            color: #f55;
+            background: #fcc;
+            width: 200px;
+            line-height: 100px;
+            text-align:center;
+            margin: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<p>Haha</p>
+<p>Hehe</p>
+</body>
+
+
+<!--
+我们可以在p外面包裹一层容器，并触发该容器生成一个BFC。那么两个P便不属于同一个BFC，就不会发生margin重叠了。
+
+<style>
+    .wrap {
+        overflow: hidden;
+    }
+    p {
+        color: #f55;
+        background: #fcc;
+        width: 200px;
+        line-height: 100px;
+        text-align:center;
+        margin: 100px;
+    }
+</style>
+<body>
+    <p>Haha</p>
+    <div class="wrap">
+        <p>Hehe</p>
+    </div>
+</body>
+
+-->
+
+</body>
+</body>
+</html>

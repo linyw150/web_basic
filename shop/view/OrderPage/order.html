@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>我的</title>
+    <link rel="stylesheet" type="text/css" href="../../uclbrt/ulite/ulite.css">
+    <link href="../../uclbrt/css/bootstrap.css" rel="stylesheet">
+    <link href="../../run/src/OrderPage/order.css" rel="stylesheet">
+    <link href="../../run/src/common.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/jslib/toastr/2.1.2/toastr.min.css">
+
+
+    <!--[if lt IE 9]>
+    <script src="../../jslib/html5shiv/html5shiv.min.js"></script>
+    <script src="../../jslib/html5shiv/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="doc" class="container">
+        <div id="doc-header" class="navbar-cart">
+            <a href="/view/PublicPage/center.html" class="back-home info-back"></a>
+            <a href="javascript:void(0);" class="back-home img-back hidden"></a>
+            <div class="navbar-title">我的订单</div>
+            <div class="compile info-compile"></div>
+        </div>
+    <div id="doc-body" class="hidden">
+        <div class="nowrap-color"></div>
+        <div class="tabs ulite-js-tabs ulite-js-ripple-effect ">
+            <div class="tabs-tab-bar" >
+                <a href="#all-order" class="col-xs-3 tabs-tab is-active ">全部</a>
+                <a href="#payment-order" class="col-xs-3  tabs-tab ">待付款</a>
+                <a href="#send-order" class="col-xs-3 tabs-tab">待发货</a>
+                <a href="#take-order" class="col-xs-3 tabs-tab ">待收货</a>
+            </div>
+            <div class="nowrap-color"></div>
+            <div  class="tabs-panel is-active " id="all-order"></div>
+            <div class="tabs-panel " id="payment-order"></div>
+            <div class="tabs-panel" id="send-order"></div>
+            <div class="tabs-panel" id="take-order"></div>
+        </div>
+    </div>
+    <div id="noLogining" class="hidden">
+        <a href="/view/PublicPage/login.html" class="theme-text">尚未登录，请点击这里登录</a>
+    </div>
+    <script type="text/html" id="templateOrder">
+        <div class="store-container">
+            <!--店铺名-->
+            <div class="store-head">
+                <div class="store-name"></div>
+                <div class="store-status"></div>
+            </div>
+            <!--商品详情-->
+            <div class="store-goods"></div>
+            <!--商品数量和总价-->
+            <div class="store-foot">
+                <div class="store-pay">
+                    <span>总价：</span><span class="pay"></span>
+                </div>
+                <div class="store-freight">
+                    <span>运费</span><span class="freight"></span>
+                </div>
+                <div class="store-check">
+                    <span>共</span><span class="choice"></span>件商品
+                </div>
+            </div>
+            <!--订单操作-->
+            <div class="store-operation">
+                <div class="operation-list hidden">
+                    <div class="operation-delete ">删除订单</div>
+                </div>
+                <div class="operation-list hidden">
+                    <div class="operation-pay">继续支付</div>
+                </div>
+                <div class="operation-list hidden">
+                    <div class="operation-close">关闭订单</div>
+                </div>
+                <div class="operation-list hidden">
+                    <div class="operation-remind">提醒发货</div>
+                </div>
+                <div class="operation-list hidden">
+                    <div class="operation-affirm">确认收货</div>
+                </div>
+                <div class="operation-list hidden">
+                    <div class="operation-check">查看物流</div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- 商品详情模板-->
+    <script type="text/html" id="templateGoodsList">
+        <div class="store-goods-list">
+            <div class="goods-img-content">
+                <div class="goods-picture">
+                    <div class="goods-picture-cover"></div>
+                </div>
+            </div>
+            <div class="goods-represent">
+                <div class="represent-top">
+                    <div class="represent-dec"></div>
+                    <div class="represent-price"></div>
+                </div>
+                <div class="represent-foot">
+                    <div class="represent-model">
+                        <span>型号：</span><span class="model"></span>
+                    </div>
+                    <div class="sum">
+                        <span>x</span><span class="scalar"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- 空状态页模板-->
+    <script type="text/html" id="templateOrderEmpty">
+        <div class="centeral-container vertical-middle-block">
+            <div class="centeral-content vertical-middle-block-cell">
+                <div class="col-xs-12 text-center theme-text" >没有查询到订单</div>
+                <div class="col-xs-12 text-center">
+                    <div class="order-refresh btn-sm btn-link" >刷新试试</div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+
+<div id="loadingContainer" class="hidden">
+    <div id="loading">
+        <div class="cssload-loader">
+            <div class="cssload-inner cssload-one"></div>
+            <div class="cssload-inner cssload-two"></div>
+            <div class="cssload-inner cssload-three"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../jslib/jquery/1.11.2/jquery.min.js"></script>
+<script src="../../jslib/bookstrap/bootstrap.js"></script>
+<script src="/uclbrt/ulite/ulite.js"></script>
+<script type="text/javascript" src="/jslib/toastr/2.1.2/toastr.min.js"></script>
+<script type="text/javascript" src="../../jslib/upload/hammer.min.js"></script>
+<script type="text/javascript" src="../../jslib/upload/iscroll-zoom-min.js"></script>
+<script type="text/javascript" src="../../jslib/upload/lrz.all.bundle.js"></script>
+<script type="text/javascript" src="../../jslib/upload/PhotoClip.js"></script>
+<script  type="text/javascript" src="../../run/src/common_zh_cn.js"></script>
+<script  type="text/javascript" src="../../run/src/common.js"></script>
+<script src="../../run/src/OrderPage/order.js"></script>
+
+</html>

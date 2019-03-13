@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style type="text/css">
+        .first-face {
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: row;/*flex-direction属性决定主轴的方向（即项目的排列方向）。*/
+        justify-content: space-between;/*属性定义了项目在主轴上的对齐方式。*/
+
+        }
+
+       /* 取值：数值
+3、flex-shrink
+
+取值：数值
+
+功能：缩小因子
+
+使用前提：主轴方向上的空间不够，项目被压缩。
+
+默认值为1（当项目主轴方向不能容下全部项目，并且不允许换行。
+
+     由于flex-shrink为1，所有项目都会被压缩。）
+
+
+
+各自被压缩的数值是不一样的，如下公式：
+
+（1）总差值，即需要被压缩的大小：M=容器的宽度-项目的宽度之和
+
+（2）加权和：N=flex-shrink  *项目宽度值之和
+
+（3）缩小后的宽度=项目值- 项目值*  flex-shrink /N * N
+
+结论：
+
+（1）项目默认会被缩小（空间不够） flex-shrink：1
+
+（2）Flex-shrink越大，被压缩的越多；
+
+（3）Flex-shrink越小，被压缩的越小。特别的，当flex-shrink:0时，不会被压缩。
+       */
+
+       span{
+           width:200px ;
+       }
+        .p1{
+            flex-shrink:1;
+            border: 1px solid #2858ff;
+        }
+        .p2 {
+            flex-shrink:1;
+            border: 1px solid #66ff6d;
+        }
+        .p3 {
+            flex-shrink:0;
+            border: 1px solid #ffff00;
+        }
+    </style>
+</head>
+<body>
+<!--
+https://blog.csdn.net/zxy9602/article/details/53138564-->
+<div class="first-face">
+    <span class="p1">1</span>
+    <span class="p2">2</span>
+    <span class="p3">3</span>
+</div>
+</body>
+</html>

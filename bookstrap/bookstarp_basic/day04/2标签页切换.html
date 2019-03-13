@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title></title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container">
+  <h1>jQuery插件——标签页(tab)</h1>
+
+  <ul class="nav nav-tabs">
+    <li><a data-toggle="tab" href="#p1">十元套餐</a></li>
+    <li class="active"><a data-toggle="tab" href="#p2">二十元套餐</a></li>
+    <li><a data-toggle="tab" href="#p3">三十元套餐</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="p1" class="fade tab-pane">十元套餐详情：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloremque exercitationem harum laboriosam modi mollitia quam quas recusandae sequi tempora! Amet assumenda consectetur culpa debitis dignissimos facere in inventore provident. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis doloribus dolorum ea, eaque et excepturi harum in libero minus modi nostrum numquam officia perferendis quas reiciendis, repellat similique tenetur vitae!</div>
+    <div id="p2" class="fade in tab-pane active">二十元套餐详情：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi, beatae deleniti doloremque error excepturi fuga impedit laboriosam nobis quod. Aliquid dicta ipsam labore laboriosam provident quibusdam reprehenderit, saepe tenetur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet aperiam reprehenderit. Adipisci aspernatur blanditiis culpa dignissimos fuga, hic impedit libero molestiae molestias nisi obcaecati, placeat quam quisquam reprehenderit tempora.</div>
+    <div id="p3" class="fade tab-pane">三十元套餐详情：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium inventore nemo nesciunt quam tenetur? Ad architecto beatae et eveniet exercitationem expedita, modi, nemo nesciunt nisi odio quos sapiente suscipit, voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur dolorum earum eos incidunt inventore ipsa laudantium magnam, necessitatibus nostrum officia, perferendis quas quisquam rerum sit suscipit voluptate voluptates voluptatum!</div>
+  </div>
+
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  (function () {
+    var s = document.createElement("script");
+    s.onload = function () {
+      bootlint.showLintReportForCurrentDocument([]);
+    };
+    s.src = "js/bootlint.js";
+    document.body.appendChild(s)
+  })();
+</script>
+</body>
+</html>

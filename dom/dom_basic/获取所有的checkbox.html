@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<style></style>
+
+</head>
+<body>
+<li><input type="checkBox" class="checkAll" onclick="clickAll()" id="all"/><label for="all">爱好(全选)</label></li>
+<br/>
+<li><input type="checkBox" class="checkOne" onclick="clickOne()" id="ck1"/><label for="ck1">足球</label></li>
+<li><input type="checkBox" class="checkOne" onclick="clickOne()" id="ck2"/><label for="ck2">网球</label></li>
+<li><input type="checkBox" class="checkOne" onclick="clickOne()" id="ck3"/><label for="ck3">篮球</label></li>
+
+</body>
+<script>
+    function clickAll(){
+        var b = $('.checkAll').prop('checked')
+        $('.checkOne').prop('checked',$('.checkAll').prop('checked'))
+    }
+    function clickOne(){
+        var clickAll = true;
+        $('.checkOne').each(function(){
+            if(!$(this).prop('checked')) clickAll = false;
+        })
+        $('.checkAll').prop('checked',clickAll)
+    }
+</script>
+</html>

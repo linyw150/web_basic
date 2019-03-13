@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery动画效果-自定义动画二</title>
+  <meta charset="utf-8" />
+  <script src="scripts/jquery-1.11.3.js"></script>
+  <style>
+
+  </style>
+ </head>
+ <body>
+ <div id="panel" style="width: 60px;height: 22px;background-color: #eee;border: 1px solid #abcdef;font-size: 12px;">呵呵</div>
+<!--
+（1）直接使用使用stop()方法，则会立即停止当前正在进行的动画，
+ 如果接下来还有动画等待继续进行，则以当前状态开始接下来的动画。
+ 比如下面例子：
+ -->
+
+
+ </body>
+ <!-- 引入jquery库 -->
+ <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        $("#panel").hover(function() {
+            $(this).stop().animate({height: "150"}, 5000);
+        },function() {
+            $(this).stop().animate({height: "22"}, 3000);
+        });
+    })
+</script>
+</html>

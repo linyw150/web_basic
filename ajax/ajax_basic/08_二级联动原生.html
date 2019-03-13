@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Ajax实现二级联动三</title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+  <select id="province">
+	<option>请选择</option>
+  </select>
+  <select id="city">
+	<option>请选择</option>
+  </select>
+  <script>
+	var xhr = getXhr();
+	// 第一次执行Ajax异步请求 - 省份
+	window.onload = function(){
+		xhr.open("get","08.php?state=1");
+		xhr.send(null);
+		xhr.onreadystatechange = function(){
+			
+		}
+	}
+	// 第二次执行Ajax异步请求 - 城市
+	provinceEle.onchange = function(){
+		xhr.open("post","08.php");
+		xhr.send("state=2&province="+provinceEle.value);
+		xhr.onreadystatechange = function(){
+		
+		}
+
+	}
+
+	function getXhr(){
+		var xhr = null;
+		if(window.XMLHttpRequest){
+			xhr = new XMLHttpRequest();
+		}else{
+			xhr = new ActiveXObject("Microsoft.XMLHttp");
+		}
+		return xhr;
+	}
+  </script>
+ </body>
+</html>

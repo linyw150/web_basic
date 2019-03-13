@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style type="text/css">
+
+        .first-face {
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: row;/*flex-direction属性决定主轴的方向（即项目的排列方向）。*/
+        justify-content: space-between;/*属性定义了项目在主轴上的对齐方式。*/
+
+        }
+
+       /*  后来研究发发现，这个属性值的作用也就是width的替代品。
+如果子容器设置了flex-basis或者width，那么在分配空间之前，他们会先跟父容器
+预约这么多的空间，然后剩下的才是归入到剩余空间，然后父容器再把剩余空间分配
+给设置了flex-grow的容器。 如果同时设置flex-basis和width，那么width属性会
+被覆盖，也就是说flex-basis的优先级比width高。
+有一点需要注意，如果flex-basis和width其中有一个是auto，那么另外一个非auto的属性优先级会更高
+       */
+
+        .p1{
+            flex-basis: 100px;
+            border: 1px solid #2858ff;
+        }
+        .p2 {
+            flex-grow: 1;
+            border: 1px solid #66ff6d;
+        }
+        .p3 {
+            flex-grow: 2;
+            border: 1px solid #ffff00;
+        }
+    </style>
+</head>
+<body>
+<!--
+https://blog.csdn.net/zxy9602/article/details/53138564-->
+<div class="first-face">
+    <span class="p1">1</span>
+    <span class="p2">2</span>
+    <span class="p3">3</span>
+</div>
+</body>
+</html>

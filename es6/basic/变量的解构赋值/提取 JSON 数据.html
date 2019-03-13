@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       let jsonData = {
+           id: 42,
+           status: "OK",
+           data: [867, 5309]
+       };
+
+       let { id, status, data:number } = jsonData;
+
+       console.log(id, status, number);
+       // 42, "OK", [867, 5309]
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

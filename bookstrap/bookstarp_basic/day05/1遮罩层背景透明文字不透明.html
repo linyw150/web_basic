@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title></title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    div {
+      border: 1px solid #000;
+    }
+    .masked {
+      position: relative;
+    }
+    .masked .mask {
+      position: absolute;
+      left: 0;
+      top: 80%;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0, .5);/*让背景半透明，文字不透明*/
+      color: #fff;
+      transition: top .15s linear;
+    }
+    .masked .mask:hover {
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="masked">
+        <img class="img-responsive" src="img/intel.web.368.207.1.jpg" alt="">
+        <div class="mask">
+          <h5>解密2合1电脑</h5>
+          <p>搭载英特尔处理器的2合1电脑，助你高效工作的同时带给你灵活可触控的平板体验。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  (function () {
+    var s = document.createElement("script");
+    s.onload = function () {
+      bootlint.showLintReportForCurrentDocument([]);
+    };
+    s.src = "js/bootlint.js";
+    document.body.appendChild(s)
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>1. 使用节点树方式实现表格偶数行变色</title>
+<meta charset="utf-8" />
+ <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<style></style>
+
+</head>
+<body>
+<li><input type="checkBox" class="checkAll"  id="all"/><label for="all">爱好(全选)</label></li>
+<br/>
+<li><input type="checkBox" class="checkOne"  id="ck1"/><label for="ck1">足球</label></li>
+<li><input type="checkBox" class="checkOne"  id="ck2"/><label for="ck2">网球</label></li>
+<li><input type="password" class="checkOne"  id="ck3"/><label for="ck3">篮球</label></li>
+
+</body>
+<script>
+    var domList = document.getElementsByTagName('input');
+    var len = domList.length;
+    checkBoxList  = [];
+    for(x in domList){
+        if(domList[x].type=='checkbox'){
+            checkBoxList.push(domList[x]);
+        }
+    }
+    console.log(checkBoxList)
+
+</script>
+</html>

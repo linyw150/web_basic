@@ -1,0 +1,85 @@
+.compile {
+  background: url(../image/add.png) right center no-repeat;
+  background-size: 0.34rem 0.34rem ;
+}
+#doc-body {
+  padding-top: 0.68rem;
+}
+#doc-body .nowrap-color {
+  height: .2rem;
+}
+#doc-body .addresslist-content {
+  font-size: 13px ;
+}
+#doc-body .addresslist-content .addresslist .addresslist-info {
+  height: 1.26rem;
+  padding: 0 0.32rem;
+  border-bottom: 1px solid #ccc ;
+  padding-top: 0.34rem;
+}
+#doc-body .addresslist-content .addresslist .addresslist-info .name-num {
+  height: 0.48rem;
+}
+#doc-body .addresslist-content .addresslist .addresslist-info .name-num .info-name {
+  float: left;
+  height: 0.48rem;
+  line-height: 0.48rem;
+}
+#doc-body .addresslist-content .addresslist .addresslist-info .name-num .info-num {
+  float: right;
+  height: 0.48rem;
+  line-height: 0.48rem;
+}
+#doc-body .addresslist-content .addresslist .addresslist-info .info-address {
+  height: 0.48rem;
+  line-height: 0.48rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#doc-body .addresslist-content .addresslist .addresslist-default {
+  height: 0.88rem;
+  position: relative;
+}
+#doc-body .addresslist-content .addresslist .addresslist-default .default-btn {
+  height: 0.58rem;
+  width: 0.48rem;
+  background: #007AFF;
+  position: absolute;
+  top: 0.14rem;
+  left: 0.32rem;
+  background: url(../image/unselected.png) left no-repeat;
+  background-size: 0.34rem 0.34rem ;
+}
+#doc-body .addresslist-content .addresslist .addresslist-default .isChecked {
+  background: url(../image/selected.png) left no-repeat;
+  background-size: 0.34rem 0.34rem ;
+}
+#doc-body .addresslist-content .addresslist .addresslist-default .default-tip {
+  height: 0.88rem;
+  line-height: 0.88rem;
+  position: absolute;
+  top: 0;
+  left: 0.9rem;
+}
+#doc-body .addresslist-content .addresslist .addresslist-default .default-del {
+  float: right;
+  height: 0.58rem;
+  width: 0.74rem;
+  position: absolute;
+  top: 0.14rem;
+  right: 0.32rem;
+  background: url(../image/del.png) center no-repeat;
+  background-size: 0.34rem 0.34rem ;
+}
+#doc-body .addresslist-content .addresslist .addresslist-default .default-compile {
+  float: right;
+  height: 0.58rem;
+  width: 0.74rem;
+  position: absolute;
+  top: 0.14rem;
+  right: 1.04rem;
+  background: url(../image/editor.png) center no-repeat;
+  background-size: 0.34rem 0.34rem ;
+  border-right: 1px solid #ccc ;
+}

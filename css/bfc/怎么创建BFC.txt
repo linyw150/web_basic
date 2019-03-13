@@ -1,0 +1,17 @@
+要显示的创建一个BFC是非常简单的，只要满足上述4个CSS条件之一就行。例如：
+
+<div class="container">
+  你的内容
+</div>
+在类container中添加类似 overflow: scroll，overflow: hidden，display: flex，float: left，或 display: table 的规则来显示创建BFC。虽然添加上述的任意一条都能创建BFC，但会有一些副作用：
+
+1、display: table 可能引发响应性问题
+2、overflow: scroll 可能产生多余的滚动条
+3、float: left 将把元素移至左侧，并被其他元素环绕
+4、overflow: hidden 将裁切溢出元素
+
+因而无论什么时候需要创建BFC，都要基于自身的需要来考虑。对于本文，将采用 overflow: hidden 方式：
+
+.container {
+    overflow: hidden;
+}

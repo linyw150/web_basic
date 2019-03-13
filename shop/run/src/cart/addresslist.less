@@ -1,0 +1,88 @@
+.compile{
+  background:url(../image/add.png) right center no-repeat;
+  background-size:0.34rem 0.34rem ;
+}
+#doc-body  {
+  padding-top: 0.68rem;
+  .nowrap-color{
+    height: .2rem;
+  }
+  .addresslist-content{
+    font-size:13px ;
+    .addresslist{
+      .addresslist-info{
+        height: 1.26rem;
+        padding: 0 0.32rem;
+        border-bottom:1px solid #ccc ;
+        padding-top: 0.34rem;
+        .name-num{
+          height: 0.48rem;
+          .info-name{
+            float: left;
+            height: 0.48rem;
+            line-height: 0.48rem;
+          }
+          .info-num{
+            float: right;
+            height: 0.48rem;
+            line-height: 0.48rem;
+          }
+        }
+        .info-address{
+          height: 0.48rem;
+          line-height: 0.48rem;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .addresslist-default{
+        height: 0.88rem;
+        position: relative;
+        .default-btn{
+          height: 0.58rem;
+          width: 0.48rem;
+          background: #007AFF;
+          position: absolute;
+          top: 0.14rem;
+          left: 0.32rem;
+          background:url(../image/unselected.png) left no-repeat;
+          background-size:0.34rem 0.34rem ;
+        }
+        .isChecked{
+          background:url(../image/selected.png) left no-repeat;
+          background-size:0.34rem 0.34rem ;
+        }
+        .default-tip{
+          height: 0.88rem;
+          line-height: 0.88rem;
+          position: absolute;
+          top: 0;
+          left: 0.9rem;
+        }
+        .default-del{
+          float: right;
+          height: 0.58rem;
+          width: 0.74rem;
+          position: absolute;
+          top: 0.14rem;
+          right: 0.32rem;
+          background:url(../image/del.png) center no-repeat;
+          background-size:0.34rem 0.34rem ;
+        }
+        .default-compile{
+          float: right;
+          height: 0.58rem;
+          width: 0.74rem;
+          position: absolute;
+          top: 0.14rem;
+          right: 1.04rem;
+          background:url(../image/editor.png) center no-repeat;
+          background-size:0.34rem 0.34rem ;
+          border-right:1px solid #ccc ;
+        }
+      }
+    }
+  }
+
+}

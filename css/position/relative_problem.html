@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            border:2px solid #000000;
+            float: left;
+
+        }
+        #parent{
+            border-color:blue;
+            width: 500px;
+            height: 400px;
+
+        }
+        #d1{
+            border-color: red;
+        }
+        /* 如果想设置d2在parent div 的右下角，则可以设置使用relative 设置top,right。
+        但该做法有个问题，如果parent div的height是变化的，就有问题。故需要用到position:absolute(相对于父元素进行定位
+
+
+        */
+        #d2{
+            border-color:yellow ;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div id="parent">
+    <div id="d1"></div>
+    <div id="d2"></div>
+</div>
+
+
+</body>
+</html>

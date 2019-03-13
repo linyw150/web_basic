@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .parent {
+            width: 600px;
+            /*height: 400px;*/
+            background: #faa;
+        }
+        .parent:after {
+            content: ' ';
+            display: table;
+            clear: both;
+        }
+        .child1 {
+            width: 200px;
+            height: 150px;
+            background: #afa;
+            float: left;
+        }
+        .child2 {
+            width: 200px;
+            height: 150px;
+            background: #aaf;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>子元素浮动对父元素、后续元素造成的影响</h1>
+
+    <div class="parent">
+        <div class="child1">1111</div>
+        <div class="child2">2222</div>
+    </div>
+    <hr>
+
+
+<br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

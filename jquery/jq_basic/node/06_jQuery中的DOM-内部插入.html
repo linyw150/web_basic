@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的DOM-内部插入</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+
+ <body>
+  <ul id="city">
+	<li>北京</li>
+	<li id="tj">天津</li>
+	<li>南京</li>
+  </ul>
+  <ul id="game">
+	<li>反恐</li>
+	<li id="ms">魔兽</li>
+	<li>星际</li>
+  </ul>
+  <script>
+	// 操作天津节点和魔兽节点
+	// append - append后面的节点被添加到append前面的节点的后面
+	//$("#tj").append($("#ms"));
+	// prepend - prepend后面的节点被添加到prepend前面的节点的前面
+	//$("#tj").prepend($("#ms"));
+	// appendTo - appendTo前面的节点被添加到appendTo后面的节点的后面
+	$("#tj").appendTo($("#ms"));
+	// prependTo - prependTo前面的节点被添加到prependTo后面的节点的前面
+	//$("#tj").prependTo($("#ms"));
+  </script>
+ </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<input type="file" id="file">
+<img src="" id="img">
+<script>
+    var fileEle = document.getElementById('file');
+    var imgEle = document.getElementById('img');
+    fileEle.onchange = function(e) {
+        var file1 = e.target.files[0];
+        var url1 = window.URL.createObjectURL(file1);
+        imgEle.src = url1;
+    }
+</script>
+</body>
+</html>

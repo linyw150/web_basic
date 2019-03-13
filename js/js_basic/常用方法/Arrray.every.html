@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        var arr = [false,false]
+        //如果arr中每一条数据都为true，返回true，否则返回false;
+//        console.log(
+//                arr.every(function(val){
+//                    return val;
+//                })
+//        )
+        var checkArr =  function(arr){
+            var flag = true
+            for(let i=0;i<arr.length;i++){
+                if(!arr[i]) flag=false
+            }
+            return flag
+        }
+        console.log(checkArr(arr))
+    </script>
+</head>
+<body>
+
+</body>
+</html>

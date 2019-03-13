@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       function getUrlParamObj(){
+           var obj = {};
+           //获取url的参数部分
+           var params = window.location.search.substr(1);
+           //https://www.baidu.com?a=1&b=2
+           //window.location.search:获取？后面的字符串，包括问号，
+           //[^&=]+ 表示不含&或=的连续字符，加上()就是提取对应字符串
+           params.replace(/([^&=]+)=([^&=]*)/gi,function(rs,$1,$2){
+               obj[$1] = $2;
+           });
+
+           return obj;
+       }
+       var url = 'http://booking.uclbrt.com/shop/index.html?shop=5&id=1'
+       console.log(getUrlParamObj(url));
+
+
+   </script>
+</head>
+<body>
+
+
+</body>
+</html>

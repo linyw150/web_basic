@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+//        https://www.cnblogs.com/chenwenhao/p/7009606.html
+//      　2、按引用传递（这么叫便于理解，其实也是按值传递）
+    function setName(obj) {
+        obj.name = "Nicholas";
+    }
+
+    var person = new Object();
+    setName(person);   //相当于按值传递  obj = person
+    alert(person.name);   // "Nicholas"
+    </script>
+</head>
+<body>
+
+</body>
+</html>

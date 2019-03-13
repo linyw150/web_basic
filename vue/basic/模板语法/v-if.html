@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        #list-1{
+            color: red;
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+   <p v-if="seen">hello world</p>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            seen:false
+        }
+    })
+</script>
+</body>
+</html>

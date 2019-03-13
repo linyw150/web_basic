@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>京东导航</title>
+    <meta charset="UTF-8">
+    <style>
+        #main{
+            width: 500px;
+            height: 500px;
+            border: 3px solid #ff0000;
+        }
+
+        #d1{
+            width:100px;
+            border: 3px solid #49ff5a;
+            float: left;
+        }
+        #d2{
+            width: 100px;
+            border: 3px solid yellow;
+            float: right;
+        }
+        /* 解决方法一：设置p为clear：both */
+        p{
+            clear :both ;
+        }
+        /*解决方法二：设置d1 d2 的height*/
+        /*#d1,#d2{*/
+            /*height: 10px;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<p>&nbsp;</p>
+<div id="main">
+    <div id="d1">123</div>
+    <div id="d2">333</div>
+    <p>342342</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery动画效果-自定义动画二</title>
+  <meta charset="utf-8" />
+  <script src="scripts/jquery-1.11.3.js"></script>
+  <style>
+	div {
+		width : 200px;
+		height : 200px;
+		border : solid 1px black;
+		background : pink;
+		position : relative;
+		top : 50px;
+		left : 10px;
+	}
+  </style>
+ </head>
+
+ <body>
+  <button>执行动画</button>
+  <br><br>
+  <div></div>
+  <script>
+	$("button").click(function(){
+		/*
+		 * animate(params,options)
+		 * * params - 设置动画的样式(CSS属性)
+		 *   * 写法 - {attrName:attrValue}
+		 * * options - 选项
+		 *   * 写法 - {name:value}
+		 *   * 选项
+		 *     * duration - 设置动画执行的时长
+		 *     * easing - 要使用的擦除效果的名称
+		 *     * complete - 动画执行完毕后的函数
+		 *     * queue - 设定为false将使此动画不进入动画队列 
+		 */
+		$("div").animate({
+			"width" : 50
+		},{
+			"duration" : 1000
+		}).animate({
+			"height" : 50
+		},{
+			"duration" : 300,
+			"queue" : false
+		});
+	});
+  </script>
+ </body>
+</html>

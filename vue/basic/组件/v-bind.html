@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <ol>
+        <todo-item v-for="item in sites" v-bind:todo="item"></todo-item>
+        <!--实际是{text：'Taobao'}传给template：-->
+        <todo-item  v-bind:todo="{ text: 'Runoob' }"></todo-item>
+        <todo-item v-bind:todo="{ text: 'Google' }"></todo-item>
+        <todo-item  v-bind:todo="{ text: 'Taobao' }"></todo-item>
+
+    </ol>
+</div>
+
+<script>
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{ todo.text }}</li>'
+    })
+    new Vue({
+        el: '#app',
+        data: {
+            sites: [
+                { text: 'Runoob' },
+                { text: 'Google' },
+                { text: 'Taobao' }
+            ]
+        }
+    })
+</script>
+</body>
+</html>

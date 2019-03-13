@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*多行注释*/
+//我的单行注释
+
+
+//less特性：变量
+@jd-red: #393ce4;
+@nav-height: 40px;
+@half-opacity: .5;
+@std-font: 'SimHei';
+@std-border: solid;
+
+.alert {
+  color: @jd-red;
+  border: @nav-height @std-border @jd-red;
+  font-family: @std-font;
+}
+.well {
+  min-height:@nav-height;
+}
+
+
+//less特性：混合(Mixin)-超级变量-本身就是一组样式
+.std-margin {
+  margin-top: 20px;
+  margin-bottom:10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.h1 {
+  font-size: 36px;
+  .std-margin;
+}
+.h2 {
+  font-size: 28px;
+  .std-margin;
+}
+.h3 {
+  font-size: 24px;
+  .std-margin;
+}
+
+
+
+
+
+
+
+

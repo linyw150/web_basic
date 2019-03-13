@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery动画效果-自定义动画二</title>
+  <meta charset="utf-8" />
+  <script src="scripts/jquery-1.11.3.js"></script>
+ </head>
+ <body>
+ <div id="panel" style="width: 60px;height: 22px;background-color: #eee;border: 1px solid #abcdef;font-size: 12px;">呵呵</div>
+<!--
+https://www.cnblogs.com/ww03/p/6007740.html
+第2个参数（gotoEnd）可以用于让正在执行的动画直接到达结束时刻的状态，
+通常用于后一个动画需要基于前一个动画的末状态的情况，
+可以通过stop(false,true)这种方式来让当前动画直接到达末状态。
+ -->
+
+
+ </body>
+ <!-- 引入jquery库 -->
+ <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        $("#panel").hover(function() {
+            $(this).stop(false,true)
+                    .animate({height: "150"}, 5000)
+                //直接跳过后面的动画队列
+                    .animate({borderWidth: "20px"},3000);//可以通过stop(false,true)这种方式来让当前动画直接到达末状态。
+        },function() {
+            $(this).stop(false,true)
+                    .animate({width: "300"}, 2000)
+                    .animate({fontSize: "24px"},3000);
+        });
+    })
+</script>
+</html>

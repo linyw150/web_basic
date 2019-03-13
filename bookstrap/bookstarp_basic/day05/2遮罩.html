@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title></title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    div {
+      border: 1px solid #000;
+    }
+    .masking-parent {
+      position: relative;
+      background: #0071c5;
+    }
+    @media screen and (min-width: 768px) {
+      .masking-text {
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8">
+      <div class="masking-parent">
+        <img class="img-responsive" src="img/intel.web.864.486.1.jpg" alt="">
+        <div class="masking-text">
+          <h1>电脑换新就要快</h1>
+          <p>全新第六代英特尔®酷睿™处理器家族，以强大性能与智能技术，释放您的双手带来前所未有的人机交互方式。快来体验自由无拘束！ </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  (function () {
+    var s = document.createElement("script");
+    s.onload = function () {
+      bootlint.showLintReportForCurrentDocument([]);
+    };
+    s.src = "js/bootlint.js";
+    document.body.appendChild(s)
+  })();
+</script>
+</body>
+</html>

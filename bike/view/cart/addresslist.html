@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html s>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <title>我的</title>
+    <link rel="stylesheet" type="text/css" href="/uclbrt/ulite/ulite.css">
+    <link href="/uclbrt/css/bootstrap.css" rel="stylesheet">
+    <link href="/run/src/cart/addresslist.css" rel="stylesheet">
+    <link href="/run/src/common.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/jslib/toastr/2.1.2/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="/jslib/swiper/swiper.min.css">
+
+
+
+    <!--[if lt IE 9]>
+    <script src="/jslib/html5shiv/html5shiv.min.js"></script>
+    <script src="/jslib/html5shiv/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="doc" class="container">
+        <div id="doc-header" class="navbar-cart">
+            <a href="/view/details/details.html" class="back-home info-back"></a>
+            <a href="javascript:void(0);" class="back-home img-back hidden"></a>
+            <div class="navbar-title">我的地址</div>
+            <div class="compile addAddress"></div>
+        </div>
+    <div id="doc-body" >
+        <div class="nowrap-color"></div>
+        <div class="addresslist-content"></div>
+        <div id="noLogining" class="hidden">
+            <a href="/view/PublicPage/login.html" class="theme-text">尚未登录，请点击这里登录</a>
+        </div>
+    </div>
+ </div>
+<script type="text/html" id="templateOrder">
+    <div class="addresslist">
+        <div class="addresslist-info">
+            <div class="name-num">
+                <div class="info-name"></div>
+                <div class="info-num"></div>
+            </div>
+            <div class="info-address"> </div>
+        </div>
+        <div class="addresslist-default">
+            <div class="default-btn"></div>
+            <div class="default-tip">默认地址</div>
+            <div class="default-compile"></div>
+            <div class="default-del"></div>
+        </div>
+        <div class="nowrap-color"></div>
+    </div>
+</script>
+<script type="text/html" id="templateOrderEmpty">
+    <div class="centeral-container vertical-middle-block">
+        <div class="centeral-content vertical-middle-block-cell">
+            <div class="col-xs-12 text-center theme-text">
+                <div class="newAddress">新建地址</div>
+            </div>
+        </div>
+    </div>
+</script>
+</body>
+<script src="/jslib/jquery/1.11.2/jquery.min.js"></script>
+<script src="/jslib/bookstrap/bootstrap.js"></script>
+<script src="/uclbrt/ulite/ulite.js"></script>
+<script type="text/javascript" src="/jslib/swiper/swiper.min.js"></script>
+
+<script type="text/javascript" src="/jslib/toastr/2.1.2/toastr.min.js"></script>
+<script  type="text/javascript" src="/run/src/common_zh_cn.js"></script>
+<script  type="text/javascript" src="/run/src/common.js"></script>
+<script src="/run/src/cart/addresslist.js"></script>
+
+</html>

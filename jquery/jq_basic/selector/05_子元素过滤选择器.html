@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>子元素过滤选择器</title>
+  <meta charset="utf-8" />
+     <script src="../../jslib/jquery-1.11.3.js"></script>
+  <style>
+	div {
+		width : 150px;
+		height : 150px;
+		border : solid 1px black;
+		background : pink;
+		float : left;
+		margin-right : 10px;
+	}
+	.mini {
+		width : 50px;
+		height : 50px;
+		border : solid 1px black;
+		background : yellow;
+		float : left;
+		margin-right : 10px;
+	}
+  </style>
+ </head>
+
+ <body>
+  <button id="btn1">:nth-child</button>
+  <button id="btn2">:first-child</button>
+  <button id="btn3">:last-child</button>
+  <button id="btn4">:only-child</button>
+  <br><br>
+  <div>
+	<div class="mini"></div>
+  </div>
+  <div>
+	<div class="mini"></div>
+	<div class="mini"></div>
+  </div>
+  <div>
+	<div class="mini"></div>
+	<div class="mini"></div>
+  </div>
+  <div></div>
+  <div></div>
+  <script>
+	// 1. 获取div元素的子元素是第二个
+	$("#btn1").click(function(){
+		// :nth-child选择器 是从1开始
+		$("div:nth-child(2)").css("background","red");
+	});
+	// 2. 获取div元素的第一个子元素
+	$("#btn2").click(function(){
+		$("div:first-child").css("background","red");
+	});
+	// 3. 获取div元素的最后一个子元素
+	$("#btn3").click(function(){
+		$("div:last-child").css("background","red");
+	});
+	// 4. 如果哪个div元素只有一个子元素,那么选中
+	$("#btn4").click(function(){
+		$("div:only-child").css("background","red");
+	});
+	// 子元素过滤选择器 - 层级+基本过滤选择器
+  </script>
+ </body>
+</html>

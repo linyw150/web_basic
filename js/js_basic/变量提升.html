@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--https://www.cnblogs.com/kawask/p/6225317.html-->
+    <script>
+        //变量提升是指提升了位置
+        var global; // 变量提升，全局作用域范围内，此时只是声明，并没有赋值
+        console.log(global); // undefined
+        global = 'global'; // 此时才赋值
+        console.log(global); // 打印出global
+
+        function fn(){
+            var a;// 变量提升，函数作用域范围内
+            console.log(a);
+            a = 'aaa';
+            console.log(a);
+        }
+        fn();
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

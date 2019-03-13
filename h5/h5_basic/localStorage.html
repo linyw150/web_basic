@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        if(!window.localStorage){
+            alert('浏览器不支持localstorage')
+        }else{
+            var storage = window.localStorage;
+            storage['a']=1;
+            storage.b = 1;
+            storage.setItem('c',3);
+//          storage.removeItem("a");将localStorage中的某个键值对删除
+
+
+        }
+    </script>
+</head>
+<body>
+https://blog.csdn.net/weixin_40279966/article/details/79176520
+
+</body>
+</html>

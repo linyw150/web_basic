@@ -1,0 +1,11 @@
+
+body{
+    margin-top: 50px;
+}
+.logo{
+    display: inline-block;
+    width: 63px;
+    height: 42px;
+    background: url("../img/hdr-spr.png") 0 -512px no-repeat ;
+    margin-top: 5px;
+}

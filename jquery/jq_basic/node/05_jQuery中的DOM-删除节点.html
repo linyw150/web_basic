@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的DOM-删除节点</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+
+ <body>
+  <ul id="city">
+	<li id="bj" name="beijing">北京</li>
+	<li id="tj" name="tianjin">天津
+		<ul>
+			<li>塘沽</li>
+		</ul>
+	</li>
+	<li id="nj" name="nanjing">南京</li>
+	<li id="sh" name="shanghai">上海</li>
+  </ul>
+  <script>
+	// 1. 删除北京节点
+	//$("#bj").remove();
+	// 2. 删除天津节点
+	$("#tj").empty();
+  </script>
+ </body>
+</html>

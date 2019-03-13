@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+/*多行注释*/
+.alert {
+  color: #393ce4;
+  border: 40px solid #393ce4;
+  font-family: 'SimHei';
+}
+.well {
+  min-height: 40px;
+}
+.std-margin {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.h1 {
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.h2 {
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>Test REM</title>
+    <style>
+        html{
+            font-size: 40px;
+        }
+        body{
+            font-size: 20px;
+        }
+        .use_em,.use_rem{
+            font-size: 14px;
+        }
+        .use_em span{
+            font-size: 1em;
+        }
+        .use_rem span{
+            font-size: 1rem;
+        }
+
+        .img_em{
+            width: 2em;
+            height: 2em;
+        }
+        .img_rem{
+            width: 2rem;
+            height: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="use_em">
+    <span>font-size使用em</span>
+</div>
+
+<div class="use_rem">
+    <span>font-size使用rem</span>
+</div>
+
+<p>图片使用em</p>
+<img src="../images/face01.jpg" class="img_em">
+<p>图片使用rem</p>
+<img src="../images/face02.jpg" class="img_rem">
+
+第一个span继承了它的父元素div的大小，所以是14px,第二个span是通过html来计算的，所以是40px。第一个img继承的body，第二个img根据html来计算。通过这个简单的例子我们得知上面的结论是正确的。所以我们可以通过下面这种比例来对不同的手机屏幕做适配。
+
+https://www.cnblogs.com/ssh-007/p/7207605.html
+</body>
+</html>

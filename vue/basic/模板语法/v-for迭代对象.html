@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        #list-1{
+            color: red;
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+   <ul v-for="site in object1">
+      {{site}}
+   </ul>
+    <ul v-for="(value,key) in object2">
+        {{key}}:{{value}}
+    </ul>
+    <ul v-for="(value,key,index) in object3">
+        {{key}}:{{value}}:{{index}}
+    </ul>
+<!--
+    v-for 也可以循环整数
+-->
+    <ul v-for="i in 10">
+        {{i}}
+    </ul>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+           object1:{
+               name: '菜鸟教程',
+               url: 'http://www.runoob.com',
+               slogan: '学的不仅是技术，更是梦想！'
+           },
+            object2:{
+                name: '菜鸟教程',
+                url: 'http://www.runoob.com',
+                slogan: '学的不仅是技术，更是梦想！'
+            },
+            object3:{
+                name: '菜鸟教程',
+                url: 'http://www.runoob.com',
+                slogan: '学的不仅是技术，更是梦想！'
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+#doc-body{
+  padding-top: 0.68rem;
+  padding-bottom:0.98rem ;
+}
+.banner-container{
+  position: relative;
+  .swiper-slide{
+    background: url(../image/placeholder.png) center no-repeat;
+    width: 100%;
+    background-size:100% 100%;
+    height: 4.8rem;
+    .cover-images{
+      width: 100%;
+      height: 100%;
+      background-size:100% 100%;
+    }
+  }
+  .sales-container{
+    position: absolute;
+    left: 0.32rem;
+    bottom: 0;
+    font-size:13px;
+    color: #fff;
+    padding: 0.05rem 0.14rem;
+    background: #000;
+    z-index: 10000;
+  }
+  .swiper-pagination-bullet-active{
+    background: #fff;
+  }
+}
+#doc-body{
+  .navbar-fixed-foot{
+    .shop-enshrine{
+      float: left;
+      margin-left: 0.14rem;
+    }
+    .shop-foot{
+      float: right;
+      margin-right: 0.32rem;
+      font-size: 14px;
+      width: 3.62rem;
+      position: relative;
+      .addToCart,.buyImmediately{
+        position: absolute;
+        top:0.18rem;
+        height: 0.58rem;
+        width: 1.7rem;
+        text-align: center;
+        line-height:0.58rem ;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .addToCart{
+        background: #ff781e;
+        left: 0;
+      }
+      .buyImmediately{
+        right: 0;
+        background: #df3e0f;
+      }
+
+    }
+  }
+}
+
+.referral-container{
+  font-size:14px ;
+  padding: 0.38rem 0.32rem 0.01rem;
+  overflow: hidden;
+  .referral{
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .referral-price{
+    margin:0.1rem 0;
+    color: #df3e0f;
+    font-size:16px ;
+  }
+}
+.gift-container{
+  padding: 0 0.32rem;
+  height: 0.88rem;
+  font-size:14px ;
+  overflow: hidden;
+  cursor: pointer;
+  .gift-box{
+    height: 0.88rem;
+    line-height: 0.88rem;
+    float: left;
+  }
+  .gift-right{
+    height: 0.88rem;
+    width: 0.88rem;
+    float: right;
+    background:url(../image/right.png) right center no-repeat;
+  }
+}
+.details-container{
+  font-size: 14px;
+  padding: 0.2rem 0.32rem;
+  overflow: hidden;
+  margin-bottom: 0.04rem;
+  .details-head{
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.version-content{
+  font-size: 14px;
+  position: fixed;
+  height: 0;
+  bottom:0;
+  z-index: 10000;
+  transition: all .3s ease;
+  width: 100%;
+  overflow: hidden;
+  background-color:transparent ;
+  .version-box{
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction:column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: 7.6rem;
+    position: absolute;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+    .version-head{
+      width: 100%;
+      position: relative;
+      height: 1.88rem;
+      border-bottom:1px solid #ccc ;
+      .version-portrait{
+        position: absolute;
+        left: 0.32rem;
+        top: -0.7rem;
+        height: 2.2rem;
+        width: 2.2rem;
+        background: url(/uclbrt/image/shili.png) center no-repeat;
+        background-size:2.2rem;
+        .portrait{
+          height: 2.2rem;
+          width: 2.2rem;
+          background-size:2.2rem;
+        }
+      }
+      .version-pirce{
+        position: absolute;
+        left: 2.82rem;
+        top: 0.28rem;
+        color: #df3e0f;
+      }
+      .version-close{
+        position: absolute;
+        height: 0.9rem;
+        line-height: 0.9rem;
+        width: 0.9rem;
+        text-align: center;
+        font-size: 30px;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+      }
+      .rummage-sale{
+        position: absolute;
+        left: 2.82rem;
+        top: 0.8rem;
+        color: #df3e0f;
+        font-size:12px ;
+      }
+    }
+    .version-size-content{
+      flex: 1;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      overflow-y:scroll ;
+      padding: 0.32rem 0.36rem;
+      .size{
+        margin-bottom: 0.3rem;
+      }
+      .size-content{
+        overflow: hidden;
+        margin-bottom: 0.26rem;
+        flex-wrap: nowrap;
+        .size-list{
+          line-height: 0.44rem;
+          border: 1px solid #ccc;
+          padding: 0 0.16rem;
+          margin-right: 0.4rem;
+          margin-bottom: 0.20rem;
+          cursor: pointer;
+          float: left;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+          max-width: 6.4rem;
+        }
+        .active{
+          border: 1px solid #df3e0f;
+          color: #df3e0f;
+        }
+      }
+    }
+    .sum-content{
+      height: 0.62rem;
+      font-size:14px ;
+      .sum{
+        float: left;
+        height: 0.60rem;
+        width: 2.8rem;
+        border:1px solid #ccc;
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        flex-direction:row;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        .reduceSum,.addSum{
+          height: 0.60rem;
+          line-height: 0.60rem;
+          color: #df3e0f;
+          text-align: center;
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        input{
+          outline: none;
+          text-align: center;
+          border: 0;
+          border-left: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          height: 0.60rem;
+          line-height: 0.60rem;
+          width: 1rem;
+        }
+      }
+      .repertory-content{
+        height: 0.62rem;
+        float: left;
+        overflow: hidden;
+        margin-left: 0.3rem;
+        span{
+          float: left;
+          display: block;
+          height: 0.62rem;
+          line-height: 0.62rem;
+        }
+      }
+    }
+    .version-foot{
+      height: 1.9rem;
+      position: relative;
+      border-top: 1px solid #ccc;
+      .addToCart,.buyImmediately,#addToCart,#buyImmediately{
+        position: absolute;
+        bottom: 0.56rem;
+        height: 0.58rem;
+        width: 1.8rem;
+        text-align: center;
+        line-height:0.58rem ;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .addToCart,#addToCart{
+        right: 2.34rem;
+        background: #ff781e;
+      }
+      .buyImmediately,#buyImmediately{
+        right: 0.32rem;
+        background: #df3e0f;
+      }
+    }
+  }
+
+}

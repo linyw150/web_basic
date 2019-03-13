@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       function test(){
+           for(var i=0;i<arguments.length;i++){
+              alert("第"+(i+1)+"个参数的值："+arguments[i]);
+              }
+          }
+       var reg=new RegExp("\\d","g");
+        var str="abd1afa4sdf";
+        str.replace(reg,test);
+       // 经过观察我们发现，第一个参数表示匹配到的字符，
+       // 第二个参数表示匹配时的字符最小索引位置(RegExp.index)，
+       // 第三个参数表示被匹配的字符串(RegExp.input)。
+   </script>
+</head>
+<body>
+
+
+</body>
+</html>

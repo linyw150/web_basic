@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*多行注释*/
+//我的单行注释
+
+
+//less特性：变量
+@jd-red: #393ce4;
+@nav-height: 40px;
+@half-opacity: .5;
+@std-font: 'SimHei';
+@std-border: solid;
+
+.alert {
+  color: @jd-red;
+  border: @nav-height @std-border @jd-red;
+  font-family: @std-font;
+}
+.well {
+  min-height:@nav-height;
+}
+
+
+//less特性：混合(Mixin)-超级变量-本身就是一组样式
+.std-margin {
+  margin-top: 20px;
+  margin-bottom:10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.h1 {
+  font-size: 36px;
+  .std-margin;
+}
+.h2 {
+  font-size: 28px;
+  .std-margin;
+}
+.h3 {
+  font-size: 24px;
+  .std-margin;
+}
+
+
+//less特性：带参混合
+.bordered(@bt,@bb, @c:#000) {
+  border-top: @bt;
+  border-right: 2px;
+  border-bottom: @bb;
+  color: @c;
+}
+h1 {
+  font-size: 36px;
+  .bordered(2px, 4px, #f00);
+}
+h2 {
+  font-size: 28px;
+  .bordered(1px, 8px);
+}
+
+
+.mybordered( ) {
+  border-top: 10px;
+  border-bottom: 10px;
+}
+
+h4 {
+  .mybordered;
+}
+h5 {
+  .mybordered;
+}
+h6 {
+  .mybordered;
+}
+
+
+//less特性：嵌套规则
+/*#navbar {
+  min-height: 50px;
+}
+
+#navbar .logo {
+  display: inline-block;
+}
+
+#navbar .logo a {
+  text-decoration: none;
+}
+#navbar .logo a:hover{
+  text-decoration: underline;
+}
+
+#navbar ul {
+  list-style: none;
+}
+#navbar ul li {
+  float: left;
+}*/
+
+
+/*#main > #navbar {
+
+}*/
+
+#nb {
+  min-height: 50px;
+  .lg {
+    display: inline-block;
+    a {
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  >ul {
+    list-style: none;
+  }
+}
+
+
+
+//less特性：函数
+//使用颜色函数创建一个网站的五级主题色
+@red-std: #e4393c;
+@red-light: lighten(@red-std, 20%);
+@red-lighter:lighten(@red-std, 40%);
+@red-dark:darken(@red-std, 20%);
+@red-darker: darken(@red-std, 40%);
+
+.box {
+  border: 2px solid @red-std;
+  background: @red-lighter;
+  color: @red-dark;
+  font-family: 'Microsoft YaHei';
+}
+
+
+@lg-container-width: 1170px;
+@lg-col-width: floor(@lg-container-width/12);
+
+
+
+
+
+
+
+

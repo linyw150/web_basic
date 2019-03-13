@@ -1,0 +1,212 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>京东导航条</title>
+		<meta charset="utf-8"/>	
+		<style>
+			body
+			{
+				font-size:12px;
+				font-family:microsoft Yahei;
+				color:#666;
+			}
+			
+			nav
+			{
+				width:900px;
+				height:40px;
+				margin:10px auto;
+				background-color:#E64346;
+			}
+			#category
+			{
+				width:210px;
+				float:left;
+				background-color:#CD2A2B;
+				
+			}
+			#p,ul,li
+			{
+				margin:0;
+				padding:0;
+			}
+			b
+			{
+				height:20px;
+				width:20px;
+				float:right;
+				background-repeat:no-repeat;
+				background-image:url(jd_navi_1/images/iconlist_1.png);
+				position:-196px -219px;
+				margin-top:10px;
+				margin-right:5px;
+			}
+			#category #p a
+			{	
+				font-size:14px;
+				font-weight:bold;
+				display:inline-block;
+				height:40px;
+				line-height:40px;
+				padding-left:20px;
+				color:#fff;
+				
+				text-decoration:none;
+			}
+			*
+			{
+			list-style:none;
+			}
+			#u1 li
+			{
+			font:12px "Mirosoft Yahei";
+			width:100px;
+			height:40px;
+			float:left;
+			text-align:center;
+			line-height:40px;
+			}
+			#u1 li a
+			{
+			display:inline-block;
+			color:#fff;
+			text-decoration:none;
+			width:50px;
+			height:40px;
+			}
+			#u1 li a:hover
+			{
+			background:#dD2A2B;
+			}
+			
+			#u2
+			{
+			
+			border:2px solid #E43A3D;
+			width:203px;
+			height:400px;
+			padding:4px 3px 3px 0px;/*上右下左*/
+			background:#FAFAFA;
+			border-top:none;
+			}
+			#u2 li
+			{
+			width:190px;
+			height:28px;
+			
+			border-bottom:1px solid #F9F9F9;
+			}
+			#u2 li>h3
+			{
+			margin:0px;
+			padding-left:5px;
+			font-size:14px;
+			width:190px;
+			height:28px;
+			line-height:28px;
+			font-weight:normal;
+			padding:0px 0px 0px 10px;
+			
+			}
+			#u2 li h3:hover
+			{
+			position:relative;
+			background-color:white;
+			border-top:1px solid #ddd;
+			border-bottom:1px solid #ddd;
+			z-index:20;
+			}
+			#u2 h3 a
+			{
+			color:#333;
+			text-decoration:none;
+			}
+			#u2{
+			position:relative;
+
+			}
+			#sub_cate_box
+			{
+			position:absolute;
+			width:700px;
+			height:400px;
+			border:1px solid #dd;
+			left:200px;
+			top:2px;
+			background:#fff;
+			padding:5px;
+			box-shadow:0 0 10px #ddd;
+			z-index:10;
+			}
+			#sub_cate_items
+			{
+			width:400px;
+			float:left;
+			height:400px;
+			border:1px solid #ddd;}
+			#sub_cate_banner
+			{
+			width:200px;
+			height:20px;
+			float:right;
+			border:1px solid #ddd;
+
+			}
+			#close
+			{
+			position:absolute;
+			left:705px;
+			top:-1px;
+			width:26px;
+			height:26px;
+			text-align:center;
+			line-height:26px;
+			background:#555;
+			color:#fff;
+			font-size:26px;
+			cursor:pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<div id="category">
+				<div id="p">
+				<a href="#">全部商品分类</a>
+				<b></b>
+				</div>
+				<ul id="u2">
+					<li>
+						<h3>
+							<a href="#">图书</a>、
+							<a href="#">音像</a>、
+							<a href="#">数字商品</a>
+						</h3>
+					</li>
+					<li>
+						<h3>
+							<a href="#">家用电器</a>
+							<div id="sub_cate_box">
+							<div id="sub_cate_items"></div>
+							<div id="sub_cate_banner"></div>
+							<div id="close">X</div>
+							</div>
+						</h3>
+					</li>
+				</ul>
+			</div>
+			<ul id="u1">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">服装城</a></li>
+			<li><a href="#">食品</a></li>
+			<li><a href="#">团购</a></li>
+			<li><a href="#">夺宝岛</a></li>
+			<li><a href="#">闪购</a></li>
+			<li><a href="#">金融</a></li>
+			</ul>
+			
+		<nav>
+		
+	</body>
+</html>

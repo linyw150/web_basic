@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       //Object.getOwnPropertySymbols
+       //属性名返回
+       var data = {'a':1,'b':2};
+       //该方法可以返回属性名，但Symbo不可以用for in
+       for(var i in data){
+           console.log(i);
+       }
+       //
+       const obj = {};
+       let a = Symbol('a');
+       let b = Symbol('b');
+
+       obj[a] = 'Hello';
+       obj[b] = 'World';
+
+       const objectSymbols = Object.getOwnPropertySymbols(obj);
+
+       console.log(objectSymbols);
+       // [Symbol(a), Symbol(b)]
+
+   </script>
+
+</head>
+<body>
+
+</body>
+</html>

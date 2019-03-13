@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+//       array.sort()方法默认是升序排序，如果想按照其他标准进行排序，就需要提供比较函数，该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：
+//
+//       若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+//       若 a 等于 b，则返回 0。
+//       若 a 大于 b，则返回一个大于 0 的值。
+//       简单点：比较函数两个参数a和b，返回a-b升序，返回b-a降序
+
+//
+//我的理解：
+//function(a,b)中，只要是return的是1，则交换位置，return-1或0，则不换
+//你要想降序，就要当b大于a的时候，就要return1
+//即if(b>a) return 1
+//你想要升序，就要当a大于b的时候，就要return1
+//即if（a>b)return1
+
+       var values = [0,1,56,23,34,3];
+       console.log(values.sort());
+       //有问题，需要改写
+      /* values.sort(function compare(value1,value2){
+           if (value1 < value2) {
+               console.info(values);
+               return -1;
+           } else if (value1 > value2) {//前一个数大于后一个数，返回1
+               console.info(values);
+               return 1;
+           }else{
+               console.info(values);
+               return 0;
+           }
+       });*/
+       console.info(values);
+       values.sort(function compare(value1,value2){
+           return value1.localeCompare(value2)
+       })
+
+   </script>
+</head>
+<body>
+
+
+</body>
+</html>

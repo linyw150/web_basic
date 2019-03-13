@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title></title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        div {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<h1>练习：使用栅格布局系统实现响应式布局</h1>
+<div class="container">
+    <!--<div class="row"></div>-->
+    <div class="row">
+        <div class="col-md-2 col-sm-3 col-xs-12">
+            <ul class="list-unstyled">
+                <li><a href="#">豆蔻年华</a></li>
+                <li><a href="#">青葱岁月</a></li>
+                <li><a href="#">迟暮之年</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8 col-sm-9 col-xs-12">
+            Lorem ip Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus accusantium ad at consequatur deleniti eius fugiat id laboriosam natus nihil pariatur quo sit ut, veniam. Alias est repellat totam!sum dolo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur laudantium numquam pariatur quas quasi, sequi velit. Aut consequatur, culpa deleniti doloremque dolorum eos modi, nemo nostrum qui recusandae ullam, vel.r si Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur corporis delectus, dolorem dolores eius eveniet exercitationem fugit hic illum ipsum labore libero non ratione recusandae reprehenderit ut vel veritatis voluptatum.t am Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, eos est fugiat ipsa natus non, quaerat quod quos reprehenderit vel voluptatum? Corporis dolores explicabo magni numquam quas reprehenderit ut?et, con Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi modi mollitia odit sed tempora? Adipisci corporis cumque dolores esse exercitationem impedit iusto magni maiores quo ratione recusandae sint, veritatis, voluptatum.sec Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut eum iure odio porro possimus quas repellat reprehenderit. Delectus dolorum eligendi libero mollitia ratione reiciendis. Dolorem iure magni molestias reiciendis.tet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deserunt esse impedit in incidunt laboriosam magni molestiae perspiciatis porro quos reprehenderit sunt, ullam vero voluptatem voluptates. Dolores ex illum repellendus?ur adipisicing elit. Culpa cupiditate excepturi, itaque nulla quam similique soluta totam. Alias aliquid asperiores blanditiis corporis cum dolo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam commodi cumque eius harum id iure magni necessitatibus nemo quo soluta. Dolorum facilis iusto libero nam optio, quis? Cupiditate deleniti, dolorum!ribus, fac Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam aut consequatur consequuntur cum, dicta dolore explicabo ipsa maiores numquam odio optio porro rem rerum, temporibus tenetur ullam ut voluptas?ere ius Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at atque blanditiis commodi dolor dolore facilis hic inventore iusto laboriosam modi molestiae nobis odio pariatur quasi quidem similique velit, voluptatum.to moll Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequatur cumque eligendi eos, eveniet ipsa ipsum laudantium, obcaecati, perferendis reiciendis repudiandae saepe veritatis voluptatum. Dolor in repellendus sed tempore vero.itia, q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolore earum ipsa ipsum nam nobis, quis rem unde voluptate voluptatibus! Accusamus, aut error iure nihil reprehenderit voluptatum. Alias, laborum provident.uod qu Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor iusto minima minus molestias. Aliquam autem corporis deleniti, ducimus fugit impedit inventore ipsa maiores porro rerum tempore ut veniam voluptates?os vel?
+        </div>
+        <div class="col-md-2 hidden-sm hidden-xs">
+            右侧的附加广告：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur culpa delectus deleniti dignissimos doloribus esse fugit inventore itaque minima mollitia nam necessitatibus nostrum obcaecati officia, placeat repellendus voluptates voluptatibus. lorem
+        </div>
+        <div class="col-md-3 col-sm-5 col-xs-5">
+            <input class="form-control">
+        </div>
+    </div>
+    <!--<div class="row"></div>    -->
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    /*Bootlint是一个Bootstrap使用方面的错误检测工具*/
+    (function () {
+        var s = document.createElement("script");
+        s.onload = function () {
+            bootlint.showLintReportForCurrentDocument([]);
+        };
+        s.src = "js/bootlint.js";
+        document.body.appendChild(s)
+    })();
+</script>
+</body>
+</html>

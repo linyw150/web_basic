@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<div id='div1'>
+    <div id='div2'>a</div>
+    <div id='div3' class='a'>b</div>
+    <div id='div4'>c</div>
+</div>
+<input value="1234" type="button" id="btn">
+
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    $(function(){
+        $("#btn").click(function(){
+            var a = $("#div1");
+            a.find("#div1").html("tttt");//find不能填div1
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>localStorage的特点</title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+  <input type="text" id="note"><br>
+  <input type="button" id="save" value="保存">
+  <input type="button" id="read" value="读取">
+  <input type="button" id="del" value="删除">
+  <script>
+	// 当用户在文本框中输入内容,点击"保存"按钮,进行保存(sessionStorage)
+	// 1. 获取button按钮
+	var save = document.getElementById("save");
+	// 2. 为button按钮绑定click事件
+	save.onclick = function(){
+		// 3. 获取用户输入的内容
+		var data = document.getElementById("note").value;
+		// * 存储数据使用key是唯一,不可重复
+		var key = new Date().getTime();
+		// 4. 利用localStorage进行存储
+		window.localStorage.setItem(key,data);
+	}
+	// 用户点击"读取"按钮,将所有数据进行读取
+	var read = document.getElementById("read");
+	read.onclick = function(){
+		// 获取当前localStorage存储系统的所有数据个数
+		var sum = localStorage.length;
+		// 遍历所有数据
+		for(var i=0;i<sum;i++){
+			// i是索引值 - 得到key(key(index))
+			var key = localStorage.key(i);
+			// 根据key得到对应的value
+			var value = localStorage.getItem(key);
+
+			console.log(value);
+		}
+	}
+	// 用户点击"删除"按钮,删除所有数据
+	var del = document.getElementById("del");
+	del.onclick = function(){
+		localStorage.clear();
+	}
+  </script>
+ </body>
+</html>

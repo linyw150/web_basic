@@ -1,0 +1,62 @@
+#doc-body .nowrap-color {
+  height: 0.2rem;
+}
+#doc-body .info-content {
+  padding: 0 0.32rem;
+  height: 0.88rem;
+  font-size: 14px;
+  position: relative;
+}
+#doc-body .info-content .info-list {
+  background: url(../image/right.png) center right no-repeat;
+  height: .88rem;
+  line-height: .88rem;
+  border-bottom: 1px solid #ccc;
+}
+#doc-body .info-content .head-pic {
+  position: absolute;
+  top: .15rem;
+  right: .72rem;
+  height: .6rem;
+  width: .6rem;
+  background: url(../image/user_headimage.png) no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+}
+#doc-body .info-content .head-pic .head-portrait {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+#doc-body .info-content .user {
+  position: absolute;
+  top: 0;
+  right: .72rem;
+  height: .88rem;
+  line-height: .88rem;
+}
+#doc-body .login-out-content {
+  height: 0.88rem;
+  text-align: center;
+  font-size: 16px ;
+  position: absolute;
+  left: 0;
+  bottom: 0.68rem;
+  width: 100%;
+}
+#doc-body .login-out-content .login-out {
+  height: 0.88rem;
+  line-height: 0.88rem;
+  color: #fff;
+  background: #DF3E0F;
+  border-radius: 4px ;
+  margin: 0 0.32rem;
+}
+#file {
+  width: 100%;
+  position: absolute;
+  height: .88rem;
+  top: 0;
+  opacity: 0;
+  z-index: 1000;
+}

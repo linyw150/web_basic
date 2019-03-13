@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        var name = "windowsName";
+        var a = {
+            name : "Cherry",
+            func1: function () {
+                console.log(this.name)
+            },
+            func2: function () {
+                setTimeout( function () {
+                    this.func1()
+                },100);
+            }
+        };
+        a.func2()  // this.func1 is not a function
+        //在不使用箭头函数的情况下，是会报错的，
+        // 因为最后调用 setTimeout 的对象是 window，但是在 window 中并没有 func1 函数。
+    </script>
+</head>
+<body>
+
+</body>
+</html>

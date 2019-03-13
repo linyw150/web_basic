@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的事件-trigger()</title>
+  <meta charset="utf-8" />
+  <script src="../../jslib/jquery-1.11.3.js"></script>
+ </head>
+
+ <body>
+  <button>按钮</button>
+  <script>
+	$("button").click(function(event,a,b){
+		console.log(event.target);
+		console.log("a : "+a);
+		console.log("b : "+b);
+	}).trigger("click",['this is a.','this is b.']);
+  </script>
+ </body>
+</html>

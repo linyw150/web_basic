@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title></title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        div {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<h1>全局CSS样式——栅格布局系统</h1>
+
+<h2>基本结构： 容器 > 行 > 12列</h2>
+
+<h2>基本结构： .container/.container-fluid > .row > .col </h2>
+
+<div class="container">
+    <div>这是一个普通的容器</div>
+</div>
+<div class="container-fluid">
+    <div>这是一个流式容器</div>
+</div>
+<hr>
+
+<h2>每行中只有1列</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-1">md-1</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">md-2</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">md-3</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">md-5</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">md-6</div>
+    </div>
+    <div class="row">
+        <div class="col-md-7">md-7</div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">md-8</div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">md-9</div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">md-10</div>
+    </div>
+    <div class="row">
+        <div class="col-md-11">md-11</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">md-12</div>
+    </div>
+
+
+    <h2>一行中放置多列</h2>
+    <div class="row">
+        <div class="col-md-1">md-1</div>
+        <div class="col-md-1">md-1</div>
+        <div class="col-md-1">md-1</div>
+        <div class="col-md-1">md-1</div>
+        <div class="col-md-1">md-1</div>
+        <div class="col-md-1">md-1</div>
+        <div class="col-md-1">md-1</div>
+        <div class="col-md-1">md-1</div>
+        <div class="col-md-1">md-1</div>
+        <div class="col-md-1">md-1</div>
+        <div class="col-md-1">md-1</div>
+        <div class="col-md-1">md-1</div>
+
+        <div class="col-md-1">md-1</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">md-2</div>
+        <div class="col-md-2">md-2</div>
+        <div class="col-md-2">md-2</div>
+        <div class="col-md-2">md-2</div>
+        <div class="col-md-2">md-2</div>
+        <div class="col-md-2">md-2</div>
+
+        <div class="col-md-2">md-2</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5">md-5</div>
+        <div class="col-md-5">md-5</div>
+
+        <div class="col-md-5">md-5</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-7">md-7</div>
+        <div class="col-md-7">md-7</div>
+    </div>
+
+    <h2>一行中放置多个不等宽的列</h2>
+    <div class="row">
+        <div class="col-md-3">md-3</div>
+        <div class="col-md-6">md-6</div>
+        <div class="col-md-3">md-3</div>
+    </div>
+
+    <h2>一个列指定不同屏幕下的不同宽度</h2>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-8 col-xs-12">变宽的列</div>
+    </div>
+
+    <h2>不同屏幕下的列宽的有效范围</h2>
+    <div class="row">
+        <div class="col-xs-6">xs-6</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">sm-6</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">md-6</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">lg-6</div>
+    </div>
+
+    <h2>列的隐藏</h2>
+    <div class="row">
+        <div class="col-xs-6 hidden-md">xs-6</div>
+    </div>
+    <h2>列的隐藏</h2>
+    有问题：col-sm-6和col-xs-6在大于768的时候重复了（冗余）
+    <div class="row">
+        <div class="col-xs-6 col-xs-6">xs-6</div>
+    </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    /*Bootlint是一个Bootstrap使用方面的错误检测工具*/
+    (function () {
+        var s = document.createElement("script");
+        s.onload = function () {
+            bootlint.showLintReportForCurrentDocument([]);
+        };
+        s.src = "js/bootlint.js";
+        document.body.appendChild(s)
+    })();
+</script>
+</body>
+</html>

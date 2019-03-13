@@ -1,0 +1,131 @@
+.container{
+  background-color: #f2f2f2;
+}
+#doc-body{
+  background-color: #f2f2f2;
+  padding-top: 0.88rem;
+  .personage-info{
+    background: #fff;
+    margin-bottom: 0.64rem;
+    .nowrap-content{
+      padding: 0 0.32rem;
+      height: 0.88rem;
+      line-height: 0.88rem;
+      font-size: 13px;
+      border-bottom:1px solid #ccc ;
+      .label{
+        float: left;
+        margin-right:0.32rem ;
+        min-width: 1.5rem;
+      }
+
+      .input-box{
+        float: left;
+        input{
+          border: 0;
+          outline: none;
+          min-width: 5rem;
+          height: 0.88rem;
+          line-height: 0.88rem;
+        }
+        .checked-default{
+          height: 0.88rem;
+          width: 0.92rem;
+          background:url(../image/unselected.png) right no-repeat;
+          background-size:0.34rem 0.34rem ;
+        }
+        .isChecked{
+          background:url(../image/selected.png) right no-repeat;
+          background-size:0.34rem 0.34rem ;
+        }
+      }
+    }
+    .nowrap-content:last-child{
+      border: 0;
+    }
+  }
+
+  .saveBtn-content{
+    padding: 0 0.32rem;
+    margin-top: 0.24rem;
+    .savebtn{
+      width: 100%;
+      background: #DF3E0F;
+      color: #fff;
+      border: 0;
+      border-radius:4px ;
+      height: 0.88rem;
+      line-height: 0.88rem;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+#select_contact{
+  width: 5rem;
+  color: rgba(86, 81, 81, 0.86);
+  .color-black{
+    color: #333;
+  }
+}
+#show_contact{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width: 5rem;
+  display: inline-block;
+}
+
+.ios-select-widget-box.olay{
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+}
+@media (min-width:768px) {
+  .ios-select-widget-box.olay{
+    max-width: 750px;
+    left:50%;
+    margin-left: -375px;
+    .layer{
+      max-width: 750px;
+      left:50%;
+      margin-left: -375px;
+    }
+  }
+}
+.ios-select-widget-box{
+  font-size:13px ;
+  .close{
+    text-shadow:initial ;
+    opacity: 1;
+    font-weight: normal;
+  }
+  .iosselect-header{
+    position: relative;
+    #iosSelectTitle{
+      width: 128px;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -64px;
+      font-size:14px ;
+    }
+    .close,.sure{
+      font-size:14px ;
+    }
+  }
+  ul li.side1, ul li.at{
+    font-size:13px ;
+  }
+}
+.del-address{
+  display: block;
+  width: 100%;
+  text-align: right;
+  line-height: 0.68rem;
+}
+.wrong{
+  font-size:14px;
+  text-align: center;
+  color: #f00;
+}

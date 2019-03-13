@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<style>
+    p:nth-child(1){
+        color:red
+    }
+</style>
+<div style="border:1px solid">
+    <span>div span中第一个段落。</span>
+    <p>div 中第一个段落。</p>
+    <p>div 中的最后一个段落。</p>
+</div><br>
+
+<div style="border:1px solid">
+    <p>另一个 div 中第一个段落。</p>
+    <p>另一个 div 中的最后一个段落。</p>
+</div>
+
+:nth-child(n)    ---->选中某个元素，该元素必须是某个父元素下的第n个子元素；
+
+p:nth-child(n)   ---->选中p元素，且该p元素必须是某个父元素下的第n个子元素
+
+注意：n是从1开始的
+
+如下代码，p:nth-child(1)，只会选中第二个div中第一个子元素p;
+
+不会选中第一个div中的第一个p，因为第一个div中第一p元素不是第一个子元素
+https://www.cnblogs.com/baiyangyuanzi/p/6603858.html
+</body>
+</html>

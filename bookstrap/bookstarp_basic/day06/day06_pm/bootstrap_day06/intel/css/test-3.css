@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+/*多行注释*/
+.alert {
+  color: #393ce4;
+  border: 40px solid #393ce4;
+  font-family: 'SimHei';
+}
+.well {
+  min-height: 40px;
+}
+.std-margin {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.h1 {
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.h2 {
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+h1 {
+  font-size: 36px;
+  border-top: 2px;
+  border-right: 2px;
+  border-bottom: 4px;
+  color: #ff0000;
+}
+h2 {
+  font-size: 28px;
+  border-top: 1px;
+  border-right: 2px;
+  border-bottom: 8px;
+  color: #000000;
+}
+h4 {
+  border-top: 10px;
+  border-bottom: 10px;
+}
+h5 {
+  border-top: 10px;
+  border-bottom: 10px;
+}
+h6 {
+  border-top: 10px;
+  border-bottom: 10px;
+}
+/*#navbar {
+  min-height: 50px;
+}
+
+#navbar .logo {
+  display: inline-block;
+}
+
+#navbar .logo a {
+  text-decoration: none;
+}
+#navbar .logo a:hover{
+  text-decoration: underline;
+}
+
+#navbar ul {
+  list-style: none;
+}
+#navbar ul li {
+  float: left;
+}*/
+/*#main > #navbar {
+
+}*/
+#nb {
+  min-height: 50px;
+}
+#nb .lg {
+  display: inline-block;
+}
+#nb .lg a {
+  text-decoration: none;
+}
+#nb .lg a:hover {
+  text-decoration: underline;
+}
+#nb > ul {
+  list-style: none;
+}
+.box {
+  border: 2px solid #e4393c;
+  background: #fceded;
+  color: #a11618;
+  font-family: 'Microsoft YaHei';
+}

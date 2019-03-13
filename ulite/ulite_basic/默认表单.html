@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title></title>
+  <link href="../qrmaster_ulite.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="container">
+  <h1>全局CSS样式——表单</h1>
+
+  <h2>1.默认表单</h2>
+  <form action="">
+    <div class="form-group">
+      <label class="control-label" for="uname">用户名：</label>
+      <input class="form-control" id="uname" type="text">
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="upwd">密码：</label>
+      <input class="form-control" id="upwd" type="password">
+    </div>
+
+    <!--Bootstrap编码规范中指定：单选/复选按钮要放在label中-->
+    <div class="checkbox">
+      <label>
+        <input type="checkbox">我接受本站的使用条款
+      </label>
+    </div>
+
+    <input class="btn btn-success" type="button" value="提交数据">
+    <input class="btn btn-danger" type="button" value="清空重填">
+  </form>
+
+
+  <h2>2.行内表单(inline)</h2>
+  <form class="form-inline" action="">
+    <div class="form-group">
+      <label class="control-label" for="uname2">用户名：</label>
+      <input class="form-control" id="uname2" type="text">
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="upwd2">密码：</label>
+      <input class="form-control" id="upwd2" type="password">
+    </div>
+
+    <!--Bootstrap编码规范中指定：单选/复选按钮要放在label中-->
+    <!--<div class="checkbox">
+      <label>
+        <input type="checkbox">我接受本站的使用条款
+      </label>
+    </div>-->
+    <input class="btn btn-default" type="button" value="登录">
+  </form>
+
+
+  <h2>3.水平表单(horizontal)</h2>
+  <h4>默认的栅格系统：.container > .row > .col-* </h4>
+  <h4>水平表单中栅格系统：.form-horizontal > .form-group > .col-* </h4>
+  <form class="form-horizontal" action="">
+    <div class="form-group">
+      <div class="col-md-2">
+        <label class="control-label" for="uname3">用户名：</label>
+      </div>
+      <div class="col-md-6">
+        <input class="form-control" id="uname3" type="text">
+      </div>
+      <div class="col-md-4">
+        <span class="help-block">用户名长度在6~12位之间</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-2">
+        <label class="control-label" for="upwd3">密码：</label>
+      </div>
+      <div class="col-md-6">
+        <input class="form-control" id="upwd3" type="password">
+      </div>
+      <div class="col-md-4">
+        <span class="help-block">密码中必须包含数字、字母</span>
+      </div>
+    </div>
+
+    <!--Bootstrap编码规范中指定：单选/复选按钮要放在label中-->
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox">我接受本站的使用条款
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <input class="btn btn-success" type="button" value="提交数据">
+        <input class="btn btn-danger" type="button" value="清空重填">
+      </div>
+    </div>
+  </form>
+
+  <hr>
+
+  <form class="form-horizontal" action="">
+    <div class="form-group">
+      <label class="col-md-2 control-label" for="uname4">用户名：</label>
+      <div class="col-md-6">
+        <input class="form-control" id="uname4" type="text">
+      </div>
+      <div class="col-md-4">
+        <span class="help-block">用户名长度在6~12位之间</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-2 control-label" for="upwd4">密码：</label>
+      <div class="col-md-6">
+        <input class="form-control" id="upwd4" type="password">
+      </div>
+      <div class="col-md-4">
+        <span class="help-block">密码中必须包含数字、字母</span>
+      </div>
+    </div>
+
+    <!--Bootstrap编码规范中指定：单选/复选按钮要放在label中-->
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox">我接受本站的使用条款
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <input class="btn btn-success" type="button" value="提交数据">
+        <input class="btn btn-danger" type="button" value="清空重填">
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="../jquery-1.11.3.js"></script>
+<script src="../ulite.js"></script>
+</body>
+</html>

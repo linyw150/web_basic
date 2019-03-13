@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style type="text/css">
+
+        .first-face {
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: row;/*flex-direction属性决定主轴的方向（即项目的排列方向）。*/
+        justify-content: space-between;/*属性定义了项目在主轴上的对齐方式。*/
+
+        }
+
+       /*  flex弹性的
+
+（1）该属性时flex-grow、flex-shrink、flex-basis的缩写
+
+（2）默认值为：0 1 auto  （后两个属性为可选）
+
+（3）该属性有两个快捷键：auto（1 1 auto）、 none（0 0 auto）
+
+
+       */
+
+        .p1{
+            flex-basis: 100px;
+            border: 1px solid #2858ff;
+        }
+        .p2 {
+            flex-grow: 1;
+            border: 1px solid #66ff6d;
+        }
+        .p3 {
+            flex-grow: 2;
+            border: 1px solid #ffff00;
+        }
+    </style>
+</head>
+<body>
+<!--
+https://blog.csdn.net/zxy9602/article/details/53138564-->
+<div class="first-face">
+    <span class="p1">1</span>
+    <span class="p2">2</span>
+    <span class="p3">3</span>
+</div>
+</body>
+</html>

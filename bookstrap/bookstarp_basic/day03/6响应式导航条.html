@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title></title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    body {
+      /*margin-top: 50px;*/
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+<div class="navbar navbar-default">
+  <div class="container">
+    <!--导航条头部-->
+    <div class="navbar-header">
+      <!--logo/商标-->
+      <a class="navbar-brand" href="#">TARENA</a>
+      <!--折叠菜单触发按钮-->
+      <button class="navbar-toggle" type="button">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!--导航条折叠部分-->
+    <div class="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#">News</a></li>
+        <li><a href="#">Product</a></li>
+      </ul>
+
+      <a class="navbar-link navbar-text navbar-right" href="#">REGISTER</a>
+
+      <span class="navbar-text navbar-right">|</span>
+
+      <button class="navbar-btn btn btn-success navbar-right" type="button">LOGIN</button>
+
+      <form class="navbar-form navbar-right" action="">
+        <div class="form-group">
+          <!--Screen Reader Only 仅屏幕阅读软件可见-->
+          <label class="sr-only" for="kw">搜索：</label>
+          <input class="form-control" type="text" id="kw" placeholder="Search...">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+<h1>组件——响应式导航条()</h1>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+版权声明
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container">
+    <!--导航条头部-->
+    <div class="navbar-header">
+      <!--logo/商标-->
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" alt="" style="margin-top:-16px;">
+      </a>
+      <!--折叠菜单触发按钮-->
+      <button class="navbar-toggle" type="button">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  (function () {
+    var s = document.createElement("script");
+    s.onload = function () {
+      bootlint.showLintReportForCurrentDocument([]);
+    };
+    s.src = "js/bootlint.js";
+    document.body.appendChild(s)
+  })();
+</script>
+</body>
+</html>

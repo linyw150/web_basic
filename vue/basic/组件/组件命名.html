@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+</div>
+
+
+<script>
+    Vue.component('MyComponent', {
+        template: '<div>hello, world</div>'
+    })
+
+    new Vue({
+        el: '#app',
+        template: '<MyComponent></MyComponent>'
+    })
+    //在vue1.0运行不了因为：(在vue2.0可以）
+    /*
+     模板 <MyComponent></MyComponent> 插入到 DOM 后会变成
+     <mycomponent></mycomponent>。标签 mycomponent 匹配的组件依次为 mycomponent（原标签名）、
+     mycomponent（camelCase形式）、Mycomponent（PascalCase形式），并没有匹配到注册的组件名
+      MyComponent，所以会报找不到组件 <mycomponent> 的警告。
+
+    总结：尽量以全小写或者仅首字母大写形式注册组件，
+
+     https://cnodejs.org/topic/5816aabdcf18d0333412d323
+     */
+</script>
+</body>
+</html>

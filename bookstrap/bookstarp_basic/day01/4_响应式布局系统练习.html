@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .left, .middle, .right {
+            float: left;
+        }
+        .left {
+            background: #fdd;
+        }
+        .middle {
+            background: #dfd;
+        }
+        .right {
+            background: #ddf;
+        }
+        @media screen and (min-width: 990px){
+            .left {
+                width: 20%;
+            }
+            .middle {
+                width: 60%;
+            }
+            .right {
+                width: 20%;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 989px){
+            .right {
+                display: none;
+            }
+            .left {
+                width: 25%;
+            }
+            .middle {
+                width: 75%;
+            }
+        }
+        @media screen and (max-width: 767px){
+             /*left 和middle默认100%*/
+            .right {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>响应式布局系统练习</h1>
+    <div class="main">
+        <div class="left">左侧的导航：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto aut commodi dolor dolores eaque eveniet exercitationem ipsam iusto laborum maxime nulla porro quae, quaerat quo quod vitae voluptas voluptate.</div>
+        <div class="middle">中间的主体：<Lorlorem></Lorlorem>em <iplorem></iplorem>sum <dolorem></dolorem>lor Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi, corporis dicta et fugit illum iure porro praesentium quaerat quia quis quod repelle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cum deleniti dolorum ipsam, libero maiores molestias nesciunt porro quasi quod, sint veritatis? Earum enim nisi non, optio perspiciatis possimus voluptatem!nd Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi natus nisi odit sint suscipit. At eius magnam maiores provident repudiandae? Accusamus aliquam atque cum laborum magnam molestias provident sed totam.us! Ad exce Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ducimus expedita hic tempora voluptates. Accusamus assumenda cum doloribus enim esse fugit iste libero quas quisquam quod, sapiente sint tenetur voluptatum.pturi re Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, non vitae! A asperiores cupiditate ipsum laborum magni minima optio, quos sit voluptatum! Facilis laudantium magni molestias provident quod rem voluptate!m repe Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur distinctio dolore error harum itaque laborum praesentium quas quis veniam! Animi eius eos minima sint? Eveniet nulla odio porro similique.llat!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut debitis dignissimos eligendi explicabo natus nostrum nulla, possimus repellendus sapiente? Culpa cumque eaque excepturi id impedit modi reiciendis repudiandae temporibus voluptates!Dese Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis dicta ducimus enim eveniet facilis impedit inventore ipsa iste laudantium minus molestias mollitia, quisquam quo rerum soluta totam vitae voluptates.runt est, impedit.sit amet, consectetur adipisicing elit. Asperiores consequuntur dolorum esse eum explicabo facere, ipsam ipsum molestiae possimus quae quam qui quo repellendus totam velit? A adipisci nobis tempora! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consectetur debitis deleniti dicta dignissimos eligendi est laudantium magnam magni minima modi molestiae natus neque, nisi officia quam quis quisquam totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at atque aut blanditiis cumque, cupiditate deleniti ea error facere illum iste libero, nisi nostrum odio quia reiciendis sint voluptatem voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores aspernatur corporis, distinctio dolore eius eveniet fugit impedit laudantium, maiores nihil nobis pariatur perspiciatis quisquam reiciendis sunt, tempora temporibus vel.</div>
+        <div class="right">右侧的广告：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam culpa debitis ducimus incidunt, laboriosam modi rem voluptates! Ab deserunt distinctio ducimus eos laborum natus nostrum reprehenderit sit, unde ut, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fugiat ipsam laborum omnis, pariatur quis sapiente. Aliquam blanditiis corporis iste magnam nam nulla omnis, quaerat. Blanditiis eaque id quas sed?</div>
+    </div>
+</body>
+</html>

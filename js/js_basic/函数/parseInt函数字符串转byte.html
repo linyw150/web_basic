@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        var a = "DEB3"
+        /*
+        0  (0,2)  0,1  即DE
+
+         */
+        function hex2bin(hex){
+
+            var bytes = [],
+            qrcodeResult = '';
+            for (var i = 0; i < hex.length - 1; i += 2) {
+                bytes.push(parseInt(hex.substr(i, 2), 16));
+            }
+            qrcodeResult = String.fromCharCode.apply(String, bytes);
+            return qrcodeResult;
+        }
+        function Str2Bytes(str)
+
+        {
+            var pos = 0;
+            var len = str.length;
+            if(len %2 != 0)
+           {
+                return null;
+            }
+            len /= 2;
+            var hexA = new Array();
+            for(var i=0; i<len; i++)
+            {
+                var s = str.substr(pos, 2);
+                var v = parseInt(s, 16);
+                hexA.push(v);
+                pos += 2;
+            }
+            return hexA;
+        }
+        var card = "DEB3FDF77E65453BF3609094AD5F885D9CE55F9B98CD3328468C4E6D767DCD3E2DE1FF2DF050000000000A6802";
+        console.log(Str2Bytes(card));
+        console.log(hex2bin(card));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

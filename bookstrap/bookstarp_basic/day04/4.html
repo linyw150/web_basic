@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title></title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+<div class="container">
+  <h1>组件——折叠效果(collapse)</h1>
+
+  <a class="btn btn-danger" href="#my-collapse" data-toggle="collapse">LINK触发折叠效果</a>
+  <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#my-collapse">BTN触发折叠效果</button>
+  <br>
+  <br>
+
+  <div id="my-collapse" class="collapse in">
+    <div class="alert alert-success">
+      Lorem ipsum dolor sit amet, conseconsectetur adipisicing elit. Delectus dolorem facilis inventore maxime minima
+      nisi perspiciatis repudiandae rerum unde veniam. Alias autem fugiat impedit odio officia similique soluta? Error,
+      sit!eat, q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cum doloribus eos, eum explicabo harum
+      id, ipsum maiores placeat possimus quasi quibusdam quisquam repellendus repudiandae similique veniam vero
+      voluptates voluptatibus.uo rec Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi
+      debitis dicta ea pariatur quaerat quidem quis quos repellendus. Adipisci cumque et illum magnam modi mollitia
+      obcaecati, officiis sint ullam?san Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequuntur cum
+      dignissimos distinctio facilis illum incidunt laboriosam, non pariatur perspiciatis quae quas recusandae rem
+      repudiandae suscipit velit voluptas? Eaque, officiis.d Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+      dignissimos itaque iure magnam mollitia non, quisquam sequi? Ab aliquam cum, eius exercitationem impedit in
+      maiores neque quae repellat unde, voluptates.ae rem ullam! Nobis! Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Commodi illo quam quia, quibusdam ratione rem saepe similique tempora? Amet beatae distinctio
+      explicabo facilis fugit harum pariatur provident quos sequi voluptatum?
+    </div>
+  </div>
+
+  <h1>折叠效果的应用1：响应式导航条</h1>
+
+  <h1>折叠效果的应用2：手风琴</h1>
+
+  <div class="panel-group" id="my-accordion">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <a data-parent="#my-accordion" data-toggle="collapse" href="#hlm">《红楼梦》简介</a>
+        </h3>
+      </div>
+      <div id="hlm" class="collapse in panel-collapse">
+        <div class="panel-body">
+          Lorem ipsum dolor , rem repudiandae. Aspernatur, eius.li Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Animi culpa cupiditate debitis deleniti repellendus, similique sit totam voluptas. Aliquid consectetur
+          laboriosam maxime minima non quam quod. Architecto odio ratione saepe!t v Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. A ad deserunt, doloribus, eveniet, fugiat id laboriosam laudantium magnam nam
+          neque officia quaerat quasi quis sunt tempora velit vitae voluptas voluptatum.ero, voluptate.
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <a data-parent="#my-accordion" href="#shz" data-toggle="collapse">《水浒传》简介</a>
+        </h3>
+      </div>
+      <div id="shz" class="collapse panel-collapse">
+        <div class="panel-body">
+          Lorem ipsum dolor , rem repudiandae. Aspernatur, eius.li Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Animi culpa cupiditate debitis deleniti repellendus, similique sit totam voluptas. Aliquid consectetur
+          laboriosam maxime minima non quam quod. Architecto odio ratione saepe!t v Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. A ad deserunt, doloribus, eveniet, fugiat id laboriosam laudantium magnam nam
+          neque officia quaerat quasi quis sunt tempora velit vitae voluptas voluptatum.ero, voluptate.
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <a data-parent="#my-accordion" data-toggle="collapse" href="#sgyy">《三国演义》简介</a>
+        </h3>
+      </div>
+      <div id="sgyy" class="collapse panel-collapse">
+        <div class="panel-body">
+          Lorem ipsum dolor , rem repudiandae. Aspernatur, eius.li Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Animi culpa cupiditate debitis deleniti repellendus, similique sit totam voluptas. Aliquid consectetur
+          laboriosam maxime minima non quam quod. Architecto odio ratione saepe!t v Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. A ad deserunt, doloribus, eveniet, fugiat id laboriosam laudantium magnam nam
+          neque officia quaerat quasi quis sunt tempora velit vitae voluptas voluptatum.ero, voluptate.
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <a data-parent="#my-accordion" data-toggle="collapse" href="#xyj">《西游记》简介</a>
+        </h3>
+      </div>
+      <div id="xyj" class="collapse panel-collapse">
+        <div class="panel-body">
+          Lorem ipsum dolor , rem repudiandae. Aspernatur, eius.li Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Animi culpa cupiditate debitis deleniti repellendus, similique sit totam voluptas. Aliquid consectetur
+          laboriosam maxime minima non quam quod. Architecto odio ratione saepe!t v Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. A ad deserunt, doloribus, eveniet, fugiat id laboriosam laudantium magnam nam
+          neque officia quaerat quasi quis sunt tempora velit vitae voluptas voluptatum.ero, voluptate.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">这里是标题</h3>
+    </div>
+    <div class="panel-body">
+      Lorem ipsum dolor , rem repudiandae. Aspernatur, eius.li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Animi culpa cupiditate debitis deleniti repellendus, similique sit totam voluptas. Aliquid consectetur laboriosam
+      maxime minima non quam quod. Architecto odio ratione saepe!t v Lorem ipsum dolor sit amet, consectetur adipisicing
+      elit. A ad deserunt, doloribus, eveniet, fugiat id laboriosam laudantium magnam nam neque officia quaerat quasi
+      quis sunt tempora velit vitae voluptas voluptatum.ero, voluptate.
+    </div>
+    <div class="panel-footer">
+      这里是尾部
+    </div>
+  </div>
+
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  (function () {
+    var s = document.createElement("script");
+    s.onload = function () {
+      bootlint.showLintReportForCurrentDocument([]);
+    };
+    s.src = "js/bootlint.js";
+    document.body.appendChild(s)
+  })();
+</script>
+</body>
+</html>

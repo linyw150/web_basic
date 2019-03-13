@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery动画效果-自定义动画一</title>
+  <meta charset="utf-8" />
+  <script src="scripts/jquery-1.11.3.js"></script>
+  <style>
+	div {
+		width : 200px;
+		height : 200px;
+		border : solid 1px black;
+		background : pink;
+		position : relative;
+		top : 50px;
+		left : 10px;
+	}
+  </style>
+ </head>
+
+ <body>
+  <button>执行动画</button>
+  <br><br>
+  <div></div>
+  <script>
+	$("button").click(function(){
+		/*
+		 * animate(params,duration,easing,callback)
+		 * * params - 设置动画执行的样式(CSS的属性)
+		 *   * 写法 - { attrName : attrValue}
+		 * * duration - 设置动画执行的时长,单位为毫秒
+		 *   * 三种预定义值 - slow|normal|fast
+		 * * easing - 要使用的擦除效果的名称(不使用)
+		 * * callback - 当动画执行完毕后的函数
+		 */
+		/* 并发效果 - 同时执行
+		$("div").animate({
+			"width" : 50,
+			"height" : 50
+		},3000);
+		*/
+		// 排队效果 - 按照先后顺序执行
+		$("div").animate({
+			"width" : 50
+		},3000).animate({
+			"height" : 50
+		},3000).animate({
+			"left" : 200
+		},3000).animate({
+			"top" : 200
+		},3000);
+	});
+  </script>
+ </body>
+</html>

@@ -1,0 +1,89 @@
+.container {
+  background-color: #f2f2f2;
+}
+#doc-body {
+  background-color: #f2f2f2;
+  padding-top: 0.88rem;
+}
+#doc-body .pay-info {
+  height: 2.64rem;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#doc-body .pay-info .pay-top {
+  text-align: center;
+  margin-top: 0.58rem;
+  font-size: 13px ;
+}
+#doc-body .pay-info .pay-total {
+  text-align: center;
+  margin-top: 0.2rem;
+  font-size: 16px ;
+}
+#doc-body .pay-info .pay-shop-name {
+  font-size: 13px ;
+  position: relative;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+#doc-body .pay-info .pay-shop-name .shop-name-content {
+  position: absolute;
+  width: 3.2rem;
+  left: 50%;
+  margin-left: -1.6rem;
+}
+#doc-body .pay-styles {
+  margin-top: 0.2rem;
+  font-size: 14px;
+  background: #fff;
+}
+#doc-body .pay-styles .pay {
+  height: 0.98rem;
+  /*支付方式的高*/
+  padding: 0 0.32rem 0 1.02rem;
+  line-height: 0.98rem;
+  position: relative;
+}
+#doc-body .pay-styles .aliPayButton {
+  border-bottom: 1px solid #ccc ;
+  background: url(../image/alipay.png) 0.32rem center no-repeat;
+  background-size: 0.46rem 0.46rem ;
+}
+#doc-body .pay-styles .wechatPayButton {
+  background: url(../image/weixin.png) 0.32rem center no-repeat;
+  background-size: 0.46rem 0.46rem ;
+}
+#doc-body .pay-styles .pay-icon {
+  height: 0.98rem;
+  width: 0.92rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../image/unselected.png) center no-repeat;
+  background-size: 0.34rem 0.34rem ;
+}
+#doc-body .pay-styles .isChecked {
+  background: url(../image/selected.png) center no-repeat;
+  background-size: 0.34rem 0.34rem ;
+}
+#doc-body .payBtn-content {
+  padding: 0 0.32rem;
+  margin-top: 1.5rem;
+}
+#doc-body .payBtn-content .paybtn {
+  width: 100%;
+  background: #DF3E0F;
+  color: #fff;
+  border: 0;
+  border-radius: 4px ;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  font-size: 16px;
+  text-align: center;
+}

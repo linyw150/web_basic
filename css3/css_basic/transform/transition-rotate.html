@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        .main{
+            width: 50px;
+            height: 50px;
+            background: url("down.png") center no-repeat;
+            margin: 0 auto;
+            transition-duration: .3s;/*为了旋转看起来更舒服*/
+            will-change: transform;
+        }
+        .revert{
+            transform:rotate(180deg)
+        }
+    </style>
+</head>
+<title>测试transition</title>
+
+<body>
+
+<div class="main">
+</div>
+</body>
+<script>
+$(function(){
+    $('.main').click(function(){
+        $('.main').toggleClass('revert');
+    })
+})
+</script>
+
+</html>

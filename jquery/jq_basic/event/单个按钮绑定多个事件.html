@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的事件-toggle()</title>
+  <meta charset="utf-8" />
+  <script src="jquery.min.js"></script>
+  <style>
+      #d1{
+          width: 20px;
+          height: 20px;
+          background-color: red;
+      }
+  </style>
+ </head>
+
+ <body>
+<div id="d1">
+    <!--单个按钮绑定多个事件,都会执行-->
+</div>
+  <script>
+       $(function(){
+           $("#d1").click(function(){
+               alert(1234);
+           })
+           $("#d1").click(function(){
+               alert(3333);
+           })
+       })
+  </script>
+ </body>
+</html>

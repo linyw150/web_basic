@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的事件-多事件绑定与解绑</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+  <style>
+	.d1 {
+		width : 200px;
+		height : 50px;
+		border : solid 1px black;
+		background : yellow;
+	}
+	.d2 {
+		width : 200px;
+		height : 200px;
+		border : solid 1px black;
+		background : pink;
+		display : none;
+	}
+  </style>
+ </head>
+
+ <body>
+  <div class="d1">
+	<h3>什么是jQuery?</h3>
+  </div>
+  <div class="d2">
+	<p>jQuery是一个轻量级的JS库.</p>
+  </div>
+  <script>
+	/*
+	 * 鼠标悬停事件
+	 * * mouseover
+	 * * mouseout
+	 */
+	/*
+	$(".d1>h3").mouseover(function(){
+		$(".d2").show(1000);
+	}).mouseout(function(){
+		$(".d2").hide(1000);
+	});
+	*/
+
+	/*
+	 * bind()方法 - 事件绑定
+	 * * type - 指定绑定的事件名称为多个时,中间使用空格隔开
+	 */
+	$(".d1>h3").bind("mouseover mouseout",function(){
+		if($(".d2").is(":hidden")){
+			$(".d2").show();
+		}else{
+			$(".d2").hide();
+		}
+	});
+	/*
+	 * unbind()方法 - 解绑事件
+	 * * type - 指定解绑的事件名称
+	 *   * 没值 - 解绑所有事件
+	 *   * 指定单事件 - 解绑指定单个事件
+	 *   * 指定多事件 - 解绑指定多个事件
+	 */
+	//$(".d1>h3").unbind("mouseover mouseout");
+  </script>
+ </body>
+</html>

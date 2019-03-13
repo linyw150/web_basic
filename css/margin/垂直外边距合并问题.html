@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>垂直外边距合并</title>
+    <style>
+
+        .top{width:160px; height:50px; background:#ccf;}
+        .middle{width:160px; background:#cfc; }
+        .middle .firstChild{margin-top:20px;}
+    </style>
+</head>
+
+<body>
+这个问题发生的原因是根据规范，
+一个盒子如果没有上补白(padding-top)和上边框(border-top)，
+那么这个盒子的上边距会和其内部文档流中的第一个子元素的上边距重叠。
+<div class="top"></div>
+
+<div class="middle">
+    <div class="firstChild">我其实只是想和我的父元素隔开点距离。</div>
+    <div class="secondChild"></div>
+</div>
+</body>
+</html>

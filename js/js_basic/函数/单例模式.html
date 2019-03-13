@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       var myModule = (function module(){
+           var someThing = "123";
+           var otherThing = [1,2,3];
+
+           function doSomeThing(){
+               console.log(someThing);
+           }
+
+           function doOtherThing(){
+               console.log(otherThing);
+           }
+
+           return {
+               doSomeThing:doSomeThing,
+               doOtherThing:doOtherThing
+           }
+       })();
+
+       myModule.doSomeThing();
+       myModule.doOtherThing();
+   </script>
+</head>
+<body>
+https://www.cnblogs.com/yiven/p/8462666.html
+</body>
+</html>

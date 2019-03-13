@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>使用My97日历插件-高级使用</title>
+  <meta charset="utf-8" />
+  <!-- 1. 引入jQuery文件 -->
+  <script src="scripts/jquery-1.11.3.js"></script>
+  <!-- 2. 引入jQuery插件文件(My97) -->
+  <script src="My97DatePicker/WdatePicker.js"></script>
+ </head>
+
+ <body>
+  <input type="text" class="Wdate">
+  <script>
+	// 为文本框绑定事件 - onclick|onfocus
+	$(".Wdate").click(function(){
+		/*
+		 * WdatePicker(options)
+		 * * options - 选项
+		 *   * 作用 - 用于配置当前的日历控件
+		 *   * 写法 - {attrName:attrValue}
+		 * * 选项
+		 *   * dateFmt - 设置日期显示的格式
+		 *     * 默认格式 - yyyy-MM-dd(标准格式)
+		 *   * realDateFmt - 设置日期对应计算机的格式
+		 *     * 默认格式 - yyyy-MM-dd(标准格式)
+		 *     * 建议使用默认格式
+		 *   * minDate - 设置最小年份(1970)
+		 *     * 电影《模仿游戏》
+		 *   * maxDate - 设置最大年份
+		 *   * isShowWeek - 设置是否显示周
+		 *   * isShowClear - 设置是否显示清空按钮
+		 *   * isShowOK - 设置是否显示确定按钮
+		 *   * isShowToday - 设置是否显示今天按钮
+		 *
+		 * 获取用户选择的日期,是input元素的value属性值
+		 */
+		WdatePicker({
+			dateFmt : "yyyy年MM月dd日",
+			isShowWeek : true,
+			isShowClear : false,
+			isShowOK : false,
+			isShowToday : false
+		});
+	});
+  </script>
+ </body>
+</html>

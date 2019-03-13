@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title></title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container">
+  <h1>组件——下拉菜单</h1>
+  <div class="dropdown">
+    <a data-toggle="dropdown" class="btn btn-default" href="#">
+      产品大全 <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#">电视</a></li>
+      <li><a href="#">洗衣机</a></li>
+      <li><a href="#">冰箱</a></li>
+      <li><a href="#">尿不湿</a></li>
+      <li><a href="#">奶嘴</a></li>
+    </ul>
+  </div>
+
+  <hr>
+  <div class="dropdown">
+    <a data-toggle="dropdown" class="btn btn-default" href="#">
+      产品大全 <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li class="dropdown-header">家电</li>
+      <li><a href="#">电视</a></li>
+      <li><a href="#">洗衣机</a></li>
+      <li><a href="#">冰箱</a></li>
+      <li class="dropdown-header">母婴</li>
+      <li><a href="#">尿不湿</a></li>
+      <li><a href="#">奶嘴</a></li>
+    </ul>
+  </div>
+  <hr>
+  <div class="dropdown">
+    <a data-toggle="dropdown" class="btn btn-default" href="#">
+      产品大全 <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#">电视</a></li>
+      <li><a href="#">洗衣机</a></li>
+      <li><a href="#">冰箱</a></li>
+      <li class="divider"></li>
+      <li><a href="#">尿不湿</a></li>
+      <li><a href="#">奶嘴</a></li>
+    </ul>
+  </div>
+
+  <script>
+    //$('[data-toggle="dropdown"]').on('click',function(){
+    //  $(this).siblings('.dropdown-menu').toggle();
+    //})
+
+  </script>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  (function () {
+    var s = document.createElement("script");
+    s.onload = function () {
+      bootlint.showLintReportForCurrentDocument([]);
+    };
+    s.src = "js/bootlint.js";
+    document.body.appendChild(s)
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        function superClass () {
+            this.a = 1;
+            this.print = function () {
+                console.log(this.a);
+            }
+        }
+
+        function subClass () {
+            superClass.call(this);
+            this.print();
+        }
+
+        subClass();
+        // 1
+   </script>
+</head>
+<body>
+https://www.jianshu.com/p/131ce0390cf8
+</body>
+</html>

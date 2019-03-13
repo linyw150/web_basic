@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       //match和exec的用法差不多
+       var str = 'abc123cba456aaa789';
+       var reg = /\d+/;
+       console.log(reg.exec(str));
+       //["123", index: 3, input: "abc123cba456aaa789"]
+       console.log(str.match(reg));
+       //["123", index: 3, input: "abc123cba456aaa789"]
+   </script>
+</head>
+<body>
+
+</body>
+</html>

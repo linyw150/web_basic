@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style type="text/css">
+        #d1{
+            width: 200px;
+            height: 200px;
+            border:2px solid black;
+            margin-left: 200px;
+        }
+        #d2{
+            width: 100px;
+            height: 100px;
+            border:2px solid #cc4649;
+        }
+        #d1{
+            border-color: green;
+            z-index: 100;
+            position: relative;
+        }
+        #d2{
+            border-color: blue;
+            background: #ddd;
+            position: fixed;
+/*
+            fixed（固定定位） 这里所固定的参照对像是可视窗口而并非是body或是父级元素。可通过z-index进行层次分级。
+*/
+            bottom: 0px;
+            left: 30px;
+            /*（z-index生效，要求参与其中的元素必须都已经定位）*/
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+<div id="d1">
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <p>cc</p>
+    <div id="d2"></div>
+</div>
+
+</body>
+</html>

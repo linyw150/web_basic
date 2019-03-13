@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style>
+        .wrapper-float {
+            padding: 15px 20px;
+            border: 1px dashed #ff6c60;
+        }
+        .left {
+            width: 120px;
+            border: 5px solid #ddd;
+        }
+        .right {
+            margin-left: 20px;
+            border: 5px solid #ddd;
+        }
+        .wrapper-float-bfc {
+            overflow: auto;
+        }
+
+        .wrapper-float-bfc .left {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .wrapper-float-bfc .right {
+            margin-left: 0;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<body>
+<!--https://segmentfault.com/a/1190000010698609-->
+
+<div class="wrapper-float-bfc" id="wrapper">
+    <div class="left">
+        左边固定宽度，高度不固定 </br> </br></br></br>高度有可能会很小，也可能很大。
+    </div>
+    <div class="right">
+        这里的内容可能比左侧高，也可能比左侧低。宽度需要自适应。</br>
+        基本的样式是，两个div相距20px, 左侧div宽 120px
+    </div>
+</div>
+
+<!--
+
+这个方案同样是利用了左侧浮动，但是右侧盒子通过overflow: auto;形成了BFC，因此右侧盒子不会与浮动的元素重叠。
+
+优点：其他的方法都需要通过左侧盒子的宽度，计算某个值，这种方法都是不需要计算的。只需要设置两个盒子之间的间隔。
+
+
+缺点:
+
+父元素需要清除浮动
+-->
+</body>
+</body>
+</html>

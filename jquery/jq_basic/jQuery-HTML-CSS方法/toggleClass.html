@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style>
+        div.box{width:300px;padding:20px;margin:20px;border:4px dashed #ccc;}
+        div.box span{color:#999;font-style:italic;}
+        div.content{width:250px;margin:10px 0;padding:20px;border:2px solid #ff6666;}
+        li{padding:10px;}
+        .red{color:red;}
+    </style>
+
+
+</head>
+<body>
+<div class="box">
+    <div id="d1">click</div>
+    <div class="content flag">
+        <li class="red">栗子</li>
+        <li class="red">李子</li>
+        <li class="red">梨子</li>
+        <li class="red">荔枝</li>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+   /* $(function(){
+        $(".content").hide();
+        $("#d1").click(function(){
+            if($(".content").hasClass("flag")){
+                $(".content").show();
+            }else{
+                $(".content").hide();
+            }
+            $(".content").toggleClass("flag");//有了toggleClass，就不需要removeClass和addClass
+        })
+    })*/
+    $(function(){
+        $(".content").hide();
+        $("#d1").click(function(){
+            if($(".content").hasClass("flag")){
+                $(".content").show();
+                $(".content").removeClass("flag");
+            }else{
+                $(".content").hide();
+                $(".content").addClass("flag");
+            }
+        })
+    })
+</script>
+
+</body>
+</html>

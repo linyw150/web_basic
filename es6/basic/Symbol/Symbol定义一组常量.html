@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       const log = {};
+       log.levels = {
+           DEBUG: Symbol('debug'),
+           INFO: Symbol('info'),
+           WARN: Symbol('warn')
+       };
+       console.log(log.levels.DEBUG, 'debug message');
+       console.log(log.levels.INFO, 'info message');
+   </script>
+   <script>
+       const COLOR_RED    = Symbol();
+       const COLOR_GREEN  = Symbol();
+
+       function getComplement(color) {
+           switch (color) {
+               case COLOR_RED:
+                   return COLOR_GREEN;
+               case COLOR_GREEN:
+                   return COLOR_RED;
+               default:
+                   throw new Error('Undefined color');
+           }
+       }
+   </script>
+
+</head>
+<body>
+
+</body>
+</html>

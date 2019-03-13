@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery动画效果-自定义动画二</title>
+  <meta charset="utf-8" />
+  <script src="scripts/jquery-1.11.3.js"></script>
+ </head>
+ <body>
+ <div id="panel" style="width: 60px;height: 22px;background-color: #eee;border: 1px solid #abcdef;font-size: 12px;">呵呵</div>
+<!--
+https://www.cnblogs.com/ww03/p/6007740.html
+stop(true)，此时程序会把当前元素接下来尚未执行完的动画队列清空。
+所以可以把上面代码改成如此代码，就能实现预期的效果。
+如果遇到组合动画，例如：
+$("#panel").hover(function() {
+        $(this).stop()
+            .animate({height: "150"}, 5000)       //如果在此时触发了光标的移出事件
+                                                  //将执行下面的动画
+            .animate({borderWidth: "20px"},3000); //而非光标移出事件中的动画
+    },function() {
+        $(this).stop()
+            .animate({width: "300"}, 2000)
+            .animate({fontSize: "24px"},3000);
+    });
+此时只用一个不带参数的stop()方法就显得力不从心了。
+因为stop()方法只会停止正在进行的动画，如果动画正执行在第1阶段（改变height的阶段），
+则触发光标移出事件后，只会停止当前的动画，并继续进行下面的.
+animate({borderWidth: "20px"},3000)动画，而光标移出事件中的动画要等这个动画结束后
+才会继续执行，这显然不是预期的结果。这种情况下stop()方法的第一个参数就发挥作用了。
+ -->
+
+
+ </body>
+ <!-- 引入jquery库 -->
+ <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        $("#panel").hover(function() {
+            $(this).stop(true)
+                    .animate({height: "150"}, 5000)       //如果在此时触发了光标的移出事件
+                //直接跳过后面的动画队列
+                    .animate({borderWidth: "20px"},3000);
+        },function() {
+            $(this).stop(true)
+                    .animate({width: "300"}, 2000)
+                    .animate({fontSize: "24px"},3000);
+        });
+    })
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            border:2px solid black;
+            float: left;
+            margin-right: 10px;
+        }
+        #d1{
+            border-color: #ff0000;
+            position: relative;
+        }
+        /* 使用float d1偏移了，d2也跟着偏移了,*/
+        #d1:hover{
+            /* 距离顶端3px */
+            /* 可以为负值 */
+           top:3px;
+            left: 3px;
+        }
+        #d2{
+            border-color: #1d8057;
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+
+</body>
+</html>

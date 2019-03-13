@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+       // 下面的代码取出扩展名
+       var reg = /\.[^\\.\/]+/i;
+       var filename = "abc.flv";
+       if(reg.test(filename)){
+          console.log(RegExp.$1);
+       }
+   </script>
+</head>
+<body>
+
+</body>
+</html>

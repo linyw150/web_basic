@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <script src="scripts/jquery-1.11.3.js"></script>
+  <script>
+      //http://www.cnblogs.com/yesw/p/4170626.html
+      $(function() {
+          //取出有clear类的input域
+          //(注: "clear once" 是两个class clear 和 once)
+          $('#testform input.clear').each(function(){
+              //使用data方法存储数据
+              $(this).data( "txt", $.trim($(this).val()) );  //这里的this是指下面focus事件的this元素
+          }).focus(function(){
+              // 获得焦点时判断域内的值是否和默认值相同，如果相同则清空
+              if ( $.trim($(this).val()) === $(this).data("txt") ) {
+                  $(this).val("");
+              }
+          }).blur(function(){
+              // 为有class clear的域添加blur时间来恢复默认值
+              // 但如果class是once则忽略
+              if ( $.trim($(this).val()) === "" && !$(this).hasClass("once") ) {
+                  //Restore saved data
+                  $(this).val( $(this).data("txt") );
+              }
+          });
+      });
+  </script>
+ </head>
+
+ <body>
+ <form id="testform">
+        <input type="text" class="clear" value="Always cleared" />
+        <input type="text" class="clear once" value="Cleared only once" />
+          <input type="text" value="Normal text" />
+</form>
+ </body>
+</html>

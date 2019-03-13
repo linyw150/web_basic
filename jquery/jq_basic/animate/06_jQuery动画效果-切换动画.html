@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery动画效果-切换动画</title>
+  <meta charset="utf-8" />
+  <script src="scripts/jquery-1.11.3.js"></script>
+  <style>
+	div {
+		width : 200px;
+		height : 200px;
+		border : solid 1px black;
+		background : pink;
+		position : relative;
+		top : 50px;
+		left : 10px;
+	}
+  </style>
+ </head>
+
+ <body>
+  <button>执行动画</button>
+  <br><br>
+  <div></div>
+  <script>
+	$("button").click(function(){
+		/*
+		 * toggle(speed,callback)
+		 * * speed - 设置动画执行的时长,单位为毫秒 
+		 */
+		//$("div").toggle(3000);
+		//$("div").slideToggle(3000);
+		/*
+		 * fadeTo(speed,opacity,callback)
+		 * * speed - 设置动画执行的时长,单位为毫秒
+		 * * opacity - 设置当前元素的透明度(0-1)
+		 *   * 0 - 透明
+		 *   * 1 - 不透明
+		 */
+		$("div").fadeTo(3000,0.5);
+	});
+
+	function move(){
+		$("div").slideToggle(3000,function(){
+			move();
+		});
+	}
+	move();
+  </script>
+ </body>
+</html>

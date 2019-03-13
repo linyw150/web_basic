@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <runoob></runoob>
+</div>
+<div id="cpp">
+    <abc></abc>
+</div>
+
+<script>
+    var Child1 = {
+        template: '<h1>自定义组件1!</h1>'
+    }
+    var Child2 = {
+        template: '<h1>自定义组件2!</h1>'
+    }
+
+
+    // 创建根实例
+    new Vue({
+        el: '#app',
+        components: {
+            // <runoob> 将只在父模板可用
+            'runoob': Child1
+        }
+    })
+    new Vue({
+        el: '#cpp',
+        components: {
+            // <runoob> 将只在父模板可用
+            'abc': Child2
+        }
+    })
+</script>
+</body>
+</html>

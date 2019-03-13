@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style type="text/css">
+        .first-face {
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: row;/*flex-direction属性决定主轴的方向（即项目的排列方向）。*/
+        justify-content: space-between;/*属性定义了项目在主轴上的对齐方式。*/
+
+        }
+
+       /* 取值：数值
+
+功能：放大因子
+
+默认值为0，表示不去放大。
+
+a、使用前提：主轴方向上有多余的空间可以让项目去“伸展”
+
+b、计算步骤
+
+（1）统计多余的空间：M=容器的宽度-所有项目的宽度
+
+（2）确定均分的份数：N=项目flex-grow的值之和
+
+（3）计算单位空间：P=M/N
+
+（4）项目放大后的宽度：R=宽度+P*当前flex-flow值
+
+结论：
+
+如果一个项目flex-grow：0，则它的宽度不会放大
+
+项目flex-grow越大，说明它在放大后，会得到更多的空间
+
+项目flex-grow越小，说明它在放大后，会得到更少的空间
+
+特别的：如果所有的项目有一样的flex-grow，它们会等分多余的空间，
+
+也就是说，放大后大小=自身的大小+等值分配的大小
+       */
+
+        #d1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ffff00;
+
+        }
+        .p1{
+            flex-grow:1;
+            border: 1px solid #2858ff;
+        }
+        .p2 {
+            flex-grow:1;
+            border: 1px solid #66ff6d;
+        }
+        .p3 {
+            flex-grow:1;
+            border: 1px solid #ffff00;
+        }
+    </style>
+</head>
+<body>
+<!--
+https://blog.csdn.net/zxy9602/article/details/53138564-->
+<div class="first-face">
+    <div id="d1"></div>
+    <span class="p1">1</span>
+    <span class="p2">2</span>
+    <span class="p3">3</span>
+</div>
+</body>
+</html>

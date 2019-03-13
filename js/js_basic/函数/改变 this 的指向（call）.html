@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        function Parent(age){
+            this.name=['mike','jack','smith'];
+            this.age=age;
+         }
+        function Child(age){
+            Parent.call(this,age);//把this指向Parent,同时还可以传递参数
+        }
+        var test=new Child(21);
+        console.log(test.age);//21，child里的上面的this因为使用了call，改变了sthis指向的方向。
+        console.log(test.name);
+        test.name.push('bill');
+        console.log(test.name);//mike,jack,smith,bill
+    </script>
+</head>
+<body>
+https://www.jianshu.com/p/131ce0390cf8
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的DOM操作-样式操作</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+  <style>
+	div {
+		width : 100px;
+		height : 100px;
+		border : solid 1px black;
+		background : pink;
+		float : left;
+		margin-right : 10px;
+	}
+	.one {
+		width : 50px;
+		height : 50px;
+		border : solid 1px black;
+		background : yellow;
+		float : left;
+		margin-right : 10px;
+	}
+	.two {
+		width : 150px;
+		height : 150px;
+		border : solid 1px black;
+		background : green;
+		float : left;
+		margin-right : 10px;
+	}
+  </style>
+ </head>
+
+ <body>
+  <button id="btn1">attr()</button>
+  <button id="btn2">addClass()</button>
+  <button id="btn3">removeClass()</button>
+  <button id="btn4">toggleClass()</button>
+  <button id="btn5">hasClass()</button>
+  <button id="btn6">css()</button>
+  <br></br>
+  <div id="d1"></div>
+  <div id="d2"></div>
+  <script>
+	// attr("class",className) - 设置
+	$("#btn1").click(function(){
+		$("#d1").attr("class","one");
+	});
+	// addClass(className) - 追加|叠加
+	$("#btn2").click(function(){
+		$("#d1").addClass("two");
+	});
+	/*
+	 * removeClass()
+	 * * 不传参 - 删除所有样式
+	 * * 传参 - 删除指定样式
+	 */
+	$("#btn3").click(function(){
+		$("#d1").removeClass();
+	});
+	/*
+	 * toggleClass(className)
+	 * * 是在没有样式与指定样式之间切换
+	 * * addClass()+removeClass()
+	 */
+	$("#btn4").click(function(){
+		$("#d1").toggleClass("one");
+	});
+	/*
+	 * hasClass(className)
+	 * * 判断指定元素是否含有指定样式
+	 */
+	$("#btn5").click(function(){
+		console.log($("#d1").hasClass("one"));
+	});
+
+	// css()方法的设置功能
+	$("#btn6").click(function(){
+		// 链式操作
+		//$("#d2").css("background","red").css("width","50").css("height","50");
+		
+		$("#d2").css({
+			"background" : "red",
+			"width" : 50,
+			"height" : 50
+		});
+	});
+  </script>
+ </body>
+</html>

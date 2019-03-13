@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的DOM-外部插入</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+
+ <body>
+  <ul id="city">
+	<li>北京</li>
+	<li id="tj">天津</li>
+	<li>南京</li>
+  </ul>
+  <ul id="game">
+	<li>反恐</li>
+	<li id="ms">魔兽</li>
+	<li>星际</li>
+  </ul>
+  <script>
+	// 操作天津节点和魔兽节点
+	// before - before后面的节点被添加到before前面的节点的前面
+	//$("#tj").before($("#ms"));
+	// after - after后面的节点被添加到after前面的节点的后面
+	//$("#tj").after($("#ms"));
+	// insertBefore
+	//$("#tj").insertBefore($("#ms"));
+	// insertAfter
+	$("#tj").insertAfter($("#ms"));
+  </script>
+ </body>
+</html>

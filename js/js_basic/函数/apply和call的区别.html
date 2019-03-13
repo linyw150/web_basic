@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        //他们的第一个参数都是需要调用的函数对象，在函数内这个参数就是this的值。
+        function add(a,b){
+            console.log(this)
+            return a+b;
+        }
+        function sub(a,b){
+            return a-b;
+        }
+
+        var a1 = sub.call(add,5,3);
+        var a2 = add.call(sub,5,3);
+        /* apply 方法
+         var a1 = sub.apply(add,[5,3])
+         var a2 = add.apply(sub,[5,3])
+         */
+        console.log(a1)//2
+        console.log(a2)//8
+        //在上面的例子中，sub.call(add,5,3) = sub(5,3)，意思就是用 sub 来替换 add 。
+       // call 和 apply 的区别在于 call 传的值可以是任意的，而 apply 传的值必须是数组。
+    </script>
+</head>
+<body>
+
+</body>
+</html>

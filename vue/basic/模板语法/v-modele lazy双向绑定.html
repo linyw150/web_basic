@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        #list-1{
+            color: red;
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{message}}</p>
+<!--
+    当添加.lazy修饰符之后，改变input框中的内容并不会使得span中的内容发生变化，此时当输入框失去焦点后触发change事件.控制台中输出相应内容。
+-->
+    <input v-model.lazy="message" @change="show">
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message:'abc'
+        },
+        methods:{
+            show(){
+            alert(this.message);
+    }
+        }
+    })
+</script>
+</body>
+</html>

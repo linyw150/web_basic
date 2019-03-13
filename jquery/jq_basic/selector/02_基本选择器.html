@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>基本选择器</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+  <style>
+	div {
+		width : 150px;
+		height : 150px;
+		border : solid 1px black;
+		background : pink;
+		float : left;
+		margin-right : 10px;
+	}
+	.mini {
+		width : 100px;
+		height : 100px;
+		border : solid 1px black;
+		background : blue;
+		float : left;
+		margin-right : 10px;
+	}
+  </style>
+ </head>
+
+ <body>
+  <button id="btn1">id选择器</button>
+  <button id="btn2">元素选择器</button>
+  <button id="btn3">class选择器</button>
+  <button id="btn4">*选择器</button>
+  <button id="btn5">复合选择器</button>
+  <br><br>
+  <div id="d1">这是id为d1的div元素.</div>
+  <div class="mini"></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <script>
+	// 1 获取btn1按钮,绑定onclick事件
+	$("#btn1").click(function(event){
+		/*
+		 * 改变背景颜色
+		 * * 操作CSS的background-color的属性
+		 * * jQuery操作CSS
+		 *   * css(name,value)方法
+		 *     * name - CSS的属性名称
+		 *     * value - CSS的属性值
+		 */
+		$("#d1").css("background","red");
+	});
+	// 2 元素选择器
+	$("#btn2").click(function(){
+		/*
+		 * JS定义的数组
+		 * * 遍历数组,获取每一个元素
+		 * * 遍历的过程中,改变每一个元素
+		 * jQuery数组对象
+		 * * 批处理
+		 */
+		$("div").css("background","red");
+		/*
+		var $divs = $("div");//$divs:jQuery数组对象
+		// 遍历数组
+		for(var i=0;i<$divs.length;i++){
+			// 获取每一个元素
+			var div = $divs[i];//jquery对象加角标得到dom对象
+			div.className;
+		}*/
+	});
+	$("#btn3").click(function(){
+		$(".mini").css("background","red");
+	});
+	$("#btn4").click(function(){
+		$("*").css("background","red");
+	});
+	$("#btn5").click(function(){
+		// 多个选择器并列使用,中间使用","分隔
+		$("#d1,.mini").css("background","red");
+	});
+  </script>
+ </body>
+</html>

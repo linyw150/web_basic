@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .aaa{
+            color: red;
+            background: #444;
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+
+</head>
+<body>
+<div id="app"><!-- 绑定一个属性 -->
+    <img v-bind:src="imageSrc">
+
+    <!-- 缩写 -->
+    <img :src="imageSrc">
+
+    <!-- 内联字符串拼接 -->
+    <img :src="'/path/to/images/' + fileName">
+
+    <!-- class 绑定 -->
+    <div :class="{ red: isRed }"></div>
+    <div :class="[classA, classB]"></div>
+    <div :class="[classA, { classB: isB, classC: isC }]">
+
+        <!-- style 绑定 -->
+        <div :style="{ fontSize: size + 'px' }"></div>
+        <div :style="[styleObjectA, styleObjectB]"></div>
+
+        <!-- 绑定一个有属性的对象 -->
+        <div v-bind="{ id: someProp, 'other-attr': otherProp }"></div>
+
+        <!-- 通过 prop 修饰符绑定 DOM 属性 -->
+        <div v-bind:text-content.prop="text"></div>
+
+        <!-- prop 绑定。“prop”必须在 my-component 中声明。-->
+        <my-component :prop="someThing"></my-component>
+
+        <!-- 通过 $props 将父组件的 props 一起传给子组件 -->
+        <child-component v-bind="$props"></child-component>
+
+        <!-- XLink -->
+        <svg><a :xlink:special="foo"></a></svg></div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            bbb: false
+        }
+    })
+</script>
+</body>
+</html>

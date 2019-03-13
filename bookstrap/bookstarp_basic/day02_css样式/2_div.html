@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        /* 盒子模型的计算方法  box-sizing
+            div {
+         box-sizing:  content-box;   默认值
+            box-sizing:  border-box;    推荐使用
+        }
+        content-box: 一个盒子的总宽度=margin+border+padding+width
+        border-box: 一个盒子的总宽度=margin+width
+         */
+        .parent {
+            width: 600px;
+            height: 400px;
+            background: #afa;
+        }
+        .child1 {
+            width: 300px;
+            height: 100px;
+            background: #faa;
+            float: left;
+        }
+        .child2 {
+            width: 300px;
+            height: 100px;
+            background: #aaf;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="child1">MMMM</div>
+    <div class="child2">NNNN</div>
+</div>
+</body>
+</html>

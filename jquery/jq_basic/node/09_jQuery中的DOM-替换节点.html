@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery中的DOM-替换节点</title>
+  <meta charset="utf-8" />
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+
+ <body>
+  <button>按钮一</button>
+  <button>按钮二</button>
+  <button>按钮三</button>
+  <p>这是段落.</p>
+  <script>
+	// repalceWith - 前面的元素是被替换的,后面的元素时替换的
+	$("button").replaceWith($("<p>这也是段落.</p>"));
+	// replaceAll - 就是颠倒了的repalceWith
+	$("<button>按钮</button>").replaceAll($("p"));
+  </script>
+ </body>
+</html>

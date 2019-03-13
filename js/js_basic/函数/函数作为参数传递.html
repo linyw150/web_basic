@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        function test(a,func,c){
+            func("abc","1");
+        }
+        test("1",function(abc,y){
+            console.log(y);
+        },"1");
+        //执行结果为1
+        //执行test函数的时候，里面就直接调用的func函数，即函数执行体。
+
+
+        //---实际的应用
+        //进行ajax请求的时候，需要加loading提示框，没请求一次就加一个非常麻烦，需要封装一下。
+        /**
+         * 封装带加载提示框的Ajax请求
+         * @param url
+         * @param fun  成功的回调函数
+         * @param data  传入的post数据
+         */
+  /*      function ajax_post_loading(url, fun, data) {
+            $.topTip.show("正在加载...");
+            setTimeout(function () {
+                $.ajax({
+                    type: "POST",
+                    dataType: 'json',
+                    async: false,
+                    contentType: "application/json",
+                    url: url + (url.indexOf('?') > 0 ? '&r=' + Math.random() : '?r=' + Math.random()),
+                    data: data == null ? '' : data,
+                    cache: false,
+                    success: function (msg) {
+                        fun(msg);
+                    }, complete: function () {
+                        $.topTip.hide();
+                    }
+                });
+            }, 100)
+        }
+        //调用
+        ajax_post_loading("../../MobileFormServlet?type=startVisit&className=visitRecord",function (data) {
+            if(data.STATUS == 'ok'){
+                _cookie.set("visitId", data.DATA);
+                flag = true;
+                jsGo = true;
+            }else{
+                flag = false;
+                jsGo = false;
+            }
+        },postData);*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

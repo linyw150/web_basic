@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style type="text/css">
+        .first-face {
+            width: 500px;
+            display: flex;
+            flex-direction: row;/*flex-direction属性决定主轴的方向（即项目的排列方向）。*/
+        justify-content: space-between;/*属性定义了项目在主轴上的对齐方式。*/
+          /*
+          justify-content:（
+          flex-start 默认值）：左对齐
+          flex-end 右对齐
+          center 居中
+          space-between 两端对齐，项目之间的间隔都相等。
+          space-around;每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+          */
+
+            align-items: center;/*属性定义项目在交叉轴上如何对齐。 垂直方向*/
+         /*   flex-start：交叉轴的起点对齐。
+            flex-end：交叉轴的终点对齐。
+            center：交叉轴的中点对齐。
+             baseline: 项目的第一行文字的基线对齐。
+            stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+        */
+        }
+
+       /* 应用：order属性用于更改在主轴方向上排列顺序。order数值越小，排列越靠前，默认为0，可以为负数。
+       当前的排列顺序是p2到p3到p1
+       */
+
+
+        .p1{
+            order:2;
+        }
+        .p2 {
+            order:0;
+        }
+        .p3 {
+            order:1;
+        }
+    </style>
+</head>
+<body>
+<!--
+http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+-->
+<div class="first-face">
+    <span class="p1">1</span>
+    <span class="p2">2</span>
+    <span class="p3">3</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+   <script>
+//       filter()方法使用指定的函数测试所有元素，
+// 并创建一个包含所有通过测试的元素的新数组。
+    /*
+     filter()实例：筛选排除掉所有的小值​
+     下例使用 filter 创建了一个新数组，该数组的元素由原数组中值大于 10 的元素组成。
+     */
+
+  /*  function isBigEnough(element) {
+        return element >= 10;
+    }
+    var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+    console.log(filtered);//[ 12, 130, 44 ]
+*/
+    var delete_number = 3;
+    var array = [1,2,3,4,5];
+
+    var loop = array.length;
+     function autoFilter(arr){
+         for(var i=0;i<loop;i++){
+             if(arr[i]===3){
+                 arr.splice(i,1);
+                 i = i -1;
+                 loop = loop -1;
+             }
+         }
+         return arr
+     }
+     console.log(autoFilter(array))
+
+
+   </script>
+</head>
+<body>
+
+
+</body>
+</html>

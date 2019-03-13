@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul {
+            list-style: none;
+            font-size: 0;
+        }
+        li {
+            width: 25%;
+            display: inline-block;
+            background: green;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li>我是第一项</li>
+    <li>我是第二项</li>
+    <li>我是第三项</li>
+    <li>我是第四项</li>
+
+<!--
+    我们为了页面代码的整洁可读性，往往会设置一些适当的缩进、换行，
+    但当元素的display为inline或者inline-block的时候，这些缩进、换行
+    就会产生空白，所以出现上述问题。虽然还有其他方法能解决我们因为缩进、换行而产生的问题，
+    但此时，最合适的方法就是给li的父级ul设置： font-size: 0; 给li设置：font-size: 16px;
+    如此就达到了所需效果。
+    其实图片的间隙问题也是因为我们的换行、缩进。
+    <div>
+        <img src="pic1.jpg">
+        <img src="pic2.jpg">
+    </div>
+
+    给这个div设置
+
+    div {
+    font-size: 0;
+    }
+    https://blog.csdn.net/lihchweb/article/details/74654154
+-->
+
+
+
+</ul>
+</body>
+</html>
